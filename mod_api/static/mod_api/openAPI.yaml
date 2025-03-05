@@ -157,7 +157,7 @@ components:
                 $ref: "#/components/schemas/xsdNonNegativeInteger"
               itemsPerPage:
                 $ref: "#/components/schemas/xsdNonNegativeInteger"
-              member:
+              collection:
                 type: array
                 title: List of Semantic Artefact
                 items:
@@ -226,7 +226,7 @@ components:
                 $ref: "#/components/schemas/xsdNonNegativeInteger"
               itemsPerPage:
                 $ref: "#/components/schemas/xsdNonNegativeInteger"
-              member:
+              collection:
                 type: array
                 title: List of OWL Classes
                 items:
@@ -265,7 +265,7 @@ components:
                 $ref: "#/components/schemas/xsdNonNegativeInteger"
               itemsPerPage:
                 $ref: "#/components/schemas/xsdNonNegativeInteger"
-              member:
+              collection:
                 type: array
                 title: List of Skos Collections
                 items:
@@ -304,7 +304,7 @@ components:
                 $ref: "#/components/schemas/xsdNonNegativeInteger"
               itemsPerPage:
                 $ref: "#/components/schemas/xsdNonNegativeInteger"
-              member:
+              collection:
                 type: array
                 title: List of Skos Concepts
                 items:
@@ -370,7 +370,7 @@ components:
                 $ref: "#/components/schemas/xsdNonNegativeInteger"
               itemsPerPage:
                 $ref: "#/components/schemas/xsdNonNegativeInteger"
-              member:
+              collection:
                 type: array
                 title: List of Semantic Artefact Distributions
                 items:
@@ -413,7 +413,7 @@ components:
                 $ref: "#/components/schemas/xsdNonNegativeInteger"
               itemsPerPage:
                 $ref: "#/components/schemas/xsdNonNegativeInteger"
-              member:
+              collection:
                 type: array
                 title: List of OWL Individuals
                 items:
@@ -452,7 +452,7 @@ components:
                 $ref: "#/components/schemas/xsdNonNegativeInteger"
               itemsPerPage:
                 $ref: "#/components/schemas/xsdNonNegativeInteger"
-              member:
+              collection:
                 type: array
                 title: List of RDFS Properties
                 items:
@@ -518,7 +518,7 @@ components:
                 $ref: "#/components/schemas/xsdNonNegativeInteger"
               itemsPerPage:
                 $ref: "#/components/schemas/xsdNonNegativeInteger"
-              member:
+              collection:
                 type: array
                 title: List of Semantic Artefact Catalog Records
                 items:
@@ -584,7 +584,7 @@ components:
                 $ref: "#/components/schemas/xsdNonNegativeInteger"
               itemsPerPage:
                 $ref: "#/components/schemas/xsdNonNegativeInteger"
-              member:
+              collection:
                 type: array
                 title: List of RDFS Resources
                 items:
@@ -623,7 +623,7 @@ components:
                 $ref: "#/components/schemas/xsdNonNegativeInteger"
               itemsPerPage:
                 $ref: "#/components/schemas/xsdNonNegativeInteger"
-              member:
+              collection:
                 type: array
                 title: List of Skos Concept Schemes
                 items:
@@ -662,7 +662,7 @@ components:
                 $ref: "#/components/schemas/xsdNonNegativeInteger"
               itemsPerPage:
                 $ref: "#/components/schemas/xsdNonNegativeInteger"
-              member:
+              collection:
                 oneOf:
                   - type: array
                     title: List of Semantic Artefacts
@@ -730,7 +730,7 @@ components:
                 $ref: "#/components/schemas/xsdNonNegativeInteger"
               itemsPerPage:
                 $ref: "#/components/schemas/xsdNonNegativeInteger"
-              member:
+              collection:
                 oneOf:
                   - type: array
                     title: List of OWL Classes
@@ -794,7 +794,7 @@ components:
                 $ref: "#/components/schemas/xsdNonNegativeInteger"
               itemsPerPage:
                 $ref: "#/components/schemas/xsdNonNegativeInteger"
-              member:
+              collection:
                   type: array
                   title: List of Semantic Artefacts
                   items:
@@ -911,7 +911,7 @@ components:
               example: http://www.w3.org/ns/hydra/core#
             Collection: 
               example: "hydra:Collection"
-            member:
+            collection:
               type: object
               properties:
                 '@id':
