@@ -417,7 +417,7 @@ components:
                 type: array
                 title: List of OWL Individuals
                 items:
-                  $ref: "#/components/schemas/OWLNamedIndividual"
+                  $ref: "#/components/schemas/owlNamedIndividual"
               view:
                 $ref: "#/components/schemas/view"
         text/html:
