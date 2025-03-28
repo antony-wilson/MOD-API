@@ -915,12 +915,7 @@ components:
             Collection: 
               example: "hydra:Collection"
             member:
-              type: object
-              properties:
-                '@id':
-                  example: "hydra:member"
-                '@type':
-                  example: '@id'
+              example: "hydra:member"
             totalItems:
               example: "hydra:totalItems"
             itemsPerPage:
@@ -2532,7 +2527,7 @@ paths:
     parameters:
       - $ref: "#/components/parameters/artefactID"
       - $ref: "#/components/parameters/format_param"
-      - $ref: "#/components/parameters/display"
+      - $ref: "#/components/parameters/displaySemanticArtefact"
 
     get:
       tags:
