@@ -2527,7 +2527,7 @@ paths:
     parameters:
       - $ref: "#/components/parameters/artefactID"
       - $ref: "#/components/parameters/format_param"
-      - $ref: "#/components/parameters/displaySemanticArtefact"
+      - $ref: "#/components/parameters/display"
 
     get:
       tags:
