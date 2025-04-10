@@ -948,12 +948,7 @@ components:
             Collection: 
               example: "hydra:Collection"
             member:
-              type: object
-              properties:
-                '@id':
-                  example: "hydra:member"
-                '@type':
-                  example: '@id'
+              example: "hydra:member"
             totalItems:
               example: "hydra:totalItems"
             itemsPerPage:
