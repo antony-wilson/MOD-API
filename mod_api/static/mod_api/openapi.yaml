@@ -71,6 +71,39 @@ components:
         type: string
         default: all
 
+    displaySemanticArtefact:
+      description: The parameters to display.
+      name: display
+      in: query
+      schema:
+        type: array
+        items:
+          type: string
+        default:
+          [ "dcterms:accessRights", "mod:acronym", "dcat:contactPoint", "dcterms:creator", "dcterms:description", "dcterms:identifier", "dcat:keyword", "dcat:landingPage", "dcterms:license", "dcterms:rightsHolder", "dcterms:subject", "dcterms:title", "dcterms:type", "owl:versionIRI" ]
+
+    displaySemanticArtefactCatalog:
+      description: The parameters to display.
+      name: display
+      in: query
+      schema:
+        type: array
+        items:
+          type: string
+        default:
+          [ "dcterms:accessRights", "dcat:accessURL", "dcat:contactPoint", "dcterms:created", "dcterms:creator", "dcterms:description", "dcterms:identifier", "dcat:keyword", "dcat:landingPage", "dcterms:license", "dcterms:modified", "dcterms:rightsHolder", "dcterms:subject", "dcterms:title", "dcterms:type" ]
+
+    displaySemanticArtefactCatalogRecord:
+      description: The parameters to display.
+      name: display
+      in: query
+      schema:
+        type: array
+        items:
+          type: string
+        default:
+          [ "dcterms:created", "dcterms:modified" ]
+
     query:
       description: The search query.
       name: q
@@ -2446,7 +2479,7 @@ paths:
   /:
     parameters:
       - $ref: "#/components/parameters/format_param"
-      - $ref: "#/components/parameters/display"
+      - $ref: "#/components/parameters/displaySemanticArtefactCatalog"
 
     get:
       tags:
@@ -2463,7 +2496,7 @@ paths:
       - $ref: "#/components/parameters/format_param"
       - $ref: "#/components/parameters/page"
       - $ref: "#/components/parameters/pagesize"
-      - $ref: "#/components/parameters/display"
+      - $ref: "#/components/parameters/displaySemanticArtefactCatalogRecord"
 
     get:
       tags:
@@ -2482,7 +2515,7 @@ paths:
     parameters:
       - $ref: "#/components/parameters/artefactID"
       - $ref: "#/components/parameters/format_param"
-      - $ref: "#/components/parameters/display"
+      - $ref: "#/components/parameters/displaySemanticArtefactCatalogRecord"
 
     get:
       tags:
@@ -2513,7 +2546,7 @@ paths:
       - $ref: "#/components/parameters/format_param"
       - $ref: "#/components/parameters/page"
       - $ref: "#/components/parameters/pagesize"
-      - $ref: "#/components/parameters/display"
+      - $ref: "#/components/parameters/displaySemanticArtefact"
 
     get:
       tags:
@@ -2532,7 +2565,7 @@ paths:
     parameters:
       - $ref: "#/components/parameters/artefactID"
       - $ref: "#/components/parameters/format_param"
-      - $ref: "#/components/parameters/display"
+      - $ref: "#/components/parameters/displaySemanticArtefact"
 
     get:
       tags:
