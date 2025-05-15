@@ -1,0 +1,19 @@
+@prefix ns0: <http://www.w3.org/ns/hydra/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://example.org/collection/collectionID>
+  a <http://www.w3.org/ns/hydra/core#Collection> ;
+  ns0:itemsPerPage "50"^^xsd:nonNegativeInteger ;
+  ns0:member <https://example.org/NamedIndividual/NamedIndividualID1>, <https://example.org/NamedIndividual/NamedIndividualID2> ;
+  ns0:totalItems "5436"^^xsd:nonNegativeInteger ;
+  ns0:view <https://example.org/items?page=3> .
+
+<https://example.org/NamedIndividual/NamedIndividualID1> a owl:NamedIndividual .
+<https://example.org/NamedIndividual/NamedIndividualID2> a owl:NamedIndividual .
+<https://example.org/items?page=3>
+  a ns0:PartialCollectionView ;
+  ns0:first "https://example.org/items?page=1"^^xsd:string ;
+  ns0:last "https://example.org/items?page=42"^^xsd:string ;
+  ns0:next "https://example.org/items?page=4"^^xsd:string ;
+  ns0:previous "https://example.org/items?page=2"^^xsd:string .

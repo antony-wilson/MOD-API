@@ -155,14 +155,21 @@ components:
             properties:
               '@context':
                 $ref: "#/components/schemas/Context"
-              mod:SemanticArtefact:
-                $ref: "#/components/schemas/modSemanticArtefact"
+            allOf:
+              - $ref: "#/components/schemas/modSemanticArtefact"
+          examples:
+            semanticArtefact:
+              $ref: "#/components/examples/semanticArtefact"
         text/html:
           schema:
             $ref: "#/components/schemas/html"
         text/turtle:
           schema:
-            $ref: "./sa_ttl.yaml"
+            type: string
+          examples:
+            semanticArtefact:
+              summary: Semantic Artefact
+              externalValue: "./ttl/artefact.ttl"
         application/rdf+xml:
           schema:
             type: array
@@ -170,8 +177,10 @@ components:
               name: rdf
               wrapped: true
             items:
-              type: string
-              example: In progress
+          examples:
+            semanticArtefact:
+              summary: Semantic Artefact
+              externalValue: "./xml/artefact.xml"
 
     artefacts:
       description: "OK"
@@ -197,14 +206,19 @@ components:
                   $ref: "#/components/schemas/modSemanticArtefact"
               view:
                 $ref: "#/components/schemas/view"
+          examples:
+            semanticArtefacts:
+              $ref: "#/components/examples/semanticArtefacts"
         text/html:
           schema:
             $ref: "#/components/schemas/html"
         text/turtle:
           schema:
-            type: array
-            items:
-              $ref: "./sa_ttl.yaml"
+            type: string
+          examples:
+            semanticArtefacts:
+              summary: Semantic Artefacts
+              externalValue: "./ttl/artefacts.ttl"
         application/rdf+xml:
           schema:
             type: array
@@ -212,8 +226,10 @@ components:
               name: rdf
               wrapped: true
             items:
-              type: string
-              example: In progress
+          examples:
+            semanticArtefacts:
+              summary: Semantic Artefacts
+              externalValue: "./xml/artefacts.xml"
 
     catalog:
       description: "OK"
@@ -225,8 +241,8 @@ components:
             properties:
               '@context':
                 $ref: "#/components/schemas/Context"
-              mod:SemanticArtefactCatalog:
-                $ref: "#/components/schemas/modSemanticArtefactCatalog"
+            allOf:
+              - $ref: "#/components/schemas/modSemanticArtefactCatalog"
         text/html:
           schema:
             $ref: "#/components/schemas/html"
@@ -266,12 +282,18 @@ components:
                   $ref: "#/components/schemas/owlClass"
               view:
                 $ref: "#/components/schemas/view"
+          examples:
+            owlClasses:
+              $ref: "#/components/examples/owlClasses"
         text/html:
           schema:
             $ref: "#/components/schemas/html"
         text/turtle:
           schema:
             type: string
+          examples:
+            owlClasses:
+              externalValue: "./ttl/classes.ttl"
         application/rdf+xml:
           schema:
             type: array
@@ -279,7 +301,9 @@ components:
               name: rdf
               wrapped: true
             items:
-              example: In progress
+          examples:
+            owlClasses:
+              externalValue: "./xml/classes.xml"
 
     collections:
       description: "OK"
@@ -305,12 +329,18 @@ components:
                   $ref: "#/components/schemas/skosCollection"
               view:
                 $ref: "#/components/schemas/view"
+          examples:
+            skosCollection:
+              $ref: "#/components/examples/skosCollections"
         text/html:
           schema:
             $ref: "#/components/schemas/html"
         text/turtle:
           schema:
             type: string
+          examples:
+            skosCollection:
+              externalValue: "./ttl/collections.ttl"
         application/rdf+xml:
           schema:
             type: array
@@ -318,7 +348,9 @@ components:
               name: rdf
               wrapped: true
             items:
-              example: In progress
+          examples:
+            skosCollection:
+              externalValue: "./xml/collections.xml"
 
     concepts:
       description: "OK"
@@ -344,12 +376,18 @@ components:
                   $ref: "#/components/schemas/skosConcept"
               view:
                 $ref: "#/components/schemas/view"
+          examples:
+            skosConcept:
+              $ref: "#/components/examples/skosConcepts"
         text/html:
           schema:
             $ref: "#/components/schemas/html"
         text/turtle:
           schema:
             type: string
+          examples:
+            skosCollection:
+              externalValue: "./ttl/concepts.ttl"
         application/rdf+xml:
           schema:
             type: array
@@ -357,7 +395,9 @@ components:
               name: rdf
               wrapped: true
             items:
-              example: In progress
+          examples:
+            skosCollection:
+              externalValue: "./xml/concepts.xml"
 
     distribution:
       description: "OK"
@@ -369,8 +409,8 @@ components:
             properties:
               '@context':
                 $ref: "#/components/schemas/Context"
-              mod:SemanticArtefactDistribution:
-                $ref: "#/components/schemas/modSemanticArtefactDistribution"
+            allOf:
+              - $ref: "#/components/schemas/modSemanticArtefactDistribution"
         text/html:
           schema:
             $ref: "#/components/schemas/html"
@@ -453,12 +493,18 @@ components:
                   $ref: "#/components/schemas/owlNamedIndividual"
               view:
                 $ref: "#/components/schemas/view"
+          examples:
+            owlNamedIndividual:
+              $ref: "#/components/examples/owlNamedIndividuals"
         text/html:
           schema:
             $ref: "#/components/schemas/html"
         text/turtle:
           schema:
             type: string
+          examples:
+            skosCollection:
+              externalValue: "./ttl/individuals.ttl"
         application/rdf+xml:
           schema:
             type: array
@@ -466,7 +512,9 @@ components:
               name: rdf
               wrapped: true
             items:
-              example: In progress
+          examples:
+            skosCollection:
+              externalValue: "./xml/individuals.xml"
 
     properties:
       description: "OK"
@@ -492,12 +540,18 @@ components:
                   $ref: "#/components/schemas/rdfsProperty"
               view:
                 $ref: "#/components/schemas/view"
+          examples:
+            rdfsProperty:
+              $ref: "#/components/examples/rdfsProperties"
         text/html:
           schema:
             $ref: "#/components/schemas/html"
         text/turtle:
           schema:
             type: string
+          examples:
+            skosCollection:
+              externalValue: "./ttl/properties.ttl"
         application/rdf+xml:
           schema:
             type: array
@@ -505,7 +559,9 @@ components:
               name: rdf
               wrapped: true
             items:
-              example: In progress
+          examples:
+            skosCollection:
+              externalValue: "./xml/properties.xml"
 
     record:
       description: "OK"
@@ -517,8 +573,11 @@ components:
             properties:
               '@context':
                 $ref: "#/components/schemas/Context"
-              mod:SemanticArtefactCatalogRecord:
-                $ref: "#/components/schemas/modSemanticArtefactCatalogRecord"
+            allOf:
+              - $ref: "#/components/schemas/modSemanticArtefactCatalogRecord"
+          examples:
+            record:
+              $ref: "#/components/examples/semanticArtefactCatalogRecord"
         text/html:
           schema:
             $ref: "#/components/schemas/html"
@@ -558,6 +617,9 @@ components:
                   $ref: "#/components/schemas/modSemanticArtefactCatalogRecord"
               view:
                 $ref: "#/components/schemas/view"
+          examples:
+            records:
+              $ref: "#/components/examples/semanticArtefactCatalogRecords"
         text/html:
           schema:
             type: array
@@ -585,12 +647,18 @@ components:
             type: object
             title: RDFS Resource
             $ref: "#/components/schemas/rdfsResource"
+          examples:
+            rdfsResource:
+              $ref: "#/components/examples/rdfsResource"
         text/html:
           schema:
             $ref: "#/components/schemas/html"
         text/turtle:
           schema:
             type: string
+          examples:
+            skosCollection:
+              externalValue: "./ttl/resource.ttl"
         application/rdf+xml:
           schema:
             type: array
@@ -598,7 +666,9 @@ components:
               name: rdf
               wrapped: true
             items:
-              example: In progress
+          examples:
+            skosCollection:
+              externalValue: "./xml/resource.xml"
 
     resources:
       description: "OK"
@@ -624,12 +694,18 @@ components:
                   $ref: "#/components/schemas/rdfsResource"
               view:
                 $ref: "#/components/schemas/view"
+          examples:
+            rdfsResource:
+              $ref: "#/components/examples/rdfsResources"
         text/html:
           schema:
             $ref: "#/components/schemas/html"
         text/turtle:
           schema:
             type: string
+          examples:
+            skosCollection:
+              externalValue: "./ttl/resources.ttl"
         application/rdf+xml:
           schema:
             type: array
@@ -637,7 +713,9 @@ components:
               name: rdf
               wrapped: true
             items:
-              example: In progress
+          examples:
+            skosCollection:
+              externalValue: "./xml/resources.xml"
 
     schemes:
       description: "OK"
@@ -663,12 +741,18 @@ components:
                   $ref: "#/components/schemas/skosScheme"
               view:
                 $ref: "#/components/schemas/view"
+          examples:
+            skosScheme:
+              $ref: "#/components/examples/skosSchemes"
         text/html:
           schema:
             $ref: "#/components/schemas/html"
         text/turtle:
           schema:
             type: string
+          examples:
+            skosCollection:
+              externalValue: "./ttl/schemes.ttl"
         application/rdf+xml:
           schema:
             type: array
@@ -676,7 +760,9 @@ components:
               name: rdf
               wrapped: true
             items:
-              example: In progress
+          examples:
+            skosCollection:
+              externalValue: "./xml/schemes.xml"
 
     searchResult:
       description: "OK"
@@ -731,6 +817,23 @@ components:
                       $ref: "#/components/schemas/skosScheme"
               view:
                 $ref: "#/components/schemas/view"
+          examples:
+            owlClass:
+              $ref: "#/components/examples/owlClasses"
+            skosCollection:
+              $ref: "#/components/examples/skosCollections"
+            skosConcept:
+              $ref: "#/components/examples/skosConcepts"
+            owlNamedIndividual:
+              $ref: "#/components/examples/owlNamedIndividuals"
+            rdfsProperty:
+              $ref: "#/components/examples/rdfsProperties"
+            rdfsResource:
+              $ref: "#/components/examples/rdfsResources"
+            skosScheme:
+              $ref: "#/components/examples/skosSchemes"
+            semanticArtefacts:
+              $ref: "#/components/examples/semanticArtefacts"
         text/html:
           schema:
             $ref: "#/components/schemas/html"
@@ -795,6 +898,21 @@ components:
                       $ref: "#/components/schemas/skosScheme"
               view:
                 $ref: "#/components/schemas/view"
+          examples:
+            owlClass:
+              $ref: "#/components/examples/owlClasses"
+            skosCollection:
+              $ref: "#/components/examples/skosCollections"
+            skosConcept:
+              $ref: "#/components/examples/skosConcepts"
+            owlNamedIndividual:
+              $ref: "#/components/examples/owlNamedIndividuals"
+            rdfsProperty:
+              $ref: "#/components/examples/rdfsProperties"
+            rdfsResource:
+              $ref: "#/components/examples/rdfsResources"
+            skosScheme:
+              $ref: "#/components/examples/skosSchemes"
         text/html:
           schema:
             $ref: "#/components/schemas/html"
@@ -834,6 +952,9 @@ components:
                     $ref: "#/components/schemas/modSemanticArtefact"
               view:
                 $ref: "#/components/schemas/view"
+          examples:
+            semanticArtefacts:
+              $ref: "#/components/examples/semanticArtefacts"
         text/html:
           schema:
             $ref: "#/components/schemas/html"
@@ -855,6 +976,1347 @@ components:
         text/html:
           schema:
             $ref: "#/components/schemas/error_message"
+
+  examples:
+    owlClasses:
+      summary: Classes
+      value:
+        '@context':
+          hydra: 'http://www.w3.org/ns/hydra/core#'
+          owl: 'http://www.w3.org/2002/07/owl#'
+          xsd: 'http://www.w3.org/2001/XMLSchema#'
+          Class: 'owl:Class'
+          Collection: 'hydra:Collection'
+          firstPage: 'hydra:first'
+          itemsPerPage: 'hydra:itemsPerPage'
+          lastPage: 'hydra:last'
+          member: 'hydra:member'
+          nextPage: 'hydra:next'
+          nonNegativeInteger: 'xsd:nonNegativeInteger'
+          PartialCollectionView: 'hydra:PartialCollectionView'
+          previousPage: 'hydra:previous'
+          totalItems: 'hydra:totalItems'
+          view: 'hydra:view'
+        '@id': 'https://example.org/collection/collectionID'
+        '@type': Collection
+        totalItems:
+          '@type': nonNegativeInteger
+          '@value': 5436
+        itemsPerPage:
+          '@type': nonNegativeInteger
+          '@value': 50
+        member:
+          - '@id': 'https://example.org/Class/ClassID1'
+            '@type': Class
+          - '@id': 'https://example.org/Class/ClassID2'
+            '@type': Class
+        view:
+          '@id': 'https://example.org/items?page=3'
+          '@type': PartialCollectionView
+          firstPage: 'https://example.org/items?page=1'
+          previousPage: 'https://example.org/items?page=2'
+          nextPage: 'https://example.org/items?page=4'
+          lastPage: 'https://example.org/items?page=42'
+
+    owlNamedIndividuals:
+      summary: Named Individuals
+      value:
+        '@context':
+          hydra: 'http://www.w3.org/ns/hydra/core#'
+          owl: 'http://www.w3.org/2002/07/owl#'
+          xsd: 'http://www.w3.org/2001/XMLSchema#'
+          Collection: 'hydra:Collection'
+          firstPage: 'hydra:first'
+          itemsPerPage: 'hydra:itemsPerPage'
+          lastPage: 'hydra:last'
+          member: 'hydra:member'
+          NamedIndividual: 'owl:NamedIndividual'
+          nextPage: 'hydra:next'
+          nonNegativeInteger: 'xsd:nonNegativeInteger'
+          PartialCollectionView: 'hydra:PartialCollectionView'
+          previousPage: 'hydra:previous'
+          totalItems: 'hydra:totalItems'
+          view: 'hydra:view'
+        '@id': 'https://example.org/collection/collectionID'
+        '@type': Collection
+        totalItems:
+          '@type': nonNegativeInteger
+          '@value': 5436
+        itemsPerPage:
+          '@type': nonNegativeInteger
+          '@value': 50
+        member:
+          - '@id': 'https://example.org/NamedIndividual/NamedIndividualID1'
+            '@type': NamedIndividual
+          - '@id': 'https://example.org/NamedIndividual/NamedIndividualID2'
+            '@type': NamedIndividual
+        view:
+          '@id': 'https://example.org/items?page=3'
+          '@type': PartialCollectionView
+          firstPage: 'https://example.org/items?page=1'
+          previousPage: 'https://example.org/items?page=2'
+          nextPage: 'https://example.org/items?page=4'
+          lastPage: 'https://example.org/items?page=42'
+
+
+    semanticArtefact:
+      summary: Semantic Artefact
+      value:
+        '@context':
+          adms: 'http://www.w3.org/ns/adms#'
+          cc: 'http://creativecommons.org/ns#'
+          dc: 'http://purl.org/dc/elements/1.1/'
+          dcat: 'http://www.w3.org/ns/dcat#'
+          dcterms: 'http://purl.org/dc/terms/'
+          doap: 'http://usefulinc.com/ns/doap#'
+          foaf: 'http://xmlns.com/foaf/0.1/'
+          ical: 'http://www.w3.org/2002/12/cal/ical#'
+          mod: 'https://w3id.org/mod#'
+          odrl: 'http://www.w3.org/ns/odrl/2/'
+          owl: 'http://www.w3.org/2002/07/owl#'
+          pav: 'http://purl.org/pav/'
+          prov: 'http://www.w3.org/ns/prov#'
+          rdf: 'http://www.w3.org/1999/02/22-rdf-syntax-ns#'
+          rdfs: 'http://www.w3.org/2000/01/rdf-schema#'
+          schema: 'https://schema.org/'
+          sd: 'http://www.w3.org/ns/sparql-service-description#'
+          skos: 'http://www.w3.org/2004/02/skos/core#'
+          vann: 'https://vocab.org/vann/'
+          vcard: 'http://www.w3.org/2006/vcard/ns#'
+          void: 'http://rdfs.org/ns/void#'
+          xsd: 'http://www.w3.org/2001/XMLSchema#'
+          abstract: 'dcterms:abstract'
+          accessRights: 'dcterms:accessRights'
+          accrualMethod: 'dcterms:accrualMethod'
+          accrualPeriodicity: 'dcterms:accrualPeriodicity'
+          accrualPolicy: 'dcterms:accrualPolicy'
+          acronym: 'mod:acronym'
+          Activity: 'prov:Activity'
+          alternative: 'dcterms:alternative'
+          analytics: 'mod:analytics'
+          Analytics: 'mod:Analytics'
+          anyURI: 'xsd:anyURI'
+          associatedMedia: 'schema:associatedMedia'
+          Attribution: 'prov:Attribution'
+          audience: 'dcterms:audience'
+          award: 'schema:award'
+          backwardCompatibleWith: 'owl:backwardCompatibleWith'
+          bibliographicCitation: 'dcterms:bibliographicCitation'
+          bug-database: 'doap:bug-database'
+          changes: 'vann:changes'
+          classPartition: 'void:classPartition'
+          comesFromTheSameDomain: 'mod:comesFromTheSameDomain'
+          comment: 'rdfs:comment'
+          competencyQuestion: 'mod:competencyQuestion'
+          conformsTo: 'dcterms:conformsTo'
+          contactPoint: 'dcat:contactPoint'
+          contributor: 'dcterms:contributor'
+          coverage: 'dcterms:coverage'
+          createdWith: 'pav:createdWith'
+          creator: 'dcterms:creator'
+          curatedBy: 'pav:curatedBy'
+          dataset: 'void:dataset'
+          depiction: 'foaf:depiction'
+          deprecated: 'owl:deprecated'
+          description: 'dcterms:description'
+          designedForTask: 'mod:designedForTask'
+          Document: 'foaf:Document'
+          endorsedBy: 'mod:endorsedBy'
+          Evaluation: 'mod:Evaluation'
+          example: 'vann:example'
+          exampleResource: 'void:exampleResource'
+          fn: 'vcard:fn'
+          fundedBy: 'foaf:fundedBy'
+          funding: 'schema:funding'
+          generalizes: 'mod:generalizes'
+          group: 'mod:group'
+          Group: 'mod:Group'
+          hasDisjunctionsWith: 'mod:hasDisjunctionsWith'
+          hasDisparateModelling: 'mod:hasDisparateModelling'
+          hasEquivalencesWith: 'mod:hasEquivalencesWith'
+          hasEvaluation: 'mod:hasEvaluation'
+          hasFormat: 'dcterms:hasFormat'
+          hasPart: 'dcterms:hasPart'
+          hasPolicy: 'odrl:hasPolicy'
+          hasVersion: 'dcterms:hasVersion'
+          hiddenLabel: 'skos:hiddenLabel'
+          homepage: 'foaf:homepage'
+          identifier: 'dcterms:identifier'
+          Image: 'foaf:Image'
+          includedInDataCatalog: 'schema:includedInDataCatalog'
+          incompatibleWith: 'owl:incompatibleWith'
+          isFormatOf: 'dcterms:isFormatOf'
+          isPartOf: 'dcterms:isPartOf'
+          isReferencedBy: 'dcterms:isReferencedBy'
+          issued: 'dcterms:issued'
+          keyword: 'dcat:keyword'
+          Kind: 'vcard:Kind'
+          knownUsage: 'mod:knownUsage'
+          landingPage: 'dcat:landingPage'
+          language: 'dcterms:language'
+          license: 'dcterms:license'
+          Literal: 'rdfs:Literal'
+          logo: 'foaf:logo'
+          mailing-list: 'doap:mailing-list'
+          metrics: 'mod:metrics'
+          modified: 'dcterms:modified'
+          morePermissions: 'cc:morePermissions'
+          nickname: 'vcard:nickname'
+          nonNegativeInteger: 'xsd:nonNegativeInteger'
+          numberOfAgents: 'mod:numberOfAgents'
+          numberOfEndorsements: 'mod:numberOfEndorsements'
+          numberOfEvaluations: 'mod:numberOfEvaluations'
+          numberOfNotes: 'mod:numberOfNotes'
+          numberOfUsers: 'mod:numberOfUsers'
+          numberOfUsingProjects: 'mod:numberOfUsingProjects'
+          Ontology: 'owl:Ontology'
+          openSearchDescription: 'void:openSearchDescription'
+          preferredNamespacePrefix: 'vann:preferredNamespacePrefix'
+          preferredNamespaceUri: 'vann:preferredNamespaceUri'
+          primaryTopic: 'foaf:primaryTopic'
+          priorVersion: 'owl:priorVersion'
+          Project: 'foaf:Project'
+          propertyPartition: 'void:propertyPartition'
+          publisher: 'dcterms:publisher'
+          qualifiedAttribution: 'prov:qualifiedAttribution'
+          qualifiedRelation: 'dcat:qualifiedRelation'
+          relation: 'dcterms:relation'
+          reliesOn: 'mod:reliesOn'
+          repository: 'doap:repository'
+          Resource: 'rdfs:Resource'
+          rights: 'dcterms:rights'
+          rightsHolder: 'dcterms:rightsHolder'
+          rootResource: 'void:rootResource'
+          SemanticArtefact: 'mod:SemanticArtefact'
+          semanticArtefactRelation: 'mod:semanticArtefactRelation'
+          SemanticArtefactTask: 'mod:SemanticArtefactTask'
+          similar: 'mod:similar'
+          source: 'dcterms:source'
+          specializes: 'mod:specializes'
+          status: 'mod:status'
+          string: 'xsd:string'
+          subject: 'dcterms:subject'
+          Thing: 'owl:Thing'
+          title: 'dcterms:title'
+          toDoList: 'mod:toDoList'
+          translationOfWork: 'schema:translationOfWork'
+          translator: 'schema:translator'
+          type: 'dcterms:type'
+          URI: 'mod:URI'
+          uriLookupEndpoint: 'void:uriLookupEndpoint'
+          uriRegexPattern: 'void:uriRegexPattern'
+          usedBy: 'mod:usedBy'
+          usedInProject: 'mod:usedInProject'
+          useGuidelines: 'cc:useGuidelines'
+          versionInfo: 'owl:versionInfo'
+          versionIRI: 'owl:versionIRI'
+          Vtodo: 'ical:Vtodo'
+          wasGeneratedBy: 'prov:wasGeneratedBy'
+          wasInvalidatedBy: 'prov:wasInvalidatedBy'
+          workTranslation: 'schema:workTranslation'
+
+        '@id': 'https://example.org/SemanticArtefact/SemanticArtefactID'
+        '@type': SemanticArtefact
+        accessRights: string
+        conformsTo: string
+        contactPoint:
+          '@id': 'https://example.org/vcardKind/vcardKindID'
+          '@type': Kind
+          fn: Corky Crystal
+          nickname: Corks
+        creator: string
+        description:
+          '@type': Literal
+          '@value': Lorem ipsum
+        hasPolicy:
+          '@id': 'https://example.org/Policy/PolicyID'
+          '@type': 'odrl:Policy'
+        identifier:
+          '@type': Literal
+          '@value': Lorem ipsum
+        isReferencedBy: string
+        issued: string
+        keyword: string
+        landingPage:
+          '@id': 'https://example.org/Document/DocumentID'
+          '@type': Document
+        language: string
+        license: string
+        modified:
+          '@type': Literal
+          '@value': Lorem ipsum
+        publisher: string
+        qualifiedAttribution:
+          '@id': 'https://example.org/Attribution/AttributionID'
+          '@type': Attribution
+        qualifiedRelation: string
+        relation: string
+        rights: string
+        subject: string
+        title:
+          '@type': Literal
+          '@value': Lorem ipsum
+        type: string
+        useGuidelines:
+          '@id': 'https://example.org/Resource/ResourceID'
+          '@type': Resource
+        morePermissions:
+          '@id': 'https://example.org/Resource/ResourceID'
+          '@type': Resource
+        primaryTopic:
+          '@id': 'https://example.org/Thing/ThingID'
+          '@type': Thing
+        abstract: string
+        accrualMethod: string
+        accrualPeriodicity: string
+        accrualPolicy: string
+        alternative:
+          '@type': Literal
+          '@value': Lorem ipsum
+        audience: string
+        bibliographicCitation:
+          '@type': Literal
+          '@value': Lorem ipsum
+        contributor: string
+        coverage: string
+        hasFormat: string
+        hasPart: string
+        hasVersion: string
+        isFormatOf: string
+        isPartOf: string
+        rightsHolder: string
+        source: string
+        bug-database: string
+        mailing-list: string
+        repository:
+          '@id': 'https://example.org/repository/repositoryID'
+          '@type': repository
+        depiction:
+          '@id': 'https://example.org/Image/ImageID'
+          '@type': Image
+        fundedBy:
+          '@id': 'https://example.org/Thing/ThingID'
+          '@type': Thing
+        homepage:
+          '@id': 'https://example.org/Document/DocumentID'
+          '@type': Document
+        logo:
+          '@id': 'https://example.org/Thing/ThingID'
+          '@type': Thing
+        acronym:
+          '@type': string
+          '@value': Lorem ipsum
+        analytics:
+          '@id': 'https://example.org/Analytics/AnalyticsID'
+          '@type': Analytics
+        comesFromTheSameDomain: string
+        competencyQuestion:
+          '@type': string
+          '@value': Lorem ipsum
+        designedForTask:
+          '@id': 'https://example.org/SemanticArtefactTask/SemanticArtefactTaskID'
+          '@type': SemanticArtefactTask
+        endorsedBy: string
+        generalizes: string
+        group:
+          '@id': 'https://example.org/Group/GroupID'
+          '@type': Group
+        hasDisjunctionsWith: string
+        hasDisparateModelling: string
+        hasEquivalencesWith: string
+        hasEvaluation:
+          '@id': 'https://example.org/Evaluation/EvaluationID'
+          '@type': Evaluation
+        knownUsage:
+          '@type': string
+          '@value': Lorem ipsum
+        metrics:
+          '@type': nonNegativeInteger
+          '@value': 5436
+        numberOfAgents:
+          '@type': nonNegativeInteger
+          '@value': 5436
+        numberOfEndorsements:
+          '@type': nonNegativeInteger
+          '@value': 5436
+        numberOfEvaluations:
+          '@type': nonNegativeInteger
+          '@value': 5436
+        numberOfNotes:
+          '@type': nonNegativeInteger
+          '@value': 5436
+        numberOfUsers:
+          '@type': nonNegativeInteger
+          '@value': 5436
+        numberOfUsingProjects:
+          '@type': nonNegativeInteger
+          '@value': 5436
+        reliesOn: string
+        semanticArtefactRelation: string
+        similar: string
+        specializes: string
+        status:
+          '@type': string
+          '@value': Lorem ipsum
+        toDoList:
+          '@id': 'https://example.org/Vtodo/VtodoID'
+          '@type': Vtodo
+        URI:
+          '@type': anyURI
+          '@value': 'https://example.org'
+        usedBy: string
+        usedInProject:
+          '@id': 'https://example.org/Project/ProjectID'
+          '@type': Project
+        backwardCompatibleWith:
+          '@id': 'https://example.org/Ontology/OntologyID'
+          '@type': Ontology
+        deprecated:
+          '@id': 'https://example.org/Resource/ResourceID'
+          '@type': Resource
+        incompatibleWith:
+          '@id': 'https://example.org/Ontology/OntologyID'
+          '@type': Ontology
+        priorVersion:
+          '@id': 'https://example.org/Ontology/OntologyID'
+          '@type': Ontology
+        versionInfo:
+          '@type': string
+          '@value': Lorem ipsum
+        versionIRI:
+          '@id': 'https://example.org/Ontology/OntologyID'
+          '@type': Ontology
+        curatedBy: string
+        createdWith: string
+        wasGeneratedBy:
+          '@id': 'https://example.org/Activity/ActivityID'
+          '@type': Activity
+        wasInvalidatedBy:
+          '@id': 'https://example.org/Activity/ActivityID'
+          '@type': Activity
+        comment:
+          '@type': Literal
+          '@value': Lorem ipsum
+        associatedMedia: string
+        award: string
+        'schema:comment': string
+        funding: string
+        includedInDataCatalog: string
+        translationOfWork: string
+        translator: string
+        workTranslation: string
+        hiddenLabel:
+          '@type': Literal
+          '@value': Lorem ipsum
+        changes: string
+        example: string
+        preferredNamespacePrefix: string
+        preferredNamespaceUri: string
+        openSearchDescription:
+          '@id': 'https://example.org/Document/DocumentID'
+          '@type': Document
+        classPartition:
+          '@id': 'https://example.org/voidDataset/voidDatasetID'
+          '@type': dataset
+        exampleResource:
+          '@id': 'https://example.org/Resource/ResourceID'
+          '@type': Resource
+        rootResource:
+          '@id': 'https://example.org/Resource/ResourceID'
+          '@type': Resource
+        propertyPartition:
+          '@id': 'https://example.org/voidDataset/voidDatasetID'
+          '@type': dataset
+        uriLookupEndpoint:
+          '@type': anyURI
+          '@value': 'https://example.org'
+        uriRegexPattern: string
+
+    semanticArtefacts:
+      summary: Semantic Artefacts
+      value:
+        '@context':
+          adms: 'http://www.w3.org/ns/adms#'
+          cc: 'http://creativecommons.org/ns#'
+          dc: 'http://purl.org/dc/elements/1.1/'
+          dcat: 'http://www.w3.org/ns/dcat#'
+          dcterms: 'http://purl.org/dc/terms/'
+          doap: 'http://usefulinc.com/ns/doap#'
+          foaf: 'http://xmlns.com/foaf/0.1/'
+          ical: 'http://www.w3.org/2002/12/cal/ical#'
+          mod: 'https://w3id.org/mod#'
+          odrl: 'http://www.w3.org/ns/odrl/2/'
+          owl: 'http://www.w3.org/2002/07/owl#'
+          pav: 'http://purl.org/pav/'
+          prov: 'http://www.w3.org/ns/prov#'
+          rdf: 'http://www.w3.org/1999/02/22-rdf-syntax-ns#'
+          rdfs: 'http://www.w3.org/2000/01/rdf-schema#'
+          schema: 'https://schema.org/'
+          sd: 'http://www.w3.org/ns/sparql-service-description#'
+          skos: 'http://www.w3.org/2004/02/skos/core#'
+          vann: 'https://vocab.org/vann/'
+          vcard: 'http://www.w3.org/2006/vcard/ns#'
+          void: 'http://rdfs.org/ns/void#'
+          xsd: 'http://www.w3.org/2001/XMLSchema#'
+          hydra: 'http://www.w3.org/ns/hydra/core#'
+          abstract: 'dcterms:abstract'
+          accessRights: 'dcterms:accessRights'
+          accrualMethod: 'dcterms:accrualMethod'
+          accrualPeriodicity: 'dcterms:accrualPeriodicity'
+          accrualPolicy: 'dcterms:accrualPolicy'
+          acronym: 'mod:acronym'
+          Activity: 'prov:Activity'
+          alternative: 'dcterms:alternative'
+          analytics: 'mod:analytics'
+          Analytics: 'mod:Analytics'
+          anyURI: 'xsd:anyURI'
+          associatedMedia: 'schema:associatedMedia'
+          Attribution: 'prov:Attribution'
+          audience: 'dcterms:audience'
+          award: 'schema:award'
+          backwardCompatibleWith: 'owl:backwardCompatibleWith'
+          bibliographicCitation: 'dcterms:bibliographicCitation'
+          bug-database: 'doap:bug-database'
+          changes: 'vann:changes'
+          classPartition: 'void:classPartition'
+          Collection: 'hydra:Collection'
+          comesFromTheSameDomain: 'mod:comesFromTheSameDomain'
+          comment: 'rdfs:comment'
+          competencyQuestion: 'mod:competencyQuestion'
+          conformsTo: 'dcterms:conformsTo'
+          contactPoint: 'dcat:contactPoint'
+          contributor: 'dcterms:contributor'
+          coverage: 'dcterms:coverage'
+          createdWith: 'pav:createdWith'
+          creator: 'dcterms:creator'
+          curatedBy: 'pav:curatedBy'
+          dataset: 'void:dataset'
+          depiction: 'foaf:depiction'
+          deprecated: 'owl:deprecated'
+          description: 'dcterms:description'
+          designedForTask: 'mod:designedForTask'
+          Document: 'foaf:Document'
+          endorsedBy: 'mod:endorsedBy'
+          Evaluation: 'mod:Evaluation'
+          example: 'vann:example'
+          exampleResource: 'void:exampleResource'
+          firstPage: 'hydra:first'
+          fn: 'vcard:fn'
+          fundedBy: 'foaf:fundedBy'
+          funding: 'schema:funding'
+          generalizes: 'mod:generalizes'
+          group: 'mod:group'
+          Group: 'mod:Group'
+          hasDisjunctionsWith: 'mod:hasDisjunctionsWith'
+          hasDisparateModelling: 'mod:hasDisparateModelling'
+          hasEquivalencesWith: 'mod:hasEquivalencesWith'
+          hasEvaluation: 'mod:hasEvaluation'
+          hasFormat: 'dcterms:hasFormat'
+          hasPart: 'dcterms:hasPart'
+          hasPolicy: 'odrl:hasPolicy'
+          hasVersion: 'dcterms:hasVersion'
+          hiddenLabel: 'skos:hiddenLabel'
+          homepage: 'foaf:homepage'
+          identifier: 'dcterms:identifier'
+          Image: 'foaf:Image'
+          includedInDataCatalog: 'schema:includedInDataCatalog'
+          incompatibleWith: 'owl:incompatibleWith'
+          isFormatOf: 'dcterms:isFormatOf'
+          isPartOf: 'dcterms:isPartOf'
+          isReferencedBy: 'dcterms:isReferencedBy'
+          issued: 'dcterms:issued'
+          itemsPerPage: 'hydra:itemsPerPage'
+          keyword: 'dcat:keyword'
+          Kind: 'vcard:Kind'
+          knownUsage: 'mod:knownUsage'
+          landingPage: 'dcat:landingPage'
+          language: 'dcterms:language'
+          lastPage: 'hydra:last'
+          license: 'dcterms:license'
+          Literal: 'rdfs:Literal'
+          logo: 'foaf:logo'
+          mailing-list: 'doap:mailing-list'
+          member: 'hydra:member'
+          metrics: 'mod:metrics'
+          modified: 'dcterms:modified'
+          morePermissions: 'cc:morePermissions'
+          nextPage: 'hydra:next'
+          nickname: 'vcard:nickname'
+          nonNegativeInteger: 'xsd:nonNegativeInteger'
+          numberOfAgents: 'mod:numberOfAgents'
+          numberOfEndorsements: 'mod:numberOfEndorsements'
+          numberOfEvaluations: 'mod:numberOfEvaluations'
+          numberOfNotes: 'mod:numberOfNotes'
+          numberOfUsers: 'mod:numberOfUsers'
+          numberOfUsingProjects: 'mod:numberOfUsingProjects'
+          Ontology: 'owl:Ontology'
+          openSearchDescription: 'void:openSearchDescription'
+          PartialCollectionView: 'hydra:PartialCollectionView'
+          preferredNamespacePrefix: 'vann:preferredNamespacePrefix'
+          preferredNamespaceUri: 'vann:preferredNamespaceUri'
+          previousPage: 'hydra:previous'
+          primaryTopic: 'foaf:primaryTopic'
+          priorVersion: 'owl:priorVersion'
+          Project: 'foaf:Project'
+          propertyPartition: 'void:propertyPartition'
+          publisher: 'dcterms:publisher'
+          qualifiedAttribution: 'prov:qualifiedAttribution'
+          qualifiedRelation: 'dcat:qualifiedRelation'
+          relation: 'dcterms:relation'
+          reliesOn: 'mod:reliesOn'
+          repository: 'doap:repository'
+          Resource: 'rdfs:Resource'
+          rights: 'dcterms:rights'
+          rightsHolder: 'dcterms:rightsHolder'
+          rootResource: 'void:rootResource'
+          SemanticArtefact: 'mod:SemanticArtefact'
+          semanticArtefactRelation: 'mod:semanticArtefactRelation'
+          SemanticArtefactTask: 'mod:SemanticArtefactTask'
+          similar: 'mod:similar'
+          source: 'dcterms:source'
+          specializes: 'mod:specializes'
+          status: 'mod:status'
+          string: 'xsd:string'
+          subject: 'dcterms:subject'
+          Thing: 'owl:Thing'
+          title: 'dcterms:title'
+          toDoList: 'mod:toDoList'
+          totalItems: 'hydra:totalItems'
+          translationOfWork: 'schema:translationOfWork'
+          translator: 'schema:translator'
+          type: 'dcterms:type'
+          URI: 'mod:URI'
+          uriLookupEndpoint: 'void:uriLookupEndpoint'
+          uriRegexPattern: 'void:uriRegexPattern'
+          usedBy: 'mod:usedBy'
+          usedInProject: 'mod:usedInProject'
+          useGuidelines: 'cc:useGuidelines'
+          versionInfo: 'owl:versionInfo'
+          versionIRI: 'owl:versionIRI'
+          view: 'hydra:view'
+          Vtodo: 'ical:Vtodo'
+          wasGeneratedBy: 'prov:wasGeneratedBy'
+          wasInvalidatedBy: 'prov:wasInvalidatedBy'
+          workTranslation: 'schema:workTranslation'
+        '@id': 'https://example.org/collection/collectionID'
+        '@type': Collection
+        totalItems:
+          '@type': nonNegativeInteger
+          '@value': 5436
+        itemsPerPage:
+          '@type': nonNegativeInteger
+          '@value': 50
+        member:
+          - '@id': 'https://example.org/SemanticArtefact/SemanticArtefactID'
+            '@type': SemanticArtefact
+            accessRights: string
+            conformsTo: string
+            contactPoint:
+              '@id': 'https://example.org/vcardKind/vcardKindID'
+              '@type': Kind
+              fn: Corky Crystal
+              nickname: Corks
+            creator: string
+            description:
+              '@type': Literal
+              '@value': Lorem ipsum
+            hasPolicy:
+              '@id': 'https://example.org/Policy/PolicyID'
+              '@type': 'odrl:Policy'
+            identifier:
+              '@type': Literal
+              '@value': Lorem ipsum
+            isReferencedBy: string
+            issued: string
+            keyword: string
+            landingPage:
+              '@id': 'https://example.org/Document/DocumentID'
+              '@type': Document
+            language: string
+            license: string
+            modified:
+              '@type': Literal
+              '@value': Lorem ipsum
+            publisher: string
+            qualifiedAttribution:
+              '@id': 'https://example.org/Attribution/AttributionID'
+              '@type': Attribution
+            qualifiedRelation: string
+            relation: string
+            rights: string
+            subject: string
+            title:
+              '@type': Literal
+              '@value': Lorem ipsum
+            type: string
+            useGuidelines:
+              '@id': 'https://example.org/Resource/ResourceID'
+              '@type': Resource
+            morePermissions:
+              '@id': 'https://example.org/Resource/ResourceID'
+              '@type': Resource
+            primaryTopic:
+              '@id': 'https://example.org/Thing/ThingID'
+              '@type': Thing
+            abstract: string
+            accrualMethod: string
+            accrualPeriodicity: string
+            accrualPolicy: string
+            alternative:
+              '@type': Literal
+              '@value': Lorem ipsum
+            audience: string
+            bibliographicCitation:
+              '@type': Literal
+              '@value': Lorem ipsum
+            contributor: string
+            coverage: string
+            hasFormat: string
+            hasPart: string
+            hasVersion: string
+            isFormatOf: string
+            isPartOf: string
+            rightsHolder: string
+            source: string
+            bug-database: string
+            mailing-list: string
+            repository:
+              '@id': 'https://example.org/repository/repositoryID'
+              '@type': repository
+            depiction:
+              '@id': 'https://example.org/Image/ImageID'
+              '@type': Image
+            fundedBy:
+              '@id': 'https://example.org/Thing/ThingID'
+              '@type': Thing
+            homepage:
+              '@id': 'https://example.org/Document/DocumentID'
+              '@type': Document
+            logo:
+              '@id': 'https://example.org/Thing/ThingID'
+              '@type': Thing
+            acronym:
+              '@type': string
+              '@value': Lorem ipsum
+            analytics:
+              '@id': 'https://example.org/Analytics/AnalyticsID'
+              '@type': Analytics
+            comesFromTheSameDomain: string
+            competencyQuestion:
+              '@type': string
+              '@value': Lorem ipsum
+            designedForTask:
+              '@id': 'https://example.org/SemanticArtefactTask/SemanticArtefactTaskID'
+              '@type': SemanticArtefactTask
+            endorsedBy: string
+            generalizes: string
+            group:
+              '@id': 'https://example.org/Group/GroupID'
+              '@type': Group
+            hasDisjunctionsWith: string
+            hasDisparateModelling: string
+            hasEquivalencesWith: string
+            hasEvaluation:
+              '@id': 'https://example.org/Evaluation/EvaluationID'
+              '@type': Evaluation
+            knownUsage:
+              '@type': string
+              '@value': Lorem ipsum
+            metrics:
+              '@type': nonNegativeInteger
+              '@value': 5436
+            numberOfAgents:
+              '@type': nonNegativeInteger
+              '@value': 5436
+            numberOfEndorsements:
+              '@type': nonNegativeInteger
+              '@value': 5436
+            numberOfEvaluations:
+              '@type': nonNegativeInteger
+              '@value': 5436
+            numberOfNotes:
+              '@type': nonNegativeInteger
+              '@value': 5436
+            numberOfUsers:
+              '@type': nonNegativeInteger
+              '@value': 5436
+            numberOfUsingProjects:
+              '@type': nonNegativeInteger
+              '@value': 5436
+            reliesOn: string
+            semanticArtefactRelation: string
+            similar: string
+            specializes: string
+            status:
+              '@type': string
+              '@value': Lorem ipsum
+            toDoList:
+              '@id': 'https://example.org/Vtodo/VtodoID'
+              '@type': Vtodo
+            URI:
+              '@type': anyURI
+              '@value': 'https://example.org'
+            usedBy: string
+            usedInProject:
+              '@id': 'https://example.org/Project/ProjectID'
+              '@type': Project
+            backwardCompatibleWith:
+              '@id': 'https://example.org/Ontology/OntologyID'
+              '@type': Ontology
+            deprecated:
+              '@id': 'https://example.org/Resource/ResourceID'
+              '@type': Resource
+            incompatibleWith:
+              '@id': 'https://example.org/Ontology/OntologyID'
+              '@type': Ontology
+            priorVersion:
+              '@id': 'https://example.org/Ontology/OntologyID'
+              '@type': Ontology
+            versionInfo:
+              '@type': string
+              '@value': Lorem ipsum
+            versionIRI:
+              '@id': 'https://example.org/Ontology/OntologyID'
+              '@type': Ontology
+            curatedBy: string
+            createdWith: string
+            wasGeneratedBy:
+              '@id': 'https://example.org/Activity/ActivityID'
+              '@type': Activity
+            wasInvalidatedBy:
+              '@id': 'https://example.org/Activity/ActivityID'
+              '@type': Activity
+            comment:
+              '@type': Literal
+              '@value': Lorem ipsum
+            associatedMedia: string
+            award: string
+            'schema:comment': string
+            funding: string
+            includedInDataCatalog: string
+            translationOfWork: string
+            translator: string
+            workTranslation: string
+            hiddenLabel:
+              '@type': Literal
+              '@value': Lorem ipsum
+            changes: string
+            example: string
+            preferredNamespacePrefix: string
+            preferredNamespaceUri: string
+            openSearchDescription:
+              '@id': 'https://example.org/Document/DocumentID'
+              '@type': Document
+            classPartition:
+              '@id': 'https://example.org/voidDataset/voidDatasetID'
+              '@type': dataset
+            exampleResource:
+              '@id': 'https://example.org/Resource/ResourceID'
+              '@type': Resource
+            rootResource:
+              '@id': 'https://example.org/Resource/ResourceID'
+              '@type': Resource
+            propertyPartition:
+              '@id': 'https://example.org/voidDataset/voidDatasetID'
+              '@type': dataset
+            uriLookupEndpoint:
+              '@type': anyURI
+              '@value': 'https://example.org'
+            uriRegexPattern: string
+        view:
+          '@id': 'https://example.org/items?page=3'
+          '@type': PartialCollectionView
+          firstPage: 'https://example.org/items?page=1'
+          previousPage: 'https://example.org/items?page=2'
+          nextPage: 'https://example.org/items?page=4'
+          lastPage: 'https://example.org/items?page=42'
+
+    semanticArtefactCatalogRecord:
+      summary: Semantic Artefact Catalog Record
+      value:
+        '@context':
+          dcat: 'http://www.w3.org/ns/dcat#'
+          dcterms: 'http://purl.org/dc/terms/'
+          foaf: 'http://xmlns.com/foaf/0.1/'
+          mod: 'https://w3id.org/mod#'
+          odrl: 'http://www.w3.org/ns/odrl/2/'
+          pav: 'http://purl.org/pav/'
+          prov: 'http://www.w3.org/ns/prov#'
+          rdfs: 'http://www.w3.org/2000/01/rdf-schema#'
+          skos: 'http://www.w3.org/2004/02/skos/core#'
+          vcard: 'http://www.w3.org/2006/vcard/ns#'
+          xsd: 'http://www.w3.org/2001/XMLSchema#'
+          accessRights: 'dcterms:accessRights'
+          Attribution: 'prov:Attribution'
+          conformsTo: 'dcterms:conformsTo'
+          contactPoint: 'dcat:contactPoint'
+          created: 'dcterms:created'
+          creator: 'dcterms:creator'
+          curatedBy: 'pav:curatedBy'
+          curatedOn: 'pav:curatedOn'
+          date: 'xsd:date'
+          dateSubmitted: 'dcterms:dateSubmitted'
+          description: 'dcterms:description'
+          Document: 'foaf:Document'
+          fn: 'vcard:fn'
+          hasPolicy: 'odrl:hasPolicy'
+          homepage: 'foaf:homepage'
+          identifier: 'dcterms:identifier'
+          isReferencedBy: 'dcterms:isReferencedBy'
+          issued: 'dcterms:issued'
+          keyword: 'dcat:keyword'
+          Kind: 'vcard:Kind'
+          landingPage: 'dcat:landingPage'
+          language: 'dcterms:language'
+          license: 'dcterms:license'
+          Literal: 'rdfs:Literal'
+          modified: 'dcterms:modified'
+          nickname: 'vcard:nickname'
+          nonNegativeInteger: 'xsd:nonNegativeInteger'
+          Policy: 'odrl:Policy'
+          primaryTopic: 'foaf:primaryTopic'
+          publisher: 'dcterms:publisher'
+          qualifiedAttribution: 'prov:qualifiedAttribution'
+          qualifiedRelation: 'dcat:qualifiedRelation'
+          relation: 'dcterms:relation'
+          rights: 'dcterms:rights'
+          SemanticArtefactCatalogRecord: 'mod:SemanticArtefactCatalogRecord'
+          subject: 'dcterms:subject'
+          title: 'dcterms:title'
+          type: 'dcterms:type'
+        '@id': >-
+          https://example.org/SemanticArtefactCatalogRecord/SemanticArtefactCatalogRecordID
+        '@type': SemanticArtefactCatalogRecord
+        conformsTo: string
+        description:
+          '@type': Literal
+          '@value': Lorem ipsum
+        issued:
+          '@type': Literal
+          '@value': Lorem ipsum
+        modified:
+          '@type': Literal
+          '@value': Lorem ipsum
+        title:
+          '@type': Literal
+          '@value': Lorem ipsum
+        primaryTopic:
+          accessRights: string
+          conformsTo: string
+          contactPoint:
+            '@id': 'https://example.org/vcardKind/vcardKindID'
+            '@type': Kind
+            fn: Corky Crystal
+            nickname: Corks
+          creator: string
+          description:
+            '@type': Literal
+            '@value': Lorem ipsum
+          hasPolicy:
+            '@id': 'https://example.org/Policy/PolicyID'
+            '@type': Policy
+          identifier:
+            '@type': Literal
+            '@value': Lorem ipsum
+          isReferencedBy: string
+          issued: string
+          keyword: string
+          landingPage:
+            '@id': 'https://example.org/Document/DocumentID'
+            '@type': Document
+          language: string
+          license: string
+          modified:
+            '@type': Literal
+            '@value': Lorem ipsum
+          publisher: string
+          qualifiedAttribution:
+            '@id': 'https://example.org/Attribution/AttributionID'
+            '@type': Attribution
+          qualifiedRelation: string
+          relation: string
+          rights: string
+          subject: string
+          title:
+            '@type': Literal
+            '@value': Lorem ipsum
+          type: string
+        dateSubmitted:
+          '@type': Literal
+          '@value': Lorem ipsum
+        homepage:
+          '@id': 'https://example.org/Document/DocumentID'
+          '@type': Document
+        created:
+          '@type': Literal
+          '@value': Lorem ipsum
+        curatedBy: string
+        curatedOn:
+          '@type': date
+
+    semanticArtefactCatalogRecords:
+      summary: Semantic Artefact Catalog Records
+      value:
+        '@context':
+          dcat: 'http://www.w3.org/ns/dcat#'
+          dcterms: 'http://purl.org/dc/terms/'
+          foaf: 'http://xmlns.com/foaf/0.1/'
+          hydra: 'http://www.w3.org/ns/hydra/core#'
+          mod: 'https://w3id.org/mod#'
+          odrl: 'http://www.w3.org/ns/odrl/2/'
+          pav: 'http://purl.org/pav/'
+          prov: 'http://www.w3.org/ns/prov#'
+          rdfs: 'http://www.w3.org/2000/01/rdf-schema#'
+          skos: 'http://www.w3.org/2004/02/skos/core#'
+          vcard: 'http://www.w3.org/2006/vcard/ns#'
+          xsd: 'http://www.w3.org/2001/XMLSchema#'
+          accessRights: 'dcterms:accessRights'
+          Attribution: 'prov:Attribution'
+          Collection: 'hydra:Collection'
+          conformsTo: 'dcterms:conformsTo'
+          contactPoint: 'dcat:contactPoint'
+          created: 'dcterms:created'
+          creator: 'dcterms:creator'
+          curatedBy: 'pav:curatedBy'
+          curatedOn: 'pav:curatedOn'
+          date: 'xsd:date'
+          dateSubmitted: 'dcterms:dateSubmitted'
+          description: 'dcterms:description'
+          Document: 'foaf:Document'
+          firstPage: 'hydra:first'
+          fn: 'vcard:fn'
+          hasPolicy: 'odrl:hasPolicy'
+          homepage: 'foaf:homepage'
+          identifier: 'dcterms:identifier'
+          isReferencedBy: 'dcterms:isReferencedBy'
+          issued: 'dcterms:issued'
+          itemsPerPage: 'hydra:itemsPerPage'
+          keyword: 'dcat:keyword'
+          Kind: 'vcard:Kind'
+          landingPage: 'dcat:landingPage'
+          language: 'dcterms:language'
+          lastPage: 'hydra:last'
+          license: 'dcterms:license'
+          Literal: 'rdfs:Literal'
+          member: 'hydra:member'
+          modified: 'dcterms:modified'
+          nextPage: 'hydra:next'
+          nickname: 'vcard:nickname'
+          nonNegativeInteger: 'xsd:nonNegativeInteger'
+          PartialCollectionView: 'hydra:PartialCollectionView'
+          Policy: 'odrl:Policy'
+          previousPage: 'hydra:previous'
+          primaryTopic: 'foaf:primaryTopic'
+          publisher: 'dcterms:publisher'
+          qualifiedAttribution: 'prov:qualifiedAttribution'
+          qualifiedRelation: 'dcat:qualifiedRelation'
+          relation: 'dcterms:relation'
+          rights: 'dcterms:rights'
+          SemanticArtefactCatalogRecord: 'mod:SemanticArtefactCatalogRecord'
+          subject: 'dcterms:subject'
+          title: 'dcterms:title'
+          totalItems: 'hydra:totalItems'
+          type: 'dcterms:type'
+          view: 'hydra:view'
+        '@id': 'https://example.org/collection/collectionID'
+        '@type': Collection
+        totalItems:
+          '@type': nonNegativeInteger
+          '@value': 5436
+        itemsPerPage:
+          '@type': nonNegativeInteger
+          '@value': 50
+        member:
+          - '@id': >-
+              https://example.org/SemanticArtefactCatalogRecord/SemanticArtefactCatalogRecordID
+            '@type': SemanticArtefactCatalogRecord
+            conformsTo: string
+            description:
+              '@type': Literal
+              '@value': Lorem ipsum
+            issued:
+              '@type': Literal
+              '@value': Lorem ipsum
+            modified:
+              '@type': Literal
+              '@value': Lorem ipsum
+            title:
+              '@type': Literal
+              '@value': Lorem ipsum
+            primaryTopic:
+              accessRights: string
+              conformsTo: string
+              contactPoint:
+                '@id': 'https://example.org/vcardKind/vcardKindID'
+                '@type': Kind
+                fn: Corky Crystal
+                nickname: Corks
+              creator: string
+              description:
+                '@type': Literal
+                '@value': Lorem ipsum
+              hasPolicy:
+                '@id': 'https://example.org/Policy/PolicyID'
+                '@type': Policy
+              identifier:
+                '@type': Literal
+                '@value': Lorem ipsum
+              isReferencedBy: string
+              issued: string
+              keyword: string
+              landingPage:
+                '@id': 'https://example.org/Document/DocumentID'
+                '@type': Document
+              language: string
+              license: string
+              modified:
+                '@type': Literal
+                '@value': Lorem ipsum
+              publisher: string
+              qualifiedAttribution:
+                '@id': 'https://example.org/Attribution/AttributionID'
+                '@type': Attribution
+              qualifiedRelation: string
+              relation: string
+              rights: string
+              subject: string
+              title:
+                '@type': Literal
+                '@value': Lorem ipsum
+              type: string
+            dateSubmitted:
+              '@type': Literal
+              '@value': Lorem ipsum
+            homepage:
+              '@id': 'https://example.org/Document/DocumentID'
+              '@type': Document
+            created:
+              '@type': Literal
+              '@value': Lorem ipsum
+            curatedBy: string
+            curatedOn:
+              '@type': date
+        view:
+          '@id': 'https://example.org/items?page=3'
+          '@type': PartialCollectionView
+          firstPage: 'https://example.org/items?page=1'
+          previousPage: 'https://example.org/items?page=2'
+          nextPage: 'https://example.org/items?page=4'
+          lastPage: 'https://example.org/items?page=42'
+
+    skosCollections:
+      summary: Collections
+      value:
+        '@context':
+          hydra: 'http://www.w3.org/ns/hydra/core#'
+          skos: 'http://www.w3.org/2004/02/skos/core#'
+          xsd: 'http://www.w3.org/2001/XMLSchema#'
+          Collection: 'hydra:Collection'
+          firstPage: 'hydra:first'
+          itemsPerPage: 'hydra:itemsPerPage'
+          lastPage: 'hydra:last'
+          member: 'hydra:member'
+          nextPage: 'hydra:next'
+          nonNegativeInteger: 'xsd:nonNegativeInteger'
+          PartialCollectionView: 'hydra:PartialCollectionView'
+          prefLabel: 'skos:prefLabel'
+          previousPage: 'hydra:previous'
+          skosCollection: 'skos:Collection'
+          totalItems: 'hydra:totalItems'
+          view: 'hydra:view'
+        '@id': 'https://example.org/collection/collectionID'
+        '@type': Collection
+        totalItems:
+          '@type': nonNegativeInteger
+          '@value': 5436
+        itemsPerPage:
+          '@type': nonNegativeInteger
+          '@value': 50
+        member:
+          - '@id': 'https://example.org/skosCollection/skosCollectionID1'
+            '@type': skosCollection
+            prefLabel: collection of cars
+          - '@id': 'https://example.org/skosCollection/skosCollectionID2'
+            '@type': skosCollection
+            prefLabel: collection of cats
+        view:
+          '@id': 'https://example.org/items?page=3'
+          '@type': PartialCollectionView
+          firstPage: 'https://example.org/items?page=1'
+          previousPage: 'https://example.org/items?page=2'
+          nextPage: 'https://example.org/items?page=4'
+          lastPage: 'https://example.org/items?page=42'
+
+    skosConcepts:
+      summary: Concepts
+      value:
+        '@context':
+          hydra: 'http://www.w3.org/ns/hydra/core#'
+          skos: 'http://www.w3.org/2004/02/skos/core#'
+          xsd: 'http://www.w3.org/2001/XMLSchema#'
+          Collection: 'hydra:Collection'
+          Concept: 'skos:Concept'
+          firstPage: 'hydra:first'
+          itemsPerPage: 'hydra:itemsPerPage'
+          lastPage: 'hydra:last'
+          member: 'hydra:member'
+          nextPage: 'hydra:next'
+          nonNegativeInteger: 'xsd:nonNegativeInteger'
+          PartialCollectionView: 'hydra:PartialCollectionView'
+          prefLabel: 'skos:prefLabel'
+          previousPage: 'hydra:previous'
+          totalItems: 'hydra:totalItems'
+          view: 'hydra:view'
+        '@id': 'https://example.org/collection/collectionID'
+        '@type': Collection
+        totalItems:
+          '@type': nonNegativeInteger
+          '@value': 5436
+        itemsPerPage:
+          '@type': nonNegativeInteger
+          '@value': 50
+        member:
+          - '@id': 'https://example.org/skosConcept/skosConceptID1'
+            '@type': Concept
+            prefLabel: cars
+          - '@id': 'https://example.org/skosConcept/skosConceptID2'
+            '@type': Concept
+            prefLabel: cats
+        view:
+          '@id': 'https://example.org/items?page=3'
+          '@type': PartialCollectionView
+          firstPage: 'https://example.org/items?page=1'
+          previousPage: 'https://example.org/items?page=2'
+          nextPage: 'https://example.org/items?page=4'
+          lastPage: 'https://example.org/items?page=42'
+
+    skosSchemes:
+      summary: Schemes
+      value:
+        '@context':
+          hydra: 'http://www.w3.org/ns/hydra/core#'
+          skos: 'http://www.w3.org/2004/02/skos/core#'
+          xsd: 'http://www.w3.org/2001/XMLSchema#'
+          Collection: 'hydra:Collection'
+          firstPage: 'hydra:first'
+          itemsPerPage: 'hydra:itemsPerPage'
+          lastPage: 'hydra:last'
+          member: 'hydra:member'
+          nextPage: 'hydra:next'
+          nonNegativeInteger: 'xsd:nonNegativeInteger'
+          PartialCollectionView: 'hydra:PartialCollectionView'
+          prefLabel: 'skos:prefLabel'
+          previousPage: 'hydra:previous'
+          ConceptScheme: 'skos:ConceptScheme'
+          totalItems: 'hydra:totalItems'
+          view: 'hydra:view'
+        '@id': 'https://example.org/collection/collectionID'
+        '@type': Collection
+        totalItems:
+          '@type': nonNegativeInteger
+          '@value': 5436
+        itemsPerPage:
+          '@type': nonNegativeInteger
+          '@value': 50
+        member:
+          - '@id': 'https://example.org/skosScheme/skosSchemeID1'
+            '@type': ConceptScheme
+            prefLabel: cars scheme
+          - '@id': 'https://example.org/skosScheme/skosSchemeID2'
+            '@type': ConceptScheme
+            prefLabel: cats scheme
+        view:
+          '@id': 'https://example.org/items?page=3'
+          '@type': PartialCollectionView
+          firstPage: 'https://example.org/items?page=1'
+          previousPage: 'https://example.org/items?page=2'
+          nextPage: 'https://example.org/items?page=4'
+          lastPage: 'https://example.org/items?page=42'
+
+    rdfsProperties:
+      summary: Properties
+      value:
+        '@context':
+          hydra: 'http://www.w3.org/ns/hydra/core#'
+          rdfs: 'http://www.w3.org/2000/01/rdf-schema#'
+          xsd: 'http://www.w3.org/2001/XMLSchema#'
+          Collection: 'hydra:Collection'
+          firstPage: 'hydra:first'
+          itemsPerPage: 'hydra:itemsPerPage'
+          lastPage: 'hydra:last'
+          member: 'hydra:member'
+          nextPage: 'hydra:next'
+          nonNegativeInteger: 'xsd:nonNegativeInteger'
+          PartialCollectionView: 'hydra:PartialCollectionView'
+          Property: 'rdfs:Property'
+          previousPage: 'hydra:previous'
+          totalItems: 'hydra:totalItems'
+          view: 'hydra:view'
+        '@id': 'https://example.org/collection/collectionID'
+        '@type': Collection
+        totalItems:
+          '@type': nonNegativeInteger
+          '@value': 5436
+        itemsPerPage:
+          '@type': nonNegativeInteger
+          '@value': 50
+        member:
+          - '@id': 'https://example.org/rdfsProperty/rdfsPropertyID'
+            '@type': Property
+        view:
+          '@id': 'https://example.org/items?page=3'
+          '@type': PartialCollectionView
+          firstPage: 'https://example.org/items?page=1'
+          previousPage: 'https://example.org/items?page=2'
+          nextPage: 'https://example.org/items?page=4'
+          lastPage: 'https://example.org/items?page=42'
+
+    rdfsResource:
+      summary: Resource
+      value:
+        '@context':
+          rdfs: 'http://www.w3.org/2000/01/rdf-schema#'
+          Resource: 'rdfs:Resource'
+        '@id': 'https://example.org/Resource/ResourceID'
+        '@type': Resource
+
+    rdfsResources:
+      summary: Resources
+      value:
+        '@context':
+          hydra: 'http://www.w3.org/ns/hydra/core#'
+          rdfs: 'http://www.w3.org/2000/01/rdf-schema#'
+          xsd: 'http://www.w3.org/2001/XMLSchema#'
+          Collection: 'hydra:Collection'
+          firstPage: 'hydra:first'
+          itemsPerPage: 'hydra:itemsPerPage'
+          lastPage: 'hydra:last'
+          member: 'hydra:member'
+          nextPage: 'hydra:next'
+          nonNegativeInteger: 'xsd:nonNegativeInteger'
+          PartialCollectionView: 'hydra:PartialCollectionView'
+          previousPage: 'hydra:previous'
+          Resource: 'rdfs:Resource'
+          totalItems: 'hydra:totalItems'
+          view: 'hydra:view'
+        '@id': 'https://example.org/collection/collectionID'
+        '@type': Collection
+        totalItems:
+          '@type': nonNegativeInteger
+          '@value': 5436
+        itemsPerPage:
+          '@type': nonNegativeInteger
+          '@value': 50
+        member:
+          - '@id': 'https://example.org/Resource/ResourceID'
+            '@type': Resource
+        view:
+          '@id': 'https://example.org/items?page=3'
+          '@type': PartialCollectionView
+          firstPage: 'https://example.org/items?page=1'
+          previousPage: 'https://example.org/items?page=2'
+          nextPage: 'https://example.org/items?page=4'
+          lastPage: 'https://example.org/items?page=42'
 
   schemas:
     error_message:
@@ -2381,6 +3843,8 @@ components:
       description: rdf:Property is the class of RDF properties. rdf:Property is an instance of rdfs:Class.
       type: object
       properties:
+        '@id':
+          example: https://example.org/rdfsProperty/rdfsPropertyID
         '@type':
           example: rdfs:Property
 
@@ -2398,6 +3862,8 @@ components:
       title: Collection
       type: object
       properties:
+        '@id':
+          example: https://example.org/skosCollection/skosCollectionID
         '@type':
           example: skos:Collection
         skos:prefLabel:
@@ -2407,6 +3873,8 @@ components:
       title: Concept
       type: object
       properties:
+        '@id':
+          example: https://example.org/skosConcept/skosConceptID
         '@type':
           example: skos:Concept
         skos:prefLabel:
@@ -2416,6 +3884,8 @@ components:
       title: ConceptScheme
       type: object
       properties:
+        '@id':
+          example: https://example.org/skosScheme/skosSchemeID
         '@type':
           example: skos:ConceptScheme
         skos:prefLabel:
