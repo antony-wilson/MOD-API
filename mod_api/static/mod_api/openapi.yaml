@@ -72,7 +72,7 @@ components:
         default: all
 
     displaySemanticArtefact:
-      description: The parameters to display.
+      description: The parameters to display. If "display=all" is used, then all available parameters will be returned. If the display parameter is omitted only the default parameters will be returned.
       name: display
       in: query
       schema:
@@ -83,7 +83,7 @@ components:
           [ "dcterms:accessRights", "mod:acronym", "dcat:contactPoint", "dcterms:creator", "dcterms:description", "dcterms:identifier", "dcat:keyword", "dcat:landingPage", "dcterms:license", "dcterms:rightsHolder", "dcterms:subject", "dcterms:title", "dcterms:type", "owl:versionIRI" ]
 
     displaySemanticArtefactCatalog:
-      description: The parameters to display.
+      description: The parameters to display. If "display=all" is used, then all available parameters will be returned. If the display parameter is omitted only the default parameters will be returned.
       name: display
       in: query
       schema:
@@ -94,7 +94,7 @@ components:
           [ "dcterms:accessRights", "dcat:accessURL", "dcat:contactPoint", "dcterms:created", "dcterms:creator", "dcterms:description", "dcterms:identifier", "dcat:keyword", "dcat:landingPage", "dcterms:license", "dcterms:modified", "dcterms:rightsHolder", "dcterms:subject", "dcterms:title", "dcterms:type" ]
 
     displaySemanticArtefactCatalogRecord:
-      description: The parameters to display.
+      description: The parameters to display. If "display=all" is used, then all available parameters will be returned. If the display parameter is omitted only the default parameters will be returned.
       name: display
       in: query
       schema:
