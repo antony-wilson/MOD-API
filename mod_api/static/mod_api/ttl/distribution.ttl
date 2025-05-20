@@ -1,0 +1,90 @@
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ns0: <http://purl.org/pav/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix odrl: <http://www.w3.org/ns/odrl/2/> .
+@prefix sd: <http://www.w3.org/ns/sparql-service-description#> .
+@prefix ns1: <https://w3id.org/mod#> .
+
+<https://example.org/SemanticArtefactDistribution/SemanticArtefactDistributionID>
+  a <https://w3id.org/mod#SemanticArtefactDistribution> ;
+  cc:useGuidelines <https://example.org/Resource/UseGuidelinesResourceID> ;
+  dc:accessRights "string"^^xsd:string ;
+  dc:conformsTo "string"^^xsd:string ;
+  dc:created "Lorem ipsum"^^rdfs:Literal ;
+  dc:dateSubmitted "Lorem ipsum"^^rdfs:Literal ;
+  dc:description "Lorem ipsum"^^rdfs:Literal ;
+  dc:format "string"^^xsd:string ;
+  dc:issued "Lorem ipsum"^^rdfs:Literal ;
+  dc:license "string"^^xsd:string ;
+  dc:modified "Lorem ipsum"^^rdfs:Literal ;
+  dc:rights "string"^^xsd:string ;
+  dc:title "Lorem ipsum"^^rdfs:Literal ;
+  dc:valid "Lorem ipsum"^^rdfs:Literal ;
+  ns0:curatedOn [ a xsd:date ] ;
+  owl:deprecated <https://example.org/Resource/DeprecatedResourceID> ;
+  owl:imports <https://example.org/Ontology/OntologyID> ;
+  dcat:accessService <https://example.org/DataService/DataServiceID> ;
+  dcat:accessURL <https://example.org/Resource/AccessURLResourceID> ;
+  dcat:byteSize "string"^^xsd:string ;
+  dcat:compressFormat "string"^^xsd:string ;
+  dcat:downloadURL <https://example.org/Resource/DownloadURLResourceID> ;
+  dcat:mediaType "string"^^xsd:string ;
+  dcat:packageFormat "string"^^xsd:string ;
+  dcat:spatialResolutionInMeters "string"^^xsd:string ;
+  dcat:temporalResolution "string"^^xsd:string ;
+  odrl:hasPolicy <https://example.org/Policy/PolicyID> ;
+  sd:endpoint "string"^^xsd:string ;
+  ns1:FairAssessment <https://example.org/FairAssessment/FairAssessmentID> ;
+  ns1:authorProperty "https://example.org/authorProperty"^^xsd:anyURI ;
+  ns1:averageChildCount 4.0 ;
+  ns1:browsingUI "https://example.org/browsingUI"^^xsd:anyURI ;
+  ns1:classesWithMoreThan25Children "5436"^^xsd:nonNegativeInteger ;
+  ns1:classesWithNoAuthorMetadata "5436"^^xsd:nonNegativeInteger ;
+  ns1:classesWithNoDateMetadata "5436"^^xsd:nonNegativeInteger ;
+  ns1:classesWithNoDefinition "5436"^^xsd:nonNegativeInteger ;
+  ns1:classesWithNoFormalDefinition "5436"^^xsd:nonNegativeInteger ;
+  ns1:classesWithNoLabel "5436"^^xsd:nonNegativeInteger ;
+  ns1:classesWithOneChild "5436"^^xsd:nonNegativeInteger ;
+  ns1:conformsToKnowledgeRepresentationParadigm <https://example.org/KnowledgeRepresentationParadigm/KnowledgeRepresentationParadigmID> ;
+  ns1:createdProperty "https://example.org/createdProperty"^^xsd:anyURI ;
+  ns1:definitionProperty "https://example.org/definitionProperty"^^xsd:anyURI ;
+  ns1:fairScore "5436"^^xsd:nonNegativeInteger ;
+  ns1:hasFormalityLevel "Lorem ipsum"^^xsd:string ;
+  ns1:hasRepresentationLanguage "Lorem ipsum"^^xsd:string ;
+  ns1:hasSyntax "https://example.org/hasSyntax"^^xsd:anyURI ;
+  ns1:hierarchyProperty "https://example.org/hierarchyProperty"^^xsd:anyURI ;
+  ns1:maxChildCount "5436"^^xsd:nonNegativeInteger ;
+  ns1:maxDepth "5436"^^xsd:nonNegativeInteger ;
+  ns1:metadataVoc "https://example.org/metadataVoc"^^xsd:anyURI ;
+  ns1:metrics "5436"^^xsd:nonNegativeInteger ;
+  ns1:modifiedProperty "https://example.org/modifiedProperty"^^xsd:anyURI ;
+  ns1:numberOfAxioms "5436"^^xsd:nonNegativeInteger ;
+  ns1:numberOfClasses 0 ;
+  ns1:numberOfDataProperties "5436"^^xsd:nonNegativeInteger ;
+  ns1:numberOfDeprecated "5436"^^xsd:nonNegativeInteger ;
+  ns1:numberOfIndividuals "5436"^^xsd:nonNegativeInteger ;
+  ns1:numberOfLabels "5436"^^xsd:nonNegativeInteger ;
+  ns1:numberOfMappings "5436"^^xsd:nonNegativeInteger ;
+  ns1:numberOfObjectProperties "5436"^^xsd:nonNegativeInteger ;
+  ns1:numberOfProperties "5436"^^xsd:nonNegativeInteger ;
+  ns1:obsoleteParent "https://example.org/obsoleteParent"^^xsd:anyURI ;
+  ns1:obsoleteProperty "https://example.org/obsoleteProperty"^^xsd:anyURI ;
+  ns1:prefLabelProperty "https://example.org/prefLabelProperty"^^xsd:anyURI ;
+  ns1:sampleQueries "https://example.org/sampleQueries"^^xsd:anyURI ;
+  ns1:synonymProperty "https://example.org/synonymProperty"^^xsd:anyURI ;
+  ns1:usedEngineeringMethodology <https://example.org/EngineeringMethodology/EngineeringMethodologyID> .
+
+<https://example.org/Resource/UseGuidelinesResourceID> a rdfs:Resource .
+<https://example.org/Resource/DeprecatedResourceID> a rdfs:Resource .
+<https://example.org/Ontology/OntologyID> a owl:Ontology .
+<https://example.org/DataService/DataServiceID> a dcat:DataService .
+<https://example.org/Resource/AccessURLResourceID> a rdfs:Resource .
+<https://example.org/Resource/DownloadURLResourceID> a rdfs:Resource .
+<https://example.org/Policy/PolicyID> a odrl:Policy .
+<https://example.org/FairAssessment/FairAssessmentID> a <http://njh.me/FairAssessment> .
+<https://example.org/KnowledgeRepresentationParadigm/KnowledgeRepresentationParadigmID> a ns1:KnowledgeRepresentationParadigm .
+<https://example.org/EngineeringMethodology/EngineeringMethodologyID> a ns1:EngineeringMethodology .

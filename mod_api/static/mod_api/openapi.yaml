@@ -411,12 +411,19 @@ components:
                 $ref: "#/components/schemas/Context"
             allOf:
               - $ref: "#/components/schemas/modSemanticArtefactDistribution"
+          examples:
+            semanticArtefactDistribution:
+              $ref: "#/components/examples/semanticArtefactDistribution"
         text/html:
           schema:
             $ref: "#/components/schemas/html"
         text/turtle:
           schema:
             type: string
+          examples:
+            semanticArtefactDistribution:
+              summary: Semantic Artefact Distribution
+              externalValue: "./ttl/distribution.ttl"
         application/rdf+xml:
           schema:
             type: array
@@ -424,7 +431,10 @@ components:
               name: rdf
               wrapped: true
             items:
-              example: In progress
+          examples:
+            semanticArtefactDistribution:
+              summary: Semantic Artefact Distribution
+              externalValue: "./xml/distribution.xml"
 
     distributions:
       description: "OK"
@@ -450,6 +460,9 @@ components:
                   $ref: "#/components/schemas/modSemanticArtefactDistribution"
               view:
                 $ref: "#/components/schemas/view"
+          examples:
+            semanticArtefactDistributions:
+              $ref: "#/components/examples/semanticArtefactDistributions"
         text/html:
           schema:
             type: array
@@ -457,9 +470,11 @@ components:
               $ref: "#/components/schemas/html"
         text/turtle:
           schema:
-            type: array
-            items:
-              type: string
+            type: string
+          examples:
+            semanticArtefactDistributions:
+              summary: Semantic Artefact Distributions
+              externalValue: "./ttl/distributions.ttl"
         application/rdf+xml:
           schema:
             type: array
@@ -467,7 +482,10 @@ components:
               name: rdf
               wrapped: true
             items:
-              example: In progress
+          examples:
+            semanticArtefactDistributions:
+              summary: Semantic Artefact Distributions
+              externalValue: "./xml/distributions.xml"
 
     individuals:
       description: "OK"
@@ -2104,6 +2122,571 @@ components:
           nextPage: 'https://example.org/items?page=4'
           lastPage: 'https://example.org/items?page=42'
 
+    semanticArtefactDistribution:
+      summary: Semantic Artefact Distribution
+      value:
+        '@context':
+          cc: 'http://creativecommons.org/ns#'
+          dcat: 'http://www.w3.org/ns/dcat#'
+          dcterms: 'http://purl.org/dc/terms/'
+          mod: 'https://w3id.org/mod#'
+          odrl: 'http://www.w3.org/ns/odrl/2/'
+          owl: 'http://www.w3.org/2002/07/owl#'
+          pav: 'http://purl.org/pav/'
+          rdfs: 'http://www.w3.org/2000/01/rdf-schema#'
+          sd: 'http://www.w3.org/ns/sparql-service-description#'
+          xsd: 'http://www.w3.org/2001/XMLSchema#'
+          accessRights: 'dcterms:accessRights'
+          accessService: 'dcat:accessService'
+          accessURL: 'dcat:accessURL'
+          anyURI: 'xsd:anyURI'
+          authorProperty: 'mod:authorProperty'
+          averageChildCount: 'mod:averageChildCount'
+          browsingUI: 'mod:browsingUI'
+          byteSize: 'dcat:byteSize'
+          classesWithMoreThan25Children: 'mod:classesWithMoreThan25Children'
+          classesWithNoAuthorMetadata: 'mod:classesWithNoAuthorMetadata'
+          classesWithNoDateMetadata: 'mod:classesWithNoDateMetadata'
+          classesWithNoDefinition: 'mod:classesWithNoDefinition'
+          classesWithNoFormalDefinition: 'mod:classesWithNoFormalDefinition'
+          classesWithNoLabel: 'mod:classesWithNoLabel'
+          classesWithOneChild: 'mod:classesWithOneChild'
+          compressFormat: 'dcat:compressFormat'
+          conformsTo: 'dcterms:conformsTo'
+          conformsToKnowledgeRepresentationParadigm: 'mod:conformsToKnowledgeRepresentationParadigm'
+          created: 'dcterms:created'
+          createdProperty: 'mod:createdProperty'
+          curatedOn: 'pav:curatedOn'
+          DataService: 'dcat:DataService'
+          date: 'xsd:date'
+          dateSubmitted: 'dcterms:dateSubmitted'
+          decimal: 'xsd:decimal'
+          definitionProperty: 'mod:definitionProperty'
+          deprecated: 'owl:deprecated'
+          description: 'dcterms:description'
+          downloadURL: 'dcat:downloadURL'
+          endpoint: 'sd:endpoint'
+          EngineeringMethodology: 'mod:EngineeringMethodology'
+          fairAssessment: 'mod:FairAssessment'
+          fairScore: 'mod:fairScore'
+          format: 'dcterms:format'
+          hasFormalityLevel: 'mod:hasFormalityLevel'
+          hasPolicy: 'odrl:hasPolicy'
+          hasRepresentationLanguage: 'mod:hasRepresentationLanguage'
+          hasSyntax: 'mod:hasSyntax'
+          hierarchyProperty: 'mod:hierarchyProperty'
+          imports: 'owl:imports'
+          issued: 'dcterms:issued'
+          KnowledgeRepresentationParadigm: 'mod:KnowledgeRepresentationParadigm'
+          license: 'dcterms:license'
+          Literal: 'rdfs:Literal'
+          maxChildCount: 'mod:maxChildCount'
+          maxDepth: 'mod:maxDepth'
+          mediaType: 'dcat:mediaType'
+          metadataVoc: 'mod:metadataVoc'
+          metrics: 'mod:metrics'
+          modified: 'dcterms:modified'
+          modifiedProperty: 'mod:modifiedProperty'
+          nonNegativeInteger: 'xsd:nonNegativeInteger'
+          numberOfAxioms: 'mod:numberOfAxioms'
+          numberOfClasses: 'mod:numberOfClasses'
+          numberOfDataProperties: 'mod:numberOfDataProperties'
+          numberOfDeprecated: 'mod:numberOfDeprecated'
+          numberOfIndividuals: 'mod:numberOfIndividuals'
+          numberOfLabels: 'mod:numberOfLabels'
+          numberOfMappings: 'mod:numberOfMappings'
+          numberOfObjectProperties: 'mod:numberOfObjectProperties'
+          numberOfProperties: 'mod:numberOfProperties'
+          obsoleteParent: 'mod:obsoleteParent'
+          obsoleteProperty: 'mod:obsoleteProperty'
+          Ontology: 'owl:Ontology'
+          packageFormat: 'dcat:packageFormat'
+          Policy: 'odrl:Policy'
+          prefLabelProperty: 'mod:prefLabelProperty'
+          Resource: 'rdfs:Resource'
+          rights: 'dcterms:rights'
+          sampleQueries: 'mod:sampleQueries'
+          SemanticArtefactDistribution: 'mod:SemanticArtefactDistribution'
+          spatialResolutionInMeters: 'dcat:spatialResolutionInMeters'
+          string: 'xsd:string'
+          synonymProperty: 'mod:synonymProperty'
+          temporalResolution: 'dcat:temporalResolution'
+          title: 'dcterms:title'
+          usedEngineeringMethodology: 'mod:usedEngineeringMethodology'
+          useGuidelines: 'cc:useGuidelines'
+          valid: 'dcterms:valid'
+
+        '@id': >-
+          https://example.org/SemanticArtefactDistribution/SemanticArtefactDistributionID
+        '@type': SemanticArtefactDistribution
+        accessService:
+            '@id': 'https://example.org/DataService/DataServiceID'
+            '@type': DataService
+        accessRights: string
+        accessURL:
+          '@id': 'https://example.org/Resource/AccessURLResourceID'
+          '@type': Resource
+        byteSize: string
+        compressFormat: string
+        conformsTo: string
+        description:
+          '@type': Literal
+          '@value': Lorem ipsum
+        downloadURL:
+          '@id': 'https://example.org/Resource/DownloadURLResourceID'
+          '@type': rdfs:Resource
+        format: string
+        hasPolicy:
+          '@id': 'https://example.org/Policy/PolicyID'
+          '@type': Policy
+        issued:
+          '@type': Literal
+          '@value': Lorem ipsum
+        license: string
+        mediaType: string
+        modified:
+          '@type': Literal
+          '@value': Lorem ipsum
+        packageFormat: string
+        rights: string
+        spatialResolutionInMeters: string
+        temporalResolution: string
+        title:
+          '@type': Literal
+          '@value': Lorem ipsum
+        useGuidelines:
+          '@id': 'https://example.org/Resource/UseGuidelinesResourceID'
+          '@type': Resource
+        created:
+          '@type': Literal
+          '@value': Lorem ipsum
+        dateSubmitted:
+          '@type': Literal
+          '@value': Lorem ipsum
+        dcterms:valid:
+          '@type': Literal
+          '@value': Lorem ipsum
+        authorProperty:
+          '@type': anyURI
+          '@value': 'https://example.org/authorProperty'
+        averageChildCount:
+          '@type': decimal
+          '@value': 4
+        browsingUI:
+          '@type': anyURI
+          '@value': 'https://example.org/browsingUI'
+        classesWithMoreThan25Children:
+          '@type': nonNegativeInteger
+          '@value': 5436
+        classesWithNoAuthorMetadata:
+          '@type': nonNegativeInteger
+          '@value': 5436
+        classesWithNoDateMetadata:
+          '@type': nonNegativeInteger
+          '@value': 5436
+        classesWithNoDefinition:
+          '@type': nonNegativeInteger
+          '@value': 5436
+        classesWithNoFormalDefinition:
+          '@type': nonNegativeInteger
+          '@value': 5436
+        classesWithNoLabel:
+          '@type': nonNegativeInteger
+          '@value': 5436
+        classesWithOneChild:
+          '@type': nonNegativeInteger
+          '@value': 5436
+        conformsToKnowledgeRepresentationParadigm:
+          '@id': 'https://example.org/KnowledgeRepresentationParadigm/KnowledgeRepresentationParadigmID'
+          '@type': KnowledgeRepresentationParadigm
+        createdProperty:
+          '@type': anyURI
+          '@value': 'https://example.org/createdProperty'
+        definitionProperty:
+          '@type': anyURI
+          '@value': 'https://example.org/definitionProperty'
+        fairAssessment:
+          '@id': 'https://example.org/FairAssessment/FairAssessmentID'
+          '@type': FairAssessment
+        fairScore:
+          '@type': nonNegativeInteger
+          '@value': 5436
+        hasFormalityLevel:
+          '@type': string
+          '@value': Lorem ipsum
+        hasRepresentationLanguage:
+          '@type': string
+          '@value': Lorem ipsum
+        hasSyntax:
+          '@type': anyURI
+          '@value': 'https://example.org/hasSyntax'
+        hierarchyProperty:
+          '@type': anyURI
+          '@value': 'https://example.org/hierarchyProperty'
+        maxChildCount:
+          '@type': nonNegativeInteger
+          '@value': 5436
+        maxDepth:
+          '@type': nonNegativeInteger
+          '@value': 5436
+        metadataVoc:
+          '@type': anyURI
+          '@value': 'https://example.org/metadataVoc'
+        metrics:
+          '@type': nonNegativeInteger
+          '@value': 5436
+        modifiedProperty:
+          '@type': anyURI
+          '@value': 'https://example.org/modifiedProperty'
+        numberOfAxioms:
+          '@type': nonNegativeInteger
+          '@value': 5436
+        numberOfClasses: 0
+        numberOfDataProperties:
+          '@type': nonNegativeInteger
+          '@value': 5436
+        numberOfDeprecated:
+          '@type': nonNegativeInteger
+          '@value': 5436
+        numberOfIndividuals:
+          '@type': nonNegativeInteger
+          '@value': 5436
+        numberOfLabels:
+          '@type': nonNegativeInteger
+          '@value': 5436
+        numberOfMappings:
+          '@type': nonNegativeInteger
+          '@value': 5436
+        numberOfObjectProperties:
+          '@type': nonNegativeInteger
+          '@value': 5436
+        numberOfProperties:
+          '@type': nonNegativeInteger
+          '@value': 5436
+        obsoleteParent:
+          '@type': anyURI
+          '@value': 'https://example.org/obsoleteParent'
+        obsoleteProperty:
+          '@type': anyURI
+          '@value': 'https://example.org/obsoleteProperty'
+        prefLabelProperty:
+          '@type': anyURI
+          '@value': 'https://example.org/prefLabelProperty'
+        sampleQueries:
+          '@type': anyURI
+          '@value': 'https://example.org/sampleQueries'
+        synonymProperty:
+          '@type': anyURI
+          '@value': 'https://example.org/synonymProperty'
+        usedEngineeringMethodology:
+          '@id': 'https://example.org/EngineeringMethodology/EngineeringMethodologyID'
+          '@type': EngineeringMethodology
+        deprecated:
+          '@id': 'https://example.org/Resource/DeprecatedResourceID'
+          '@type': Resource
+        imports:
+          '@id': 'https://example.org/Ontology/OntologyID'
+          '@type': Ontology
+        curatedOn:
+          '@type': date
+        endpoint: string
+
+    semanticArtefactDistributions:
+      summary: Semantic Artefact Distributions
+      value:
+        '@context':
+          cc: 'http://creativecommons.org/ns#'
+          dcat: 'http://www.w3.org/ns/dcat#'
+          dcterms: 'http://purl.org/dc/terms/'
+          hydra: 'http://www.w3.org/ns/hydra/core#'
+          mod: 'https://w3id.org/mod#'
+          odrl: 'http://www.w3.org/ns/odrl/2/'
+          owl: 'http://www.w3.org/2002/07/owl#'
+          pav: 'http://purl.org/pav/'
+          rdfs: 'http://www.w3.org/2000/01/rdf-schema#'
+          sd: 'http://www.w3.org/ns/sparql-service-description#'
+          xsd: 'http://www.w3.org/2001/XMLSchema#'
+          accessRights: 'dcterms:accessRights'
+          accessService: 'dcat:accessService'
+          accessURL: 'dcat:accessURL'
+          anyURI: 'xsd:anyURI'
+          authorProperty: 'mod:authorProperty'
+          averageChildCount: 'mod:averageChildCount'
+          browsingUI: 'mod:browsingUI'
+          byteSize: 'dcat:byteSize'
+          classesWithMoreThan25Children: 'mod:classesWithMoreThan25Children'
+          classesWithNoAuthorMetadata: 'mod:classesWithNoAuthorMetadata'
+          classesWithNoDateMetadata: 'mod:classesWithNoDateMetadata'
+          classesWithNoDefinition: 'mod:classesWithNoDefinition'
+          classesWithNoFormalDefinition: 'mod:classesWithNoFormalDefinition'
+          classesWithNoLabel: 'mod:classesWithNoLabel'
+          classesWithOneChild: 'mod:classesWithOneChild'
+          Collection: 'hydra:Collection'
+          compressFormat: 'dcat:compressFormat'
+          conformsTo: 'dcterms:conformsTo'
+          conformsToKnowledgeRepresentationParadigm: 'mod:conformsToKnowledgeRepresentationParadigm'
+          created: 'dcterms:created'
+          createdProperty: 'mod:createdProperty'
+          curatedOn: 'pav:curatedOn'
+          DataService: 'dcat:DataService'
+          date: 'xsd:date'
+          dateSubmitted: 'dcterms:dateSubmitted'
+          decimal: 'xsd:decimal'
+          definitionProperty: 'mod:definitionProperty'
+          deprecated: 'owl:deprecated'
+          description: 'dcterms:description'
+          downloadURL: 'dcat:downloadURL'
+          endpoint: 'sd:endpoint'
+          EngineeringMethodology: 'mod:EngineeringMethodology'
+          fairAssessment: 'mod:FairAssessment'
+          fairScore: 'mod:fairScore'
+          firstPage: 'hydra:first'
+          format: 'dcterms:format'
+          hasFormalityLevel: 'mod:hasFormalityLevel'
+          hasPolicy: 'odrl:hasPolicy'
+          hasRepresentationLanguage: 'mod:hasRepresentationLanguage'
+          hasSyntax: 'mod:hasSyntax'
+          hierarchyProperty: 'mod:hierarchyProperty'
+          imports: 'owl:imports'
+          itemsPerPage: 'hydra:itemsPerPage'
+          issued: 'dcterms:issued'
+          KnowledgeRepresentationParadigm: 'mod:KnowledgeRepresentationParadigm'
+          lastPage: 'hydra:last'
+          license: 'dcterms:license'
+          Literal: 'rdfs:Literal'
+          maxChildCount: 'mod:maxChildCount'
+          maxDepth: 'mod:maxDepth'
+          mediaType: 'dcat:mediaType'
+          member: 'hydra:member'
+          metadataVoc: 'mod:metadataVoc'
+          metrics: 'mod:metrics'
+          modified: 'dcterms:modified'
+          modifiedProperty: 'mod:modifiedProperty'
+          nextPage: 'hydra:next'
+          nonNegativeInteger: 'xsd:nonNegativeInteger'
+          numberOfAxioms: 'mod:numberOfAxioms'
+          numberOfClasses: 'mod:numberOfClasses'
+          numberOfDataProperties: 'mod:numberOfDataProperties'
+          numberOfDeprecated: 'mod:numberOfDeprecated'
+          numberOfIndividuals: 'mod:numberOfIndividuals'
+          numberOfLabels: 'mod:numberOfLabels'
+          numberOfMappings: 'mod:numberOfMappings'
+          numberOfObjectProperties: 'mod:numberOfObjectProperties'
+          numberOfProperties: 'mod:numberOfProperties'
+          obsoleteParent: 'mod:obsoleteParent'
+          obsoleteProperty: 'mod:obsoleteProperty'
+          Ontology: 'owl:Ontology'
+          packageFormat: 'dcat:packageFormat'
+          PartialCollectionView: 'hydra:PartialCollectionView'
+          Policy: 'odrl:Policy'
+          prefLabelProperty: 'mod:prefLabelProperty'
+          previousPage: 'hydra:previous'
+          Resource: 'rdfs:Resource'
+          rights: 'dcterms:rights'
+          sampleQueries: 'mod:sampleQueries'
+          SemanticArtefactDistribution: 'mod:SemanticArtefactDistribution'
+          spatialResolutionInMeters: 'dcat:spatialResolutionInMeters'
+          string: 'xsd:string'
+          synonymProperty: 'mod:synonymProperty'
+          temporalResolution: 'dcat:temporalResolution'
+          title: 'dcterms:title'
+          totalItems: 'hydra:totalItems'
+          usedEngineeringMethodology: 'mod:usedEngineeringMethodology'
+          useGuidelines: 'cc:useGuidelines'
+          valid: 'dcterms:valid'
+          view: 'hydra:view'
+
+        '@id': 'https://example.org/collection/collectionID'
+        '@type': Collection
+        totalItems:
+          '@type': nonNegativeInteger
+          '@value': 5436
+        itemsPerPage:
+          '@type': nonNegativeInteger
+          '@value': 50
+        member:
+          - '@id': >-
+              https://example.org/SemanticArtefactDistribution/SemanticArtefactDistributionID
+            '@type': SemanticArtefactDistribution
+            accessService:
+                '@id': 'https://example.org/DataService/DataServiceID'
+                '@type': DataService
+            accessRights: string
+            accessURL:
+              '@id': 'https://example.org/Resource/AccessURLResourceID'
+              '@type': Resource
+            byteSize: string
+            compressFormat: string
+            conformsTo: string
+            description:
+              '@type': Literal
+              '@value': Lorem ipsum
+            downloadURL:
+              '@id': 'https://example.org/Resource/DownloadURLResourceID'
+              '@type': rdfs:Resource
+            format: string
+            hasPolicy:
+              '@id': 'https://example.org/Policy/PolicyID'
+              '@type': Policy
+            issued:
+              '@type': Literal
+              '@value': Lorem ipsum
+            license: string
+            mediaType: string
+            modified:
+              '@type': Literal
+              '@value': Lorem ipsum
+            packageFormat: string
+            rights: string
+            spatialResolutionInMeters: string
+            temporalResolution: string
+            title:
+              '@type': Literal
+              '@value': Lorem ipsum
+            useGuidelines:
+              '@id': 'https://example.org/Resource/UseGuidelinesResourceID'
+              '@type': Resource
+            created:
+              '@type': Literal
+              '@value': Lorem ipsum
+            dateSubmitted:
+              '@type': Literal
+              '@value': Lorem ipsum
+            dcterms:valid:
+              '@type': Literal
+              '@value': Lorem ipsum
+            authorProperty:
+              '@type': anyURI
+              '@value': 'https://example.org/authorProperty'
+            averageChildCount:
+              '@type': decimal
+              '@value': 4
+            browsingUI:
+              '@type': anyURI
+              '@value': 'https://example.org/browsingUI'
+            classesWithMoreThan25Children:
+              '@type': nonNegativeInteger
+              '@value': 5436
+            classesWithNoAuthorMetadata:
+              '@type': nonNegativeInteger
+              '@value': 5436
+            classesWithNoDateMetadata:
+              '@type': nonNegativeInteger
+              '@value': 5436
+            classesWithNoDefinition:
+              '@type': nonNegativeInteger
+              '@value': 5436
+            classesWithNoFormalDefinition:
+              '@type': nonNegativeInteger
+              '@value': 5436
+            classesWithNoLabel:
+              '@type': nonNegativeInteger
+              '@value': 5436
+            classesWithOneChild:
+              '@type': nonNegativeInteger
+              '@value': 5436
+            conformsToKnowledgeRepresentationParadigm:
+              '@id': 'https://example.org/KnowledgeRepresentationParadigm/KnowledgeRepresentationParadigmID'
+              '@type': KnowledgeRepresentationParadigm
+            createdProperty:
+              '@type': anyURI
+              '@value': 'https://example.org/createdProperty'
+            definitionProperty:
+              '@type': anyURI
+              '@value': 'https://example.org/definitionProperty'
+            fairAssessment:
+              '@id': 'https://example.org/FairAssessment/FairAssessmentID'
+              '@type': FairAssessment
+            fairScore:
+              '@type': nonNegativeInteger
+              '@value': 5436
+            hasFormalityLevel:
+              '@type': string
+              '@value': Lorem ipsum
+            hasRepresentationLanguage:
+              '@type': string
+              '@value': Lorem ipsum
+            hasSyntax:
+              '@type': anyURI
+              '@value': 'https://example.org/hasSyntax'
+            hierarchyProperty:
+              '@type': anyURI
+              '@value': 'https://example.org/hierarchyProperty'
+            maxChildCount:
+              '@type': nonNegativeInteger
+              '@value': 5436
+            maxDepth:
+              '@type': nonNegativeInteger
+              '@value': 5436
+            metadataVoc:
+              '@type': anyURI
+              '@value': 'https://example.org/metadataVoc'
+            metrics:
+              '@type': nonNegativeInteger
+              '@value': 5436
+            modifiedProperty:
+              '@type': anyURI
+              '@value': 'https://example.org/modifiedProperty'
+            numberOfAxioms:
+              '@type': nonNegativeInteger
+              '@value': 5436
+            numberOfClasses: 0
+            numberOfDataProperties:
+              '@type': nonNegativeInteger
+              '@value': 5436
+            numberOfDeprecated:
+              '@type': nonNegativeInteger
+              '@value': 5436
+            numberOfIndividuals:
+              '@type': nonNegativeInteger
+              '@value': 5436
+            numberOfLabels:
+              '@type': nonNegativeInteger
+              '@value': 5436
+            numberOfMappings:
+              '@type': nonNegativeInteger
+              '@value': 5436
+            numberOfObjectProperties:
+              '@type': nonNegativeInteger
+              '@value': 5436
+            numberOfProperties:
+              '@type': nonNegativeInteger
+              '@value': 5436
+            obsoleteParent:
+              '@type': anyURI
+              '@value': 'https://example.org/obsoleteParent'
+            obsoleteProperty:
+              '@type': anyURI
+              '@value': 'https://example.org/obsoleteProperty'
+            prefLabelProperty:
+              '@type': anyURI
+              '@value': 'https://example.org/prefLabelProperty'
+            sampleQueries:
+              '@type': anyURI
+              '@value': 'https://example.org/sampleQueries'
+            synonymProperty:
+              '@type': anyURI
+              '@value': 'https://example.org/synonymProperty'
+            usedEngineeringMethodology:
+              '@id': 'https://example.org/EngineeringMethodology/EngineeringMethodologyID'
+              '@type': EngineeringMethodology
+            deprecated:
+              '@id': 'https://example.org/Resource/DeprecatedResourceID'
+              '@type': Resource
+            imports:
+              '@id': 'https://example.org/Ontology/OntologyID'
+              '@type': Ontology
+            curatedOn:
+              '@type': date
+            endpoint: string
+        view:
+          '@id': 'https://example.org/items?page=3'
+          '@type': PartialCollectionView
+          firstPage: 'https://example.org/items?page=1'
+          previousPage: 'https://example.org/items?page=2'
+          nextPage: 'https://example.org/items?page=4'
+          lastPage: 'https://example.org/items?page=42'
+
     skosCollections:
       summary: Collections
       value:
@@ -2586,14 +3169,26 @@ components:
         dcat:accessService:
           title: access service
           description: A data service that gives access to the distribution of the dataset
-          $ref: "#/components/schemas/dcatDataService"
+          type: array
+          items:
+            type: object
+            properties:
+              '@id':
+                example: https://example.org/DataService/DataServiceID
+              '@type':
+                example: dcat:DataService
         dcterms:accessRights:
           title: access rights
           description: A rights statement that concerns how the distribution is accessed.
         dcat:accessURL:
           title: access URL
           description: A URL of the resource that gives access to a distribution of the dataset. E.g. landing page, feed, SPARQL endpoint.
-          $ref: "#/components/schemas/rdfsResource"
+          type: object
+          properties:
+            '@id':
+              example: https://example.org/Resource/AccessURLResourceID
+            '@type':
+              example: rdfs:Resource
         dcat:byteSize:
           title: byte size
           description: The size of a distribution in bytes.
@@ -2606,11 +3201,21 @@ components:
         dcterms:description:
           title: description
           description: A free-text account of the distribution.
-          $ref: "#/components/schemas/rdfsLiteral"
+          type: object
+          properties:
+            '@type':
+              example: rdfs:Literal
+            '@value':
+              example: Lorem ipsum
         dcat:downloadURL:
           title: download URL
           description: The URL of the downloadable file in a given format. E.g. CSV file or RDF file. The format is indicated by the distribution's dcterms:format and/or dcat:mediaType
-          $ref: "#/components/schemas/rdfsResource"
+          type: object
+          properties:
+            '@id':
+              example: https://example.org/Resource/DownloadURLResourceID
+            '@type':
+              example: rdfs:Resource
         dcterms:format:
           title: format
           description: The file format of the distribution.
@@ -2626,7 +3231,12 @@ components:
         dcterms:issued:
           title: release date
           description: Date of formal issuance (e.g., publication) of the distribution.
-          $ref: "#/components/schemas/rdfsLiteral"
+          type: object
+          properties:
+            '@type':
+              example: rdfs:Literal
+            '@value':
+              example: Lorem ipsum
         dcterms:license:
           title: license
           description: A legal document under which the distribution is made available.
@@ -2636,7 +3246,12 @@ components:
         dcterms:modified:
           title: update/modification date
           description: Most recent date on which the distribution was changed, updated or modified.
-          $ref: "#/components/schemas/rdfsLiteral"
+          type: object
+          properties:
+            '@type':
+              example: rdfs:Literal
+            '@value':
+              example: Lorem ipsum
         dcat:packageFormat:
           title: packaging format
           description: The package format of the distribution in which one or more data files are grouped together, e.g. to enable a set of related files to be downloaded together.
@@ -2652,7 +3267,12 @@ components:
         dcterms:title:
           title: title
           description: A name given to the distribution.
-          $ref: "#/components/schemas/rdfsLiteral"
+          type: object
+          properties:
+            '@type':
+              example: rdfs:Literal
+            '@value':
+              example: Lorem ipsum
 
     # see https://www.w3.org/TR/vocab-dcat-2/#Class:Resource
     dcatResource:
@@ -2749,9 +3369,17 @@ components:
         dcterms:rights:
           title: rights
           description: A statement that concerns all rights not addressed with dcterms:license or dcterms:accessRights, such as copyright statements.
-        dcterms:subject:
+        dcat:theme:
           title: theme/category
           description: A main category of the resource. A resource can have multiple themes.
+          type: array
+          items:
+            type: object
+            properties:
+              '@id':
+                example: https://example.org/Resource/ThemeResourceID
+              '@type':
+                example: rdfs:Resource
         dcterms:title:
           title: title
           description: A name given to the item.
@@ -3566,23 +4194,48 @@ components:
             cc:useGuidelines:
               title: use guidelines
               description: A related resource which defines non-binding use guidelines for the work.
-              $ref: "#/components/schemas/rdfsResource"
+              type: object
+              properties:
+                '@id':
+                  example: https://example.org/Resource/UseGuidelinesResourceID
+                '@type':
+                  example: rdfs:Resource
             dcterms:created:
               title: creation date
               description: Date of creation of the resource.
-              $ref: "#/components/schemas/rdfsLiteral"
+              type: object
+              properties:
+                '@type':
+                  example: rdfs:Literal
+                '@value':
+                  example: Lorem ipsum
             dcterms:dateSubmitted:
               title: submission date
               description: Date of submission of the resource.
-              $ref: "#/components/schemas/rdfsLiteral"
+              type: object
+              properties:
+                '@type':
+                  example: rdfs:Literal
+                '@value':
+                  example: Lorem ipsum
             dcterms:valid:
               title: validity date
               description: Date (often a range) of validity of a resource.
-              $ref: "#/components/schemas/rdfsLiteral"
+              type: object
+              properties:
+                '@type':
+                  example: rdfs:Literal
+                '@value':
+                  example: Lorem ipsum
             mod:authorProperty:
               title: object author property
               description: Property used to specify objects's author.
-              $ref: "#/components/schemas/xsdAnyURI"
+              type: object
+              properties:
+                '@type':
+                  example: xsd:anyURI
+                '@value':
+                  example: https://example.org/authorProperty
             mod:averageChildCount:
               title: average number of children per class
               description: Average number of children per class (BioPortal definition).
@@ -3595,35 +4248,75 @@ components:
             mod:browsingUI:
               title: browsing user interface
               description: The user interface (URL) where the ontology may be browsed or searched.
-              $ref: "#/components/schemas/xsdAnyURI"
+              type: object
+              properties:
+                '@type':
+                  example: xsd:anyURI
+                '@value':
+                  example: https://example.org/browsingUI
             mod:classesWithMoreThan25Children:
               title: number of classes with more than 25 children
               description: Number of classes that have more than 25 direct subclasses.
-              $ref: "#/components/schemas/xsdNonNegativeInteger"
+              type: object
+              properties:
+                '@type':
+                  example: xsd:nonNegativeInteger
+                '@value':
+                  example: 5436
             mod:classesWithNoAuthorMetadata:
               title: number of classes with no author metadata
               description: Number of classes with author metadata.
-              $ref: "#/components/schemas/xsdNonNegativeInteger"
+              type: object
+              properties:
+                '@type':
+                  example: xsd:nonNegativeInteger
+                '@value':
+                  example: 5436
             mod:classesWithNoDateMetadata:
               title: number of classes with no date metadata
               description: Number of classes with no date metadata.
-              $ref: "#/components/schemas/xsdNonNegativeInteger"
+              type: object
+              properties:
+                '@type':
+                  example: xsd:nonNegativeInteger
+                '@value':
+                  example: 5436
             mod:classesWithNoDefinition:
               title: number of classes with no definition
               description: Number of classes that have no value for the definition property.
-              $ref: "#/components/schemas/xsdNonNegativeInteger"
+              type: object
+              properties:
+                '@type':
+                  example: xsd:nonNegativeInteger
+                '@value':
+                  example: 5436
             mod:classesWithNoFormalDefinition:
               title: number of classes with no formal or logical definition
               description: Number of classes with no formal or logical definition.
-              $ref: "#/components/schemas/xsdNonNegativeInteger"
+              type: object
+              properties:
+                '@type':
+                  example: xsd:nonNegativeInteger
+                '@value':
+                  example: 5436
             mod:classesWithNoLabel:
               title: number of classes with no label
               description: Number of classes with no labels.
-              $ref: "#/components/schemas/xsdNonNegativeInteger"
+              type: object
+              properties:
+                '@type':
+                  example: xsd:nonNegativeInteger
+                '@value':
+                  example: 5436
             mod:classesWithOneChild:
               title: number of classes with a single child
               description: Number of classes that have only one subclass in the is-a hierarchy.
-              $ref: "#/components/schemas/xsdNonNegativeInteger"
+              type: object
+              properties:
+                '@type':
+                  example: xsd:nonNegativeInteger
+                '@value':
+                  example: 5436
             mod:conformsToKnowledgeRepresentationParadigm:
               title: knowledge representation paradigm
               description: A representation formalism that is followed to describe knowledge in an ontology. Example includes description logics, first order logic, etc. 
@@ -3636,11 +4329,21 @@ components:
             mod:createdProperty:
               title: object creation date property
               description: Property used to specify the date of creation of a class or another object in the ontology.
-              $ref: "#/components/schemas/xsdAnyURI"
+              type: object
+              properties:
+                '@type':
+                  example: xsd:anyURI
+                '@value':
+                  example: https://example.org/createdProperty
             mod:definitionProperty:
               title: object definition property
               description: Property used to specify objects' definition.
-              $ref: "#/components/schemas/xsdAnyURI"
+              type: object
+              properties:
+                '@type':
+                  example: xsd:anyURI
+                '@value':
+                  example: https://example.org/definitionProperty
             mod:fairAssessment:
               title: FAIR assessment
               description: A FAIRness assessment result produced by a known or identified FAIRness assessment method or tool. It can be either a simple number or a structured result document explaining the assessment.
@@ -3653,46 +4356,101 @@ components:
             mod:fairScore:
               title: FAIR assessment
               description: A FAIRness assessment result produced by a known or identified FAIRness assessment method or tool. It can be either a simple number or a structured result document explaining the assessment.
-              $ref: "#/components/schemas/xsdNonNegativeInteger"
+              type: object
+              properties:
+                '@type':
+                  example: xsd:nonNegativeInteger
+                '@value':
+                  example: 5436
             mod:hasFormalityLevel:
               title: formality level
               description: The level of formality of an ontology.
-              $ref: "#/components/schemas/xsdString"
+              type: object
+              properties:
+                '@type':
+                  example: xsd:string
+                '@value':
+                  example: Lorem ipsum
             mod:hasRepresentationLanguage:
               title: representation language
               description: A language that is used to create an ontology.
-              $ref: "#/components/schemas/xsdString"
+              type: object
+              properties:
+                '@type':
+                  example: xsd:string
+                '@value':
+                  example: Lorem ipsum
             mod:hasSyntax:
               title: syntax
               description: The syntax followed in the creation of an ontology.
-              $ref: "#/components/schemas/xsdAnyURI"
+              type: object
+              properties:
+                '@type':
+                  example: xsd:anyURI
+                '@value':
+                  example: https://example.org/hasSyntax
             mod:hierarchyProperty:
               title: transitive hierarchy property
               description: Property used to specify the hierarchy (e.g. rdfs:subClassOf or skos:broader).
-              $ref: "#/components/schemas/xsdAnyURI"
+              type: object
+              properties:
+                '@type':
+                  example: xsd:anyURI
+                '@value':
+                  example: https://example.org/hierarchyProperty
             mod:maxChildCount:
               title: maximum number of children per class
               description: Maximum number of children per class (BioPortal definition).
-              $ref: "#/components/schemas/xsdNonNegativeInteger"
+              type: object
+              properties:
+                '@type':
+                  example: xsd:nonNegativeInteger
+                '@value':
+                  example: 5436
             mod:maxDepth:
               title: maximum depth of the hierachy
               description: Maximum depth of the hierarchy tree.
-              $ref: "#/components/schemas/xsdNonNegativeInteger"
+              type: object
+              properties:
+                '@type':
+                  example: xsd:nonNegativeInteger
+                '@value':
+                  example: 5436
             mod:metadataVoc:
               title: metadata vocabulary used
-              $ref: "#/components/schemas/xsdAnyURI"
+              type: object
+              properties:
+                '@type':
+                  example: xsd:anyURI
+                '@value':
+                  example: https://example.org/metadataVoc
             mod:metrics:
               title: metrics
               description: A generic property to store any metrics (number) related to the ontology.
-              $ref: "#/components/schemas/xsdNonNegativeInteger"
+              type: object
+              properties:
+                '@type':
+                  example: xsd:nonNegativeInteger
+                '@value':
+                  example: 5436
             mod:modifiedProperty:
               title: object modification date property
               description: Property used to specify the date of modification of a class or another object in the ontology.
-              $ref: "#/components/schemas/xsdAnyURI"
+              type: object
+              properties:
+                '@type':
+                  example: xsd:anyURI
+                '@value':
+                  example: https://example.org/modifiedProperty
             mod:numberOfAxioms:
               title: number of axioms or triples
               description: The total number of axioms in an ontology.
-              $ref: "#/components/schemas/xsdNonNegativeInteger"
+              type: object
+              properties:
+                '@type':
+                  example: xsd:nonNegativeInteger
+                '@value':
+                  example: 5436
             mod:numberOfClasses:
               title: number of classes
               description: The total number of classes in an ontology.
@@ -3700,51 +4458,111 @@ components:
             mod:numberOfDataProperties:
               title: number of data properties
               description: The total number of data properties in an ontology.
-              $ref: "#/components/schemas/xsdNonNegativeInteger"
+              type: object
+              properties:
+                '@type':
+                  example: xsd:nonNegativeInteger
+                '@value':
+                  example: 5436
             mod:numberOfDeprecated:
               title: number of deprecated objects
               description: The total number of  in an ontology.
-              $ref: "#/components/schemas/xsdNonNegativeInteger"
+              type: object
+              properties:
+                '@type':
+                  example: xsd:nonNegativeInteger
+                '@value':
+                  example: 5436
             mod:numberOfIndividuals:
               title: number of individuals
               description: The total number of individuals in an ontology.
-              $ref: "#/components/schemas/xsdNonNegativeInteger"
+              type: object
+              properties:
+                '@type':
+                  example: xsd:nonNegativeInteger
+                '@value':
+                  example: 5436
             mod:numberOfLabels:
               title: number of labels
               description: Number of defined labels for any resources in an ontology (classes, properties, etc).
-              $ref: "#/components/schemas/xsdNonNegativeInteger"
+              type: object
+              properties:
+                '@type':
+                  example: xsd:nonNegativeInteger
+                '@value':
+                  example: 5436
             mod:numberOfMappings:
               title: number of mappings
               description: Number of mappings within a given semantic artefact or semantic artefact catalogue.
-              $ref: "#/components/schemas/xsdNonNegativeInteger"
+              type: object
+              properties:
+                '@type':
+                  example: xsd:nonNegativeInteger
+                '@value':
+                  example: 5436
             mod:numberOfObjectProperties:
               title: number of object properties
               description: The total number of object properties in an ontology.
-              $ref: "#/components/schemas/xsdNonNegativeInteger"
+              type: object
+              properties:
+                '@type':
+                  example: xsd:nonNegativeInteger
+                '@value':
+                  example: 5436
             mod:numberOfProperties:
               title: number of properties
               description: The total number of properties in an ontology.
-              $ref: "#/components/schemas/xsdNonNegativeInteger"
+              type: object
+              properties:
+                '@type':
+                  example: xsd:nonNegativeInteger
+                '@value':
+                  example: 5436
             mod:obsoleteParent:
               title: root of obsolete branch
               description: Property used to specify the root of an obsolete branch in the ontology.  
-              $ref: "#/components/schemas/xsdAnyURI"
+              type: object
+              properties:
+                '@type':
+                  example: xsd:anyURI
+                '@value':
+                  example: https://example.org/obsoleteParent
             mod:obsoleteProperty:
               title: object obsolete property
               description: Property used to specify obsolete objects.
-              $ref: "#/components/schemas/xsdAnyURI"
+              type: object
+              properties:
+                '@type':
+                  example: xsd:anyURI
+                '@value':
+                  example: https://example.org/obsoleteProperty
             mod:prefLabelProperty:
               title: object preferred label property
               description: Property used to specify objects' preferred label.
-              $ref: "#/components/schemas/xsdAnyURI"
+              type: object
+              properties:
+                '@type':
+                  example: xsd:anyURI
+                '@value':
+                  example: https://example.org/prefLabelProperty
             mod:sampleQueries:
               title: sample queries
               description: A set of queries (may be SPARQL, DL Queries) that are provided along with an ontology.
-              $ref: "#/components/schemas/xsdAnyURI"
+              type: object
+              properties:
+                '@type':
+                  example: xsd:anyURI
+                '@value':
+                  example: https://example.org/sampleQueries
             mod:synonymProperty:
               title: object synonym property
               description: Property used to specify objects' synonyms.
-              $ref: "#/components/schemas/xsdAnyURI"
+              type: object
+              properties:
+                '@type':
+                  example: xsd:anyURI
+                '@value':
+                  example: https://example.org/synonymProperty
             mod:usedEngineeringMethodology:
               title: engineering methodology
               description: A methodolgy following which an ontology is created.
@@ -3757,7 +4575,12 @@ components:
             owl:deprecated:
               title: deprecated
               description: The annotation property that indicates that a given entity has been deprecated.
-              $ref: "#/components/schemas/rdfsResource"
+              type: object
+              properties:
+                '@id':
+                  example: https://example.org/Resource/DeprecatedResourceID
+                '@type':
+                  example: rdfs:Resource
             owl:imports:
               title: imports
               description: References another OWL ontology containing definitions, whose meaning is considered to be part of the meaning of the importing ontology.

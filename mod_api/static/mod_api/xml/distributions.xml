@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:ns0="http://www.w3.org/ns/hydra/core#"
+         xmlns:cc="http://creativecommons.org/ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:dc="http://purl.org/dc/terms/"
+         xmlns:ns1="http://purl.org/pav/"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xmlns:dcat="http://www.w3.org/ns/dcat#"
+         xmlns:odrl="http://www.w3.org/ns/odrl/2/"
+         xmlns:sd="http://www.w3.org/ns/sparql-service-description#"
+         xmlns:ns2="https://w3id.org/mod#">
+
+  <rdf:Description rdf:about="https://example.org/collection/collectionID">
+    <rdf:type rdf:resource="http://www.w3.org/ns/hydra/core#Collection"/>
+    <ns0:itemsPerPage rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">50</ns0:itemsPerPage>
+    <ns0:member>
+      <rdf:Description rdf:about="https://example.org/SemanticArtefactDistribution/SemanticArtefactDistributionID">
+        <rdf:type rdf:resource="https://w3id.org/mod#SemanticArtefactDistribution"/>
+        <cc:useGuidelines>
+          <rdfs:Resource rdf:about="https://example.org/Resource/UseGuidelinesResourceID">
+          </rdfs:Resource>
+        </cc:useGuidelines>
+
+        <dc:accessRights rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string</dc:accessRights>
+        <dc:conformsTo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string</dc:conformsTo>
+        <dc:created rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Lorem ipsum</dc:created>
+        <dc:dateSubmitted rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Lorem ipsum</dc:dateSubmitted>
+        <dc:description rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Lorem ipsum</dc:description>
+        <dc:format rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string</dc:format>
+        <dc:issued rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Lorem ipsum</dc:issued>
+        <dc:license rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string</dc:license>
+        <dc:modified rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Lorem ipsum</dc:modified>
+        <dc:rights rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string</dc:rights>
+        <dc:title rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Lorem ipsum</dc:title>
+        <dc:valid rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Lorem ipsum</dc:valid>
+        <ns1:curatedOn>
+          <xsd:date>
+          </xsd:date>
+        </ns1:curatedOn>
+
+        <owl:deprecated>
+          <rdfs:Resource rdf:about="https://example.org/Resource/DeprecatedResourceID">
+          </rdfs:Resource>
+        </owl:deprecated>
+
+        <owl:imports>
+          <owl:Ontology rdf:about="https://example.org/Ontology/OntologyID">
+          </owl:Ontology>
+        </owl:imports>
+
+        <dcat:accessService>
+          <dcat:DataService rdf:about="https://example.org/DataService/DataServiceID">
+          </dcat:DataService>
+        </dcat:accessService>
+
+        <dcat:accessURL>
+          <rdfs:Resource rdf:about="https://example.org/Resource/AccessURLResourceID">
+          </rdfs:Resource>
+        </dcat:accessURL>
+
+        <dcat:byteSize rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string</dcat:byteSize>
+        <dcat:compressFormat rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string</dcat:compressFormat>
+        <dcat:downloadURL>
+          <rdfs:Resource rdf:about="https://example.org/Resource/DownloadURLResourceID">
+          </rdfs:Resource>
+        </dcat:downloadURL>
+
+        <dcat:mediaType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string</dcat:mediaType>
+        <dcat:packageFormat rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string</dcat:packageFormat>
+        <dcat:spatialResolutionInMeters rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string</dcat:spatialResolutionInMeters>
+        <dcat:temporalResolution rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string</dcat:temporalResolution>
+        <odrl:hasPolicy>
+          <odrl:Policy rdf:about="https://example.org/Policy/PolicyID">
+          </odrl:Policy>
+        </odrl:hasPolicy>
+
+        <sd:endpoint rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string</sd:endpoint>
+        <ns2:FairAssessment>
+          <rdf:Description rdf:about="https://example.org/FairAssessment/FairAssessmentID">
+            <rdf:type rdf:resource="http://njh.me/FairAssessment"/>
+          </rdf:Description>
+        </ns2:FairAssessment>
+
+        <ns2:authorProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://example.org/authorProperty</ns2:authorProperty>
+        <ns2:averageChildCount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.0</ns2:averageChildCount>
+        <ns2:browsingUI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://example.org/browsingUI</ns2:browsingUI>
+        <ns2:classesWithMoreThan25Children rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">5436</ns2:classesWithMoreThan25Children>
+        <ns2:classesWithNoAuthorMetadata rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">5436</ns2:classesWithNoAuthorMetadata>
+        <ns2:classesWithNoDateMetadata rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">5436</ns2:classesWithNoDateMetadata>
+        <ns2:classesWithNoDefinition rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">5436</ns2:classesWithNoDefinition>
+        <ns2:classesWithNoFormalDefinition rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">5436</ns2:classesWithNoFormalDefinition>
+        <ns2:classesWithNoLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">5436</ns2:classesWithNoLabel>
+        <ns2:classesWithOneChild rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">5436</ns2:classesWithOneChild>
+        <ns2:conformsToKnowledgeRepresentationParadigm>
+          <ns2:KnowledgeRepresentationParadigm rdf:about="https://example.org/KnowledgeRepresentationParadigm/KnowledgeRepresentationParadigmID">
+          </ns2:KnowledgeRepresentationParadigm>
+        </ns2:conformsToKnowledgeRepresentationParadigm>
+
+        <ns2:createdProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://example.org/createdProperty</ns2:createdProperty>
+        <ns2:definitionProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://example.org/definitionProperty</ns2:definitionProperty>
+        <ns2:fairScore rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">5436</ns2:fairScore>
+        <ns2:hasFormalityLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lorem ipsum</ns2:hasFormalityLevel>
+        <ns2:hasRepresentationLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lorem ipsum</ns2:hasRepresentationLanguage>
+        <ns2:hasSyntax rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://example.org/hasSyntax</ns2:hasSyntax>
+        <ns2:hierarchyProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://example.org/hierarchyProperty</ns2:hierarchyProperty>
+        <ns2:maxChildCount rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">5436</ns2:maxChildCount>
+        <ns2:maxDepth rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">5436</ns2:maxDepth>
+        <ns2:metadataVoc rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://example.org/metadataVoc</ns2:metadataVoc>
+        <ns2:metrics rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">5436</ns2:metrics>
+        <ns2:modifiedProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://example.org/modifiedProperty</ns2:modifiedProperty>
+        <ns2:numberOfAxioms rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">5436</ns2:numberOfAxioms>
+        <ns2:numberOfClasses rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</ns2:numberOfClasses>
+        <ns2:numberOfDataProperties rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">5436</ns2:numberOfDataProperties>
+        <ns2:numberOfDeprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">5436</ns2:numberOfDeprecated>
+        <ns2:numberOfIndividuals rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">5436</ns2:numberOfIndividuals>
+        <ns2:numberOfLabels rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">5436</ns2:numberOfLabels>
+        <ns2:numberOfMappings rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">5436</ns2:numberOfMappings>
+        <ns2:numberOfObjectProperties rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">5436</ns2:numberOfObjectProperties>
+        <ns2:numberOfProperties rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">5436</ns2:numberOfProperties>
+        <ns2:obsoleteParent rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://example.org/obsoleteParent</ns2:obsoleteParent>
+        <ns2:obsoleteProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://example.org/obsoleteProperty</ns2:obsoleteProperty>
+        <ns2:prefLabelProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://example.org/prefLabelProperty</ns2:prefLabelProperty>
+        <ns2:sampleQueries rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://example.org/sampleQueries</ns2:sampleQueries>
+        <ns2:synonymProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://example.org/synonymProperty</ns2:synonymProperty>
+        <ns2:usedEngineeringMethodology>
+          <ns2:EngineeringMethodology rdf:about="https://example.org/EngineeringMethodology/EngineeringMethodologyID">
+          </ns2:EngineeringMethodology>
+        </ns2:usedEngineeringMethodology>
+
+      </rdf:Description>
+    </ns0:member>
+
+    <ns0:totalItems rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">5436</ns0:totalItems>
+    <ns0:view>
+      <ns0:PartialCollectionView rdf:about="https://example.org/items?page=3">
+        <ns0:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://example.org/items?page=1</ns0:first>
+        <ns0:last rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://example.org/items?page=42</ns0:last>
+        <ns0:next rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://example.org/items?page=4</ns0:next>
+        <ns0:previous rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://example.org/items?page=2</ns0:previous>
+      </ns0:PartialCollectionView>
+    </ns0:view>
+
+  </rdf:Description>
+
+</rdf:RDF>
