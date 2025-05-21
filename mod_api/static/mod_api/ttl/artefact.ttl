@@ -49,7 +49,6 @@
   dc:rights "string"^^xsd:string ;
   dc:rightsHolder "string"^^xsd:string ;
   dc:source "string"^^xsd:string ;
-  dc:subject "string"^^xsd:string ;
   dc:title "Lorem ipsum"^^rdfs:Literal ;
   dc:type "string"^^xsd:string ;
   ns0:createdWith "string"^^xsd:string ;
@@ -75,7 +74,8 @@
   dcat:contactPoint <https://example.org/vcardKind/vcardKindID> ;
   dcat:keyword "string"^^xsd:string ;
   dcat:landingPage <https://example.org/Document/DocumentID> ;
-  dcat:qualifiedRelation "string"^^xsd:string ;
+  dcat:qualifiedRelation <https://example.org/Relationship/RelationshipID> ;
+  dcat:theme <https://example.org/Theme/ThemeID> ;
   odrl:hasPolicy <https://example.org/Policy/PolicyID> ;
   prov:qualifiedAttribution <https://example.org/Attribution/AttributionID> ;
   prov:wasGeneratedBy <https://example.org/Activity/ActivityID> ;
@@ -137,6 +137,8 @@
   vcard:fn "Corky Crystal"^^xsd:string ;
   vcard:nickname "Corks"^^xsd:string .
 
+<https://example.org/Relationship/RelationshipID> a dcat:Relationship .
+<https://example.org/Theme/ThemeID> a rdfs:Resource .
 <https://example.org/Policy/PolicyID> a odrl:Policy .
 <https://example.org/Attribution/AttributionID> a prov:Attribution .
 <https://example.org/Activity/ActivityID> a prov:Activity .

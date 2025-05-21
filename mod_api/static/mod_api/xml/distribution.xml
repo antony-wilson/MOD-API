@@ -106,7 +106,7 @@
     <ns1:metrics rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">5436</ns1:metrics>
     <ns1:modifiedProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://example.org/modifiedProperty</ns1:modifiedProperty>
     <ns1:numberOfAxioms rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">5436</ns1:numberOfAxioms>
-    <ns1:numberOfClasses rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</ns1:numberOfClasses>
+    <ns1:numberOfClasses rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">5436</ns1:numberOfClasses>
     <ns1:numberOfDataProperties rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">5436</ns1:numberOfDataProperties>
     <ns1:numberOfDeprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">5436</ns1:numberOfDeprecated>
     <ns1:numberOfIndividuals rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">5436</ns1:numberOfIndividuals>

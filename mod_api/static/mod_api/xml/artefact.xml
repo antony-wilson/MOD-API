@@ -50,7 +50,6 @@
     <dc:rights rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string</dc:rights>
     <dc:rightsHolder rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string</dc:rightsHolder>
     <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string</dc:source>
-    <dc:subject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string</dc:subject>
     <dc:title rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Lorem ipsum</dc:title>
     <dc:type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string</dc:type>
     <ns0:createdWith rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string</ns0:createdWith>
@@ -86,7 +85,16 @@
 
     <dcat:keyword rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string</dcat:keyword>
     <dcat:landingPage rdf:resource="https://example.org/Document/DocumentID"/>
-    <dcat:qualifiedRelation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string</dcat:qualifiedRelation>
+    <dcat:qualifiedRelation>
+      <dcat:Relationship rdf:about="https://example.org/Relationship/RelationshipID">
+      </dcat:Relationship>
+    </dcat:qualifiedRelation>
+
+    <dcat:theme>
+      <rdfs:Resource rdf:about="https://example.org/Theme/ThemeID">
+      </rdfs:Resource>
+    </dcat:theme>
+
     <odrl:hasPolicy>
       <odrl:Policy rdf:about="https://example.org/Policy/PolicyID">
       </odrl:Policy>

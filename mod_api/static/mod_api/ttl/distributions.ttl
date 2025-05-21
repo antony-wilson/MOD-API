@@ -71,7 +71,7 @@
   ns2:metrics "5436"^^xsd:nonNegativeInteger ;
   ns2:modifiedProperty "https://example.org/modifiedProperty"^^xsd:anyURI ;
   ns2:numberOfAxioms "5436"^^xsd:nonNegativeInteger ;
-  ns2:numberOfClasses 0 ;
+  ns2:numberOfClasses "5436"^^xsd:nonNegativeInteger ;
   ns2:numberOfDataProperties "5436"^^xsd:nonNegativeInteger ;
   ns2:numberOfDeprecated "5436"^^xsd:nonNegativeInteger ;
   ns2:numberOfIndividuals "5436"^^xsd:nonNegativeInteger ;

@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:cc="http://creativecommons.org/ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:dc="http://purl.org/dc/terms/"
+         xmlns:dcat="http://www.w3.org/ns/dcat#"
+         xmlns:ns0="http://purl.org/pav/"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:void="http://rdfs.org/ns/void#"
+         xmlns:doap="http://usefulinc.com/ns/doap#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+         xmlns:ns1="http://www.w3.org/ns/adms#"
+         xmlns:vcard="http://www.w3.org/2006/vcard/ns#"
+         xmlns:odrl="http://www.w3.org/ns/odrl/2/"
+         xmlns:prov="http://www.w3.org/ns/prov#"
+         xmlns:sd="http://www.w3.org/ns/sparql-service-description#"
+         xmlns:foaf="http://xmlns.com/foaf/0.1/"
+         xmlns:ns2="https://schema.org/"
+         xmlns:ns3="https://vocab.org/vann/"
+         xmlns:ns4="https://w3id.org/mod#">
+
+  <rdf:Description rdf:about="https://example.org/SemanticArtefactCatalog/SemanticArtefactCatalogID">
+    <rdf:type rdf:resource="https://w3id.org/mod#SemanticArtefactCatalog"/>
+    <cc:morePermissions>
+      <rdfs:Resource rdf:about="https://example.org/Resource/MorePermissionsResourceID">
+      </rdfs:Resource>
+    </cc:morePermissions>
+
+    <cc:useGuidelines>
+      <rdfs:Resource rdf:about="https://example.org/Resource/UseGuidelinesResourceID">
+      </rdfs:Resource>
+    </cc:useGuidelines>
+
+    <dc:abstract rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string</dc:abstract>
+    <dc:accessRights rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string</dc:accessRights>
+    <dc:accrualMethod rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string</dc:accrualMethod>
+    <dc:accrualPeriodicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string</dc:accrualPeriodicity>
+    <dc:accrualPolicy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string</dc:accrualPolicy>
+    <dc:alternative rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Lorem ipsum</dc:alternative>
+    <dc:audience rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string</dc:audience>
+    <dc:bibliographicCitation rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Lorem ipsum</dc:bibliographicCitation>
+    <dc:conformsTo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string</dc:conformsTo>
+    <dc:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string</dc:contributor>
+    <dc:coverage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string</dc:coverage>
+    <dc:created rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Lorem ipsum</dc:created>
+    <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string</dc:creator>
+    <dc:description rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Lorem ipsum</dc:description>
+    <dc:hasPart>
+      <dcat:Resource rdf:about="https://example.org/Resource/ResourceID">
+      </dcat:Resource>
+    </dc:hasPart>
+
+    <dc:identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Lorem ipsum</dc:identifier>
+    <dc:isPartOf rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string</dc:isPartOf>
+    <dc:isReferencedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string</dc:isReferencedBy>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string</dc:issued>
+    <dc:language rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string</dc:language>
+    <dc:license rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string</dc:license>
+    <dc:modified rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Lorem ipsum</dc:modified>
+    <dc:publisher rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string</dc:publisher>
+    <dc:relation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string</dc:relation>
+    <dc:rights rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string</dc:rights>
+    <dc:rightsHolder rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string</dc:rightsHolder>
+    <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string</dc:source>
+    <dc:spatial rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string</dc:spatial>
+    <dc:temporal rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string</dc:temporal>
+    <dc:title rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Lorem ipsum</dc:title>
+    <dc:type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string</dc:type>
+    <ns0:createdWith rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string</ns0:createdWith>
+    <ns0:curatedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string</ns0:curatedBy>
+    <ns0:curatedOn>
+      <xsd:date>
+      </xsd:date>
+    </ns0:curatedOn>
+
+    <void:openSearchDescription rdf:resource="https://example.org/Document/DocumentID"/>
+    <void:uriLookupEndpoint rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://example.org/uriLookupEndpoint</void:uriLookupEndpoint>
+    <void:uriRegexPattern rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string</void:uriRegexPattern>
+    <doap:bug-database rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string</doap:bug-database>
+    <doap:mailing-list rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string</doap:mailing-list>
+    <doap:repository>
+      <doap:repository rdf:about="https://example.org/repository/repositoryID">
+      </doap:repository>
+    </doap:repository>
+
+    <rdfs:comment rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Lorem ipsum</rdfs:comment>
+    <owl:deprecated>
+      <rdfs:Resource rdf:about="https://example.org/Resource/DeprecatedResourceID">
+      </rdfs:Resource>
+    </owl:deprecated>
+
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lorem ipsum</owl:versionInfo>
+    <skos:hiddenLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Lorem ipsum</skos:hiddenLabel>
+    <ns1:supportedSchema>
+      <ns1:Asset rdf:about="https://example.org/asset/assetId">
+      </ns1:Asset>
+    </ns1:supportedSchema>
+
+    <dcat:accessURL>
+      <rdfs:Resource rdf:about="https://example.org/Resource/AccessURLResourceID">
+      </rdfs:Resource>
+    </dcat:accessURL>
+
+    <dcat:catalog>
+      <dcat:Catalog rdf:about="https://example.org/Catalog/CatalogID">
+      </dcat:Catalog>
+    </dcat:catalog>
+
+    <dcat:contactPoint>
+      <vcard:Kind rdf:about="https://example.org/vcardKind/vcardKindID">
+        <vcard:fn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Corky Crystal</vcard:fn>
+        <vcard:nickname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Corks</vcard:nickname>
+      </vcard:Kind>
+    </dcat:contactPoint>
+
+    <dcat:dataset>
+      <dcat:Dataset rdf:about="https://example.org/Dataset/DatasetID">
+      </dcat:Dataset>
+    </dcat:dataset>
+
+    <dcat:distribution>
+      <dcat:Distribution rdf:about="https://example.org/Distribution/DistributionID">
+      </dcat:Distribution>
+    </dcat:distribution>
+
+    <dcat:keyword rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string</dcat:keyword>
+    <dcat:landingPage rdf:resource="https://example.org/Document/DocumentID"/>
+    <dcat:qualifiedRelation>
+      <dcat:Relationship rdf:about="https://example.org/Relationship/RelationshipID">
+      </dcat:Relationship>
+    </dcat:qualifiedRelation>
+
+    <dcat:record>
+      <dcat:CatalogRecord rdf:about="https://example.org/CatalogRecord/CatalogRecordID">
+      </dcat:CatalogRecord>
+    </dcat:record>
+
+    <dcat:service>
+      <dcat:DataService rdf:about="https://example.org/DataService/DataServiceID">
+      </dcat:DataService>
+    </dcat:service>
+
+    <dcat:spatialResolutionInMeters rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string</dcat:spatialResolutionInMeters>
+    <dcat:temporalResolution rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string</dcat:temporalResolution>
+    <dcat:theme>
+      <rdfs:Resource rdf:about="https://example.org/Theme/ThemeID">
+      </rdfs:Resource>
+    </dcat:theme>
+
+    <dcat:themeTaxonomy>
+      <rdfs:Resource rdf:about="https://example.org/Resource/ThemeTaxonomyResourceID">
+      </rdfs:Resource>
+    </dcat:themeTaxonomy>
+
+    <odrl:hasPolicy>
+      <odrl:Policy rdf:about="https://example.org/Policy/PolicyID">
+      </odrl:Policy>
+    </odrl:hasPolicy>
+
+    <prov:qualifiedAttribution>
+      <prov:Attribution rdf:about="https://example.org/Attribution/AttributionID">
+      </prov:Attribution>
+    </prov:qualifiedAttribution>
+
+    <prov:wasGeneratedBy>
+      <prov:Activity rdf:about="https://example.org/Activity/ActivityID">
+      </prov:Activity>
+    </prov:wasGeneratedBy>
+
+    <sd:endpoint rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string</sd:endpoint>
+    <foaf:depiction>
+      <foaf:Image rdf:about="https://example.org/Image/ImageID">
+      </foaf:Image>
+    </foaf:depiction>
+
+    <foaf:fundedBy rdf:resource="https://example.org/Thing/ThingID"/>
+    <foaf:homepage rdf:resource="https://example.org/Document/DocumentID"/>
+    <foaf:logo rdf:resource="https://example.org/Thing/ThingID"/>
+    <ns2:associatedMedia rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string</ns2:associatedMedia>
+    <ns2:award rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string</ns2:award>
+    <ns2:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string</ns2:comment>
+    <ns2:funding rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string</ns2:funding>
+    <ns2:publishingPrinciples rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string</ns2:publishingPrinciples>
+    <ns2:translator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string</ns2:translator>
+    <ns3:changes rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string</ns3:changes>
+    <ns3:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string</ns3:example>
+    <ns3:preferredNamespacePrefix rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string</ns3:preferredNamespacePrefix>
+    <ns3:preferredNamespaceUri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string</ns3:preferredNamespaceUri>
+    <ns4:analytics>
+      <ns4:Analytics rdf:about="https://example.org/Analytics/AnalyticsID">
+      </ns4:Analytics>
+    </ns4:analytics>
+
+    <ns4:endorsedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string</ns4:endorsedBy>
+    <ns4:fairScore rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">5436</ns4:fairScore>
+    <ns4:group>
+      <ns4:Group rdf:about="https://example.org/Group/GroupID">
+      </ns4:Group>
+    </ns4:group>
+
+    <ns4:knownUsage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lorem ipsum</ns4:knownUsage>
+    <ns4:metadataVoc rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://example.org/metadataVoc</ns4:metadataVoc>
+    <ns4:metrics rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">5436</ns4:metrics>
+    <ns4:numberOfAgents rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">5436</ns4:numberOfAgents>
+    <ns4:numberOfArtefacts rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">5436</ns4:numberOfArtefacts>
+    <ns4:numberOfAxioms rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">5436</ns4:numberOfAxioms>
+    <ns4:numberOfClasses rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">5436</ns4:numberOfClasses>
+    <ns4:numberOfDataProperties rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">5436</ns4:numberOfDataProperties>
+    <ns4:numberOfDeprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">5436</ns4:numberOfDeprecated>
+    <ns4:numberOfEndorsements rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">5436</ns4:numberOfEndorsements>
+    <ns4:numberOfIndividuals rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">5436</ns4:numberOfIndividuals>
+    <ns4:numberOfLabels rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">5436</ns4:numberOfLabels>
+    <ns4:numberOfMappings rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">5436</ns4:numberOfMappings>
+    <ns4:numberOfObjectProperties rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">5436</ns4:numberOfObjectProperties>
+    <ns4:numberOfProperties rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">5436</ns4:numberOfProperties>
+    <ns4:numberOfUsers rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">5436</ns4:numberOfUsers>
+    <ns4:numberOfUsingProjects rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">5436</ns4:numberOfUsingProjects>
+    <ns4:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lorem ipsum</ns4:status>
+    <ns4:toDoList>
+      <rdf:Description rdf:about="https://example.org/Vtodo/VtodoID">
+        <rdf:type rdf:resource="http://www.w3.org/2002/12/cal/ical#Vtodo"/>
+      </rdf:Description>
+    </ns4:toDoList>
+
+    <ns4:usedInProject>
+      <foaf:Project rdf:about="https://example.org/Project/ProjectID">
+      </foaf:Project>
+    </ns4:usedInProject>
+
+  </rdf:Description>
+
+  <foaf:Document rdf:about="https://example.org/Document/DocumentID">
+  </foaf:Document>
+
+  <owl:Thing rdf:about="https://example.org/Thing/ThingID">
+  </owl:Thing>
+
+</rdf:RDF>
