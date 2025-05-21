@@ -602,6 +602,10 @@ components:
         text/turtle:
           schema:
             type: string
+          examples:
+            semanticArtefactCatalogRecord:
+              summary: Semantic Artefact Catalog Record
+              externalValue: "./ttl/record.ttl"
         application/rdf+xml:
           schema:
             type: array
@@ -609,7 +613,10 @@ components:
               name: rdf
               wrapped: true
             items:
-              example: In progress
+          examples:
+            semanticArtefactCatalogRecord:
+              summary: Semantic Artefact Catalog Record
+              externalValue: "./xml/record.xml"
 
     records:
       description: "OK"
@@ -645,9 +652,11 @@ components:
               $ref: "#/components/schemas/html"
         text/turtle:
           schema:
-            type: array
-            items:
-              type: string
+            type: string
+          examples:
+            semanticArtefactCatalogRecords:
+              summary: Semantic Artefact Catalog Records
+              externalValue: "./ttl/records.ttl"
         application/rdf+xml:
           schema:
             type: array
@@ -655,7 +664,10 @@ components:
               name: rdf
               wrapped: true
             items:
-              example: In progress
+          examples:
+            semanticArtefactCatalogRecords:
+              summary: Semantic Artefact Catalog Records
+              externalValue: "./xml/records.xml"
 
     resource:
       description: "OK"
@@ -1857,51 +1869,25 @@ components:
           dcterms: 'http://purl.org/dc/terms/'
           foaf: 'http://xmlns.com/foaf/0.1/'
           mod: 'https://w3id.org/mod#'
-          odrl: 'http://www.w3.org/ns/odrl/2/'
           pav: 'http://purl.org/pav/'
-          prov: 'http://www.w3.org/ns/prov#'
           rdfs: 'http://www.w3.org/2000/01/rdf-schema#'
-          skos: 'http://www.w3.org/2004/02/skos/core#'
-          vcard: 'http://www.w3.org/2006/vcard/ns#'
           xsd: 'http://www.w3.org/2001/XMLSchema#'
-          accessRights: 'dcterms:accessRights'
-          Attribution: 'prov:Attribution'
           conformsTo: 'dcterms:conformsTo'
-          contactPoint: 'dcat:contactPoint'
           created: 'dcterms:created'
-          creator: 'dcterms:creator'
           curatedBy: 'pav:curatedBy'
           curatedOn: 'pav:curatedOn'
           date: 'xsd:date'
           dateSubmitted: 'dcterms:dateSubmitted'
           description: 'dcterms:description'
           Document: 'foaf:Document'
-          fn: 'vcard:fn'
-          hasPolicy: 'odrl:hasPolicy'
           homepage: 'foaf:homepage'
-          identifier: 'dcterms:identifier'
-          isReferencedBy: 'dcterms:isReferencedBy'
           issued: 'dcterms:issued'
-          keyword: 'dcat:keyword'
-          Kind: 'vcard:Kind'
-          landingPage: 'dcat:landingPage'
-          language: 'dcterms:language'
-          license: 'dcterms:license'
           Literal: 'rdfs:Literal'
           modified: 'dcterms:modified'
-          nickname: 'vcard:nickname'
-          nonNegativeInteger: 'xsd:nonNegativeInteger'
-          Policy: 'odrl:Policy'
           primaryTopic: 'foaf:primaryTopic'
-          publisher: 'dcterms:publisher'
-          qualifiedAttribution: 'prov:qualifiedAttribution'
-          qualifiedRelation: 'dcat:qualifiedRelation'
-          relation: 'dcterms:relation'
-          rights: 'dcterms:rights'
+          Resource: 'dcat:Resource'
           SemanticArtefactCatalogRecord: 'mod:SemanticArtefactCatalogRecord'
-          subject: 'dcterms:subject'
           title: 'dcterms:title'
-          type: 'dcterms:type'
         '@id': >-
           https://example.org/SemanticArtefactCatalogRecord/SemanticArtefactCatalogRecordID
         '@type': SemanticArtefactCatalogRecord
@@ -1919,46 +1905,8 @@ components:
           '@type': Literal
           '@value': Lorem ipsum
         primaryTopic:
-          accessRights: string
-          conformsTo: string
-          contactPoint:
-            '@id': 'https://example.org/vcardKind/vcardKindID'
-            '@type': Kind
-            fn: Corky Crystal
-            nickname: Corks
-          creator: string
-          description:
-            '@type': Literal
-            '@value': Lorem ipsum
-          hasPolicy:
-            '@id': 'https://example.org/Policy/PolicyID'
-            '@type': Policy
-          identifier:
-            '@type': Literal
-            '@value': Lorem ipsum
-          isReferencedBy: string
-          issued: string
-          keyword: string
-          landingPage:
-            '@id': 'https://example.org/Document/DocumentID'
-            '@type': Document
-          language: string
-          license: string
-          modified:
-            '@type': Literal
-            '@value': Lorem ipsum
-          publisher: string
-          qualifiedAttribution:
-            '@id': 'https://example.org/Attribution/AttributionID'
-            '@type': Attribution
-          qualifiedRelation: string
-          relation: string
-          rights: string
-          subject: string
-          title:
-            '@type': Literal
-            '@value': Lorem ipsum
-          type: string
+          '@id': 'https://example.org/dcatResource/dcatResourceID'
+          '@type': Resource
         dateSubmitted:
           '@type': Literal
           '@value': Lorem ipsum
@@ -1981,20 +1929,12 @@ components:
           foaf: 'http://xmlns.com/foaf/0.1/'
           hydra: 'http://www.w3.org/ns/hydra/core#'
           mod: 'https://w3id.org/mod#'
-          odrl: 'http://www.w3.org/ns/odrl/2/'
           pav: 'http://purl.org/pav/'
-          prov: 'http://www.w3.org/ns/prov#'
           rdfs: 'http://www.w3.org/2000/01/rdf-schema#'
-          skos: 'http://www.w3.org/2004/02/skos/core#'
-          vcard: 'http://www.w3.org/2006/vcard/ns#'
           xsd: 'http://www.w3.org/2001/XMLSchema#'
-          accessRights: 'dcterms:accessRights'
-          Attribution: 'prov:Attribution'
           Collection: 'hydra:Collection'
           conformsTo: 'dcterms:conformsTo'
-          contactPoint: 'dcat:contactPoint'
           created: 'dcterms:created'
-          creator: 'dcterms:creator'
           curatedBy: 'pav:curatedBy'
           curatedOn: 'pav:curatedOn'
           date: 'xsd:date'
@@ -2002,39 +1942,22 @@ components:
           description: 'dcterms:description'
           Document: 'foaf:Document'
           firstPage: 'hydra:first'
-          fn: 'vcard:fn'
-          hasPolicy: 'odrl:hasPolicy'
           homepage: 'foaf:homepage'
-          identifier: 'dcterms:identifier'
-          isReferencedBy: 'dcterms:isReferencedBy'
           issued: 'dcterms:issued'
           itemsPerPage: 'hydra:itemsPerPage'
-          keyword: 'dcat:keyword'
-          Kind: 'vcard:Kind'
-          landingPage: 'dcat:landingPage'
-          language: 'dcterms:language'
           lastPage: 'hydra:last'
-          license: 'dcterms:license'
           Literal: 'rdfs:Literal'
           member: 'hydra:member'
           modified: 'dcterms:modified'
           nextPage: 'hydra:next'
-          nickname: 'vcard:nickname'
           nonNegativeInteger: 'xsd:nonNegativeInteger'
           PartialCollectionView: 'hydra:PartialCollectionView'
-          Policy: 'odrl:Policy'
           previousPage: 'hydra:previous'
           primaryTopic: 'foaf:primaryTopic'
-          publisher: 'dcterms:publisher'
-          qualifiedAttribution: 'prov:qualifiedAttribution'
-          qualifiedRelation: 'dcat:qualifiedRelation'
-          relation: 'dcterms:relation'
-          rights: 'dcterms:rights'
+          Resource: 'dcat:Resource'
           SemanticArtefactCatalogRecord: 'mod:SemanticArtefactCatalogRecord'
-          subject: 'dcterms:subject'
           title: 'dcterms:title'
           totalItems: 'hydra:totalItems'
-          type: 'dcterms:type'
           view: 'hydra:view'
         '@id': 'https://example.org/collection/collectionID'
         '@type': Collection
@@ -2062,46 +1985,8 @@ components:
               '@type': Literal
               '@value': Lorem ipsum
             primaryTopic:
-              accessRights: string
-              conformsTo: string
-              contactPoint:
-                '@id': 'https://example.org/vcardKind/vcardKindID'
-                '@type': Kind
-                fn: Corky Crystal
-                nickname: Corks
-              creator: string
-              description:
-                '@type': Literal
-                '@value': Lorem ipsum
-              hasPolicy:
-                '@id': 'https://example.org/Policy/PolicyID'
-                '@type': Policy
-              identifier:
-                '@type': Literal
-                '@value': Lorem ipsum
-              isReferencedBy: string
-              issued: string
-              keyword: string
-              landingPage:
-                '@id': 'https://example.org/Document/DocumentID'
-                '@type': Document
-              language: string
-              license: string
-              modified:
-                '@type': Literal
-                '@value': Lorem ipsum
-              publisher: string
-              qualifiedAttribution:
-                '@id': 'https://example.org/Attribution/AttributionID'
-                '@type': Attribution
-              qualifiedRelation: string
-              relation: string
-              rights: string
-              subject: string
-              title:
-                '@type': Literal
-                '@value': Lorem ipsum
-              type: string
+              '@id': 'https://example.org/dcatResource/dcatResourceID'
+              '@type': Resource
             dateSubmitted:
               '@type': Literal
               '@value': Lorem ipsum
@@ -3086,23 +2971,48 @@ components:
             dcterms:description:
               title: Description
               description: A free-text account of the record.
-              $ref: "#/components/schemas/rdfsLiteral"
+              type: object
+              properties:
+                '@type':
+                  example: rdfs:Literal
+                '@value':
+                  example: Lorem ipsum
             dcterms:issued:
               title: listing date
               description: The date of listing (i.e. formal recording) of the corresponding dataset or service in the catalog.
-              $ref: "#/components/schemas/rdfsLiteral"
+              type: object
+              properties:
+                '@type':
+                  example: rdfs:Literal
+                '@value':
+                  example: Lorem ipsum
             dcterms:modified:
               title: update/modification date
               description: Most recent date on which the catalog entry was changed, updated or modified.
-              $ref: "#/components/schemas/rdfsLiteral"
+              type: object
+              properties:
+                '@type':
+                  example: rdfs:Literal
+                '@value':
+                  example: Lorem ipsum
             dcterms:title:
               title: Title
               description: A name given to the resource.
-              $ref: "#/components/schemas/rdfsLiteral"
+              type: object
+              properties:
+                '@type':
+                  example: rdfs:Literal
+                '@value':
+                  example: Lorem ipsum
             foaf:primaryTopic:
               title: primary topic
               description: The Resource (dataset or service) described in the record.
-              $ref: "#/components/schemas/dcatResource"
+              type: object
+              properties:
+                '@id':
+                  example: https://example.org/dcatResource/dcatResourceID
+                '@type':
+                  example: dcat:Resource
 
     # see https://www.w3.org/TR/vocab-dcat-2/#Class:Data_Service
     dcatDataService:
@@ -4152,7 +4062,12 @@ components:
             dcterms:dateSubmitted:
               title: submission date
               description: Date of submission of the resource.
-              $ref: "#/components/schemas/rdfsLiteral"
+              type: object
+              properties:
+                '@type':
+                  example: rdfs:Literal
+                '@value':
+                  example: Lorem ipsum
             foaf:homepage:
               title: homepage
               description: An unambiguous reference to the resource within a given context.
@@ -4165,7 +4080,12 @@ components:
             dcterms:created:
               title: creation date
               description: Date of creation of the resource.
-              $ref: "#/components/schemas/rdfsLiteral"
+              type: object
+              properties:
+                '@type':
+                  example: rdfs:Literal
+                '@value':
+                  example: Lorem ipsum
             pav:curatedBy:
               title: curator
               description: A curator who restructure the previously authored content and shape it to be appropriate for the intended representation (e.g. by normalizing the fields for being represented in a spreadsheet).

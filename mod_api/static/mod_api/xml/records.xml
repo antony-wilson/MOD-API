@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:ns0="http://www.w3.org/ns/hydra/core#"
+         xmlns:dc="http://purl.org/dc/terms/"
+         xmlns:ns1="http://purl.org/pav/"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:foaf="http://xmlns.com/foaf/0.1/"
+         xmlns:dcat="http://www.w3.org/ns/dcat#">
+
+  <rdf:Description rdf:about="https://example.org/collection/collectionID">
+    <rdf:type rdf:resource="http://www.w3.org/ns/hydra/core#Collection"/>
+    <ns0:itemsPerPage rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">50</ns0:itemsPerPage>
+    <ns0:member>
+      <rdf:Description rdf:about="https://example.org/SemanticArtefactCatalogRecord/SemanticArtefactCatalogRecordID">
+        <rdf:type rdf:resource="https://w3id.org/mod#SemanticArtefactCatalogRecord"/>
+        <dc:conformsTo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string</dc:conformsTo>
+        <dc:created rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Lorem ipsum</dc:created>
+        <dc:dateSubmitted rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Lorem ipsum</dc:dateSubmitted>
+        <dc:description rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Lorem ipsum</dc:description>
+        <dc:issued rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Lorem ipsum</dc:issued>
+        <dc:modified rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Lorem ipsum</dc:modified>
+        <dc:title rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Lorem ipsum</dc:title>
+        <ns1:curatedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string</ns1:curatedBy>
+        <ns1:curatedOn>
+          <xsd:date>
+          </xsd:date>
+        </ns1:curatedOn>
+
+        <foaf:homepage>
+          <foaf:Document rdf:about="https://example.org/Document/DocumentID">
+          </foaf:Document>
+        </foaf:homepage>
+
+        <foaf:primaryTopic>
+          <dcat:Resource rdf:about="https://example.org/dcatResource/dcatResourceID">
+          </dcat:Resource>
+        </foaf:primaryTopic>
+
+      </rdf:Description>
+    </ns0:member>
+
+    <ns0:totalItems rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">5436</ns0:totalItems>
+    <ns0:view>
+      <ns0:PartialCollectionView rdf:about="https://example.org/items?page=3">
+        <ns0:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://example.org/items?page=1</ns0:first>
+        <ns0:last rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://example.org/items?page=42</ns0:last>
+        <ns0:next rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://example.org/items?page=4</ns0:next>
+        <ns0:previous rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://example.org/items?page=2</ns0:previous>
+      </ns0:PartialCollectionView>
+    </ns0:view>
+
+  </rdf:Description>
+
+</rdf:RDF>
