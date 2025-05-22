@@ -166,21 +166,12 @@ components:
         text/turtle:
           schema:
             type: string
-          examples:
-            semanticArtefact:
-              summary: Semantic Artefact
-              externalValue: "./ttl/artefact.ttl"
         application/rdf+xml:
           schema:
             type: array
             xml:
               name: rdf
               wrapped: true
-            items:
-          examples:
-            semanticArtefact:
-              summary: Semantic Artefact
-              externalValue: "./xml/artefact.xml"
 
     artefacts:
       description: "OK"
@@ -215,21 +206,12 @@ components:
         text/turtle:
           schema:
             type: string
-          examples:
-            semanticArtefacts:
-              summary: Semantic Artefacts
-              externalValue: "./ttl/artefacts.ttl"
         application/rdf+xml:
           schema:
             type: array
             xml:
               name: rdf
               wrapped: true
-            items:
-          examples:
-            semanticArtefacts:
-              summary: Semantic Artefacts
-              externalValue: "./xml/artefacts.xml"
 
     catalog:
       description: "OK"
@@ -252,21 +234,12 @@ components:
         text/turtle:
           schema:
             type: string
-          examples:
-            semanticArtefactCatalog:
-              summary: Semantic Artefact Catalog
-              externalValue: "./ttl/catalog.ttl"
         application/rdf+xml:
           schema:
             type: array
             xml:
               name: rdf
               wrapped: true
-            items:
-          examples:
-            semanticArtefactCatalog:
-              summary: Semantic Artefact Catalog
-              externalValue: "./xml/catalog.xml"
 
     classes:
       description: "OK"
@@ -301,19 +274,12 @@ components:
         text/turtle:
           schema:
             type: string
-          examples:
-            owlClasses:
-              externalValue: "./ttl/classes.ttl"
         application/rdf+xml:
           schema:
             type: array
             xml:
               name: rdf
               wrapped: true
-            items:
-          examples:
-            owlClasses:
-              externalValue: "./xml/classes.xml"
 
     collections:
       description: "OK"
@@ -348,19 +314,12 @@ components:
         text/turtle:
           schema:
             type: string
-          examples:
-            skosCollection:
-              externalValue: "./ttl/collections.ttl"
         application/rdf+xml:
           schema:
             type: array
             xml:
               name: rdf
               wrapped: true
-            items:
-          examples:
-            skosCollection:
-              externalValue: "./xml/collections.xml"
 
     concepts:
       description: "OK"
@@ -395,19 +354,12 @@ components:
         text/turtle:
           schema:
             type: string
-          examples:
-            skosCollection:
-              externalValue: "./ttl/concepts.ttl"
         application/rdf+xml:
           schema:
             type: array
             xml:
               name: rdf
               wrapped: true
-            items:
-          examples:
-            skosCollection:
-              externalValue: "./xml/concepts.xml"
 
     distribution:
       description: "OK"
@@ -430,21 +382,12 @@ components:
         text/turtle:
           schema:
             type: string
-          examples:
-            semanticArtefactDistribution:
-              summary: Semantic Artefact Distribution
-              externalValue: "./ttl/distribution.ttl"
         application/rdf+xml:
           schema:
             type: array
             xml:
               name: rdf
               wrapped: true
-            items:
-          examples:
-            semanticArtefactDistribution:
-              summary: Semantic Artefact Distribution
-              externalValue: "./xml/distribution.xml"
 
     distributions:
       description: "OK"
@@ -481,21 +424,12 @@ components:
         text/turtle:
           schema:
             type: string
-          examples:
-            semanticArtefactDistributions:
-              summary: Semantic Artefact Distributions
-              externalValue: "./ttl/distributions.ttl"
         application/rdf+xml:
           schema:
             type: array
             xml:
               name: rdf
               wrapped: true
-            items:
-          examples:
-            semanticArtefactDistributions:
-              summary: Semantic Artefact Distributions
-              externalValue: "./xml/distributions.xml"
 
     individuals:
       description: "OK"
@@ -530,19 +464,12 @@ components:
         text/turtle:
           schema:
             type: string
-          examples:
-            skosCollection:
-              externalValue: "./ttl/individuals.ttl"
         application/rdf+xml:
           schema:
             type: array
             xml:
               name: rdf
               wrapped: true
-            items:
-          examples:
-            skosCollection:
-              externalValue: "./xml/individuals.xml"
 
     properties:
       description: "OK"
@@ -577,19 +504,12 @@ components:
         text/turtle:
           schema:
             type: string
-          examples:
-            skosCollection:
-              externalValue: "./ttl/properties.ttl"
         application/rdf+xml:
           schema:
             type: array
             xml:
               name: rdf
               wrapped: true
-            items:
-          examples:
-            skosCollection:
-              externalValue: "./xml/properties.xml"
 
     record:
       description: "OK"
@@ -612,21 +532,12 @@ components:
         text/turtle:
           schema:
             type: string
-          examples:
-            semanticArtefactCatalogRecord:
-              summary: Semantic Artefact Catalog Record
-              externalValue: "./ttl/record.ttl"
         application/rdf+xml:
           schema:
             type: array
             xml:
               name: rdf
               wrapped: true
-            items:
-          examples:
-            semanticArtefactCatalogRecord:
-              summary: Semantic Artefact Catalog Record
-              externalValue: "./xml/record.xml"
 
     records:
       description: "OK"
@@ -663,21 +574,12 @@ components:
         text/turtle:
           schema:
             type: string
-          examples:
-            semanticArtefactCatalogRecords:
-              summary: Semantic Artefact Catalog Records
-              externalValue: "./ttl/records.ttl"
         application/rdf+xml:
           schema:
             type: array
             xml:
               name: rdf
               wrapped: true
-            items:
-          examples:
-            semanticArtefactCatalogRecords:
-              summary: Semantic Artefact Catalog Records
-              externalValue: "./xml/records.xml"
 
     resource:
       description: "OK"
@@ -696,19 +598,12 @@ components:
         text/turtle:
           schema:
             type: string
-          examples:
-            skosCollection:
-              externalValue: "./ttl/resource.ttl"
         application/rdf+xml:
           schema:
             type: array
             xml:
               name: rdf
               wrapped: true
-            items:
-          examples:
-            skosCollection:
-              externalValue: "./xml/resource.xml"
 
     resources:
       description: "OK"
@@ -743,19 +638,12 @@ components:
         text/turtle:
           schema:
             type: string
-          examples:
-            skosCollection:
-              externalValue: "./ttl/resources.ttl"
         application/rdf+xml:
           schema:
             type: array
             xml:
               name: rdf
               wrapped: true
-            items:
-          examples:
-            skosCollection:
-              externalValue: "./xml/resources.xml"
 
     schemes:
       description: "OK"
@@ -790,19 +678,12 @@ components:
         text/turtle:
           schema:
             type: string
-          examples:
-            skosCollection:
-              externalValue: "./ttl/schemes.ttl"
         application/rdf+xml:
           schema:
             type: array
             xml:
               name: rdf
               wrapped: true
-            items:
-          examples:
-            skosCollection:
-              externalValue: "./xml/schemes.xml"
 
     searchResult:
       description: "OK"
