@@ -228,9 +228,9 @@ components:
               externalValue: "./ttl/artefacts.ttl"
         application/rdf+xml:
           schema:
+            type: array
             xml:
               name: rdf
-              wrapped: true
           examples:
             semanticArtefact:
               summary: Semantic Artefacts RDF/XML
