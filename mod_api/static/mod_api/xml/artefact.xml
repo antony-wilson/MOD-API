@@ -1,205 +1,388 @@
 <?xml version="1.0" encoding="utf-8" ?>
+
 <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+
          xmlns:cc="http://creativecommons.org/ns#"
+
          xmlns:dc="http://purl.org/dc/terms/"
+
          xmlns:ns0="http://purl.org/pav/"
+
          xmlns:void="http://rdfs.org/ns/void#"
+
          xmlns:doap="http://usefulinc.com/ns/doap#"
+
          xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+
          xmlns:owl="http://www.w3.org/2002/07/owl#"
+
          xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+
          xmlns:dcat="http://www.w3.org/ns/dcat#"
+
          xmlns:vcard="http://www.w3.org/2006/vcard/ns#"
+
          xmlns:odrl="http://www.w3.org/ns/odrl/2/"
+
          xmlns:prov="http://www.w3.org/ns/prov#"
+
          xmlns:foaf="http://xmlns.com/foaf/0.1/"
+
          xmlns:ns1="https://schema.org/"
+
          xmlns:ns2="https://vocab.org/vann/"
+
          xmlns:ns3="https://w3id.org/mod#">
 
+
   <rdf:Description rdf:about="https://example.org/SemanticArtefact/SemanticArtefactID">
+
     <rdf:type rdf:resource="https://w3id.org/mod#SemanticArtefact"/>
+
     <cc:morePermissions rdf:resource="https://example.org/Resource/ResourceID"/>
+
     <cc:useGuidelines rdf:resource="https://example.org/Resource/ResourceID"/>
+
     <dc:abstract rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string</dc:abstract>
+
     <dc:accessRights rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string</dc:accessRights>
+
     <dc:accrualMethod rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string</dc:accrualMethod>
+
     <dc:accrualPeriodicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string</dc:accrualPeriodicity>
+
     <dc:accrualPolicy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string</dc:accrualPolicy>
+
     <dc:alternative rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Lorem ipsum</dc:alternative>
+
     <dc:audience rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string</dc:audience>
+
     <dc:bibliographicCitation rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Lorem ipsum</dc:bibliographicCitation>
+
     <dc:conformsTo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string</dc:conformsTo>
+
     <dc:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string</dc:contributor>
+
     <dc:coverage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string</dc:coverage>
+
     <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string</dc:creator>
+
     <dc:description rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Lorem ipsum</dc:description>
+
     <dc:hasFormat rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string</dc:hasFormat>
+
     <dc:hasPart rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string</dc:hasPart>
+
     <dc:hasVersion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string</dc:hasVersion>
+
     <dc:identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Lorem ipsum</dc:identifier>
+
     <dc:isFormatOf rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string</dc:isFormatOf>
+
     <dc:isPartOf rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string</dc:isPartOf>
+
     <dc:isReferencedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string</dc:isReferencedBy>
+
     <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string</dc:issued>
+
     <dc:language rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string</dc:language>
+
     <dc:license rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string</dc:license>
+
     <dc:modified rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Lorem ipsum</dc:modified>
+
     <dc:publisher rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string</dc:publisher>
+
     <dc:relation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string</dc:relation>
+
     <dc:rights rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string</dc:rights>
+
     <dc:rightsHolder rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string</dc:rightsHolder>
+
     <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string</dc:source>
+
     <dc:title rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Lorem ipsum</dc:title>
+
     <dc:type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string</dc:type>
+
     <ns0:createdWith rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string</ns0:createdWith>
+
     <ns0:curatedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string</ns0:curatedBy>
+
     <void:classPartition rdf:resource="https://example.org/voidDataset/voidDatasetID"/>
+
     <void:exampleResource rdf:resource="https://example.org/Resource/ResourceID"/>
+
     <void:openSearchDescription rdf:resource="https://example.org/Document/DocumentID"/>
+
     <void:propertyPartition rdf:resource="https://example.org/voidDataset/voidDatasetID"/>
+
     <void:rootResource rdf:resource="https://example.org/Resource/ResourceID"/>
+
     <void:uriLookupEndpoint rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://example.org</void:uriLookupEndpoint>
+
     <void:uriRegexPattern rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string</void:uriRegexPattern>
+
     <doap:bug-database rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string</doap:bug-database>
+
     <doap:mailing-list rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string</doap:mailing-list>
+
     <doap:repository>
+
       <doap:repository rdf:about="https://example.org/repository/repositoryID">
+
       </doap:repository>
+
     </doap:repository>
 
+
     <rdfs:comment rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Lorem ipsum</rdfs:comment>
+
     <owl:backwardCompatibleWith rdf:resource="https://example.org/Ontology/OntologyID"/>
+
     <owl:deprecated rdf:resource="https://example.org/Resource/ResourceID"/>
+
     <owl:incompatibleWith rdf:resource="https://example.org/Ontology/OntologyID"/>
+
     <owl:priorVersion rdf:resource="https://example.org/Ontology/OntologyID"/>
+
     <owl:versionIRI rdf:resource="https://example.org/Ontology/OntologyID"/>
+
     <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lorem ipsum</owl:versionInfo>
+
     <skos:hiddenLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Lorem ipsum</skos:hiddenLabel>
+
     <dcat:contactPoint>
+
       <vcard:Kind rdf:about="https://example.org/vcardKind/vcardKindID">
+
         <vcard:fn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Corky Crystal</vcard:fn>
+
         <vcard:nickname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Corks</vcard:nickname>
+
       </vcard:Kind>
+
     </dcat:contactPoint>
 
+
     <dcat:keyword rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string</dcat:keyword>
+
     <dcat:landingPage rdf:resource="https://example.org/Document/DocumentID"/>
+
     <dcat:qualifiedRelation>
+
       <dcat:Relationship rdf:about="https://example.org/Relationship/RelationshipID">
+
       </dcat:Relationship>
+
     </dcat:qualifiedRelation>
 
+
     <dcat:theme>
+
       <rdfs:Resource rdf:about="https://example.org/Theme/ThemeID">
+
       </rdfs:Resource>
+
     </dcat:theme>
 
+
     <odrl:hasPolicy>
+
       <odrl:Policy rdf:about="https://example.org/Policy/PolicyID">
+
       </odrl:Policy>
+
     </odrl:hasPolicy>
 
+
     <prov:qualifiedAttribution>
+
       <prov:Attribution rdf:about="https://example.org/Attribution/AttributionID">
+
       </prov:Attribution>
+
     </prov:qualifiedAttribution>
 
+
     <prov:wasGeneratedBy rdf:resource="https://example.org/Activity/ActivityID"/>
+
     <prov:wasInvalidatedBy rdf:resource="https://example.org/Activity/ActivityID"/>
+
     <foaf:depiction>
+
       <foaf:Image rdf:about="https://example.org/Image/ImageID">
+
       </foaf:Image>
+
     </foaf:depiction>
 
+
     <foaf:fundedBy rdf:resource="https://example.org/Thing/ThingID"/>
+
     <foaf:homepage rdf:resource="https://example.org/Document/DocumentID"/>
+
     <foaf:logo rdf:resource="https://example.org/Thing/ThingID"/>
+
     <foaf:primaryTopic rdf:resource="https://example.org/Thing/ThingID"/>
+
     <ns1:associatedMedia rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string</ns1:associatedMedia>
+
     <ns1:award rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string</ns1:award>
+
     <ns1:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string</ns1:comment>
+
     <ns1:funding rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string</ns1:funding>
+
     <ns1:includedInDataCatalog rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string</ns1:includedInDataCatalog>
+
     <ns1:translationOfWork rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string</ns1:translationOfWork>
+
     <ns1:translator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string</ns1:translator>
+
     <ns1:workTranslation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string</ns1:workTranslation>
+
     <ns2:changes rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string</ns2:changes>
+
     <ns2:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string</ns2:example>
+
     <ns2:preferredNamespacePrefix rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string</ns2:preferredNamespacePrefix>
+
     <ns2:preferredNamespaceUri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string</ns2:preferredNamespaceUri>
+
     <ns3:URI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://example.org</ns3:URI>
+
     <ns3:acronym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lorem ipsum</ns3:acronym>
+
     <ns3:analytics>
+
       <ns3:Analytics rdf:about="https://example.org/Analytics/AnalyticsID">
+
       </ns3:Analytics>
+
     </ns3:analytics>
 
+
     <ns3:comesFromTheSameDomain rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string</ns3:comesFromTheSameDomain>
+
     <ns3:competencyQuestion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lorem ipsum</ns3:competencyQuestion>
+
     <ns3:designedForTask>
+
       <ns3:SemanticArtefactTask rdf:about="https://example.org/SemanticArtefactTask/SemanticArtefactTaskID">
+
       </ns3:SemanticArtefactTask>
+
     </ns3:designedForTask>
 
+
     <ns3:endorsedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string</ns3:endorsedBy>
+
     <ns3:generalizes rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string</ns3:generalizes>
+
     <ns3:group>
+
       <ns3:Group rdf:about="https://example.org/Group/GroupID">
+
       </ns3:Group>
+
     </ns3:group>
 
+
     <ns3:hasDisjunctionsWith rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string</ns3:hasDisjunctionsWith>
+
     <ns3:hasDisparateModelling rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string</ns3:hasDisparateModelling>
+
     <ns3:hasEquivalencesWith rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string</ns3:hasEquivalencesWith>
+
     <ns3:hasEvaluation>
+
       <ns3:Evaluation rdf:about="https://example.org/Evaluation/EvaluationID">
+
       </ns3:Evaluation>
+
     </ns3:hasEvaluation>
 
+
     <ns3:knownUsage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lorem ipsum</ns3:knownUsage>
+
     <ns3:metrics rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">5436</ns3:metrics>
+
     <ns3:numberOfAgents rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">5436</ns3:numberOfAgents>
+
     <ns3:numberOfEndorsements rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">5436</ns3:numberOfEndorsements>
+
     <ns3:numberOfEvaluations rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">5436</ns3:numberOfEvaluations>
+
     <ns3:numberOfNotes rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">5436</ns3:numberOfNotes>
+
     <ns3:numberOfUsers rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">5436</ns3:numberOfUsers>
+
     <ns3:numberOfUsingProjects rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">5436</ns3:numberOfUsingProjects>
+
     <ns3:reliesOn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string</ns3:reliesOn>
+
     <ns3:semanticArtefactRelation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string</ns3:semanticArtefactRelation>
+
     <ns3:similar rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string</ns3:similar>
+
     <ns3:specializes rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string</ns3:specializes>
+
     <ns3:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lorem ipsum</ns3:status>
+
     <ns3:toDoList>
+
       <rdf:Description rdf:about="https://example.org/Vtodo/VtodoID">
+
         <rdf:type rdf:resource="http://www.w3.org/2002/12/cal/ical#Vtodo"/>
+
       </rdf:Description>
+
     </ns3:toDoList>
 
+
     <ns3:usedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string</ns3:usedBy>
+
     <ns3:usedInProject>
+
       <foaf:Project rdf:about="https://example.org/Project/ProjectID">
+
       </foaf:Project>
+
     </ns3:usedInProject>
+
 
   </rdf:Description>
 
+
   <rdfs:Resource rdf:about="https://example.org/Resource/ResourceID">
+
   </rdfs:Resource>
 
+
   <void:dataset rdf:about="https://example.org/voidDataset/voidDatasetID">
+
   </void:dataset>
 
+
   <foaf:Document rdf:about="https://example.org/Document/DocumentID">
+
   </foaf:Document>
 
+
   <owl:Ontology rdf:about="https://example.org/Ontology/OntologyID">
+
   </owl:Ontology>
 
+
   <prov:Activity rdf:about="https://example.org/Activity/ActivityID">
+
   </prov:Activity>
 
+
   <owl:Thing rdf:about="https://example.org/Thing/ThingID">
+
   </owl:Thing>
+
 
 </rdf:RDF>
