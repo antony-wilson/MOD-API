@@ -1,0 +1,23 @@
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ns0: <http://purl.org/pav/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+
+<https://example.org/SemanticArtefactCatalogRecord/SemanticArtefactCatalogRecordID>
+  a <https://w3id.org/mod#SemanticArtefactCatalogRecord> ;
+  dc:conformsTo "string"^^xsd:string ;
+  dc:created "Lorem ipsum"^^rdfs:Literal ;
+  dc:dateSubmitted "Lorem ipsum"^^rdfs:Literal ;
+  dc:description "Lorem ipsum"^^rdfs:Literal ;
+  dc:issued "Lorem ipsum"^^rdfs:Literal ;
+  dc:modified "Lorem ipsum"^^rdfs:Literal ;
+  dc:title "Lorem ipsum"^^rdfs:Literal ;
+  ns0:curatedBy "string"^^xsd:string ;
+  ns0:curatedOn [ a xsd:date ] ;
+  foaf:homepage <https://example.org/Document/DocumentID> ;
+  foaf:primaryTopic <https://example.org/dcatResource/dcatResourceID> .
+
+<https://example.org/Document/DocumentID> a foaf:Document .
+<https://example.org/dcatResource/dcatResourceID> a dcat:Resource .

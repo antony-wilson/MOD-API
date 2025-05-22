@@ -1,0 +1,152 @@
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ns0: <http://purl.org/pav/> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix doap: <http://usefulinc.com/ns/doap#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix odrl: <http://www.w3.org/ns/odrl/2/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix ns1: <https://schema.org/> .
+@prefix ns2: <https://vocab.org/vann/> .
+@prefix ns3: <https://w3id.org/mod#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+
+<https://example.org/SemanticArtefact/SemanticArtefactID>
+  a <https://w3id.org/mod#SemanticArtefact> ;
+  cc:morePermissions <https://example.org/Resource/ResourceID> ;
+  cc:useGuidelines <https://example.org/Resource/ResourceID> ;
+  dc:abstract "string"^^xsd:string ;
+  dc:accessRights "string"^^xsd:string ;
+  dc:accrualMethod "string"^^xsd:string ;
+  dc:accrualPeriodicity "string"^^xsd:string ;
+  dc:accrualPolicy "string"^^xsd:string ;
+  dc:alternative "Lorem ipsum"^^rdfs:Literal ;
+  dc:audience "string"^^xsd:string ;
+  dc:bibliographicCitation "Lorem ipsum"^^rdfs:Literal ;
+  dc:conformsTo "string"^^xsd:string ;
+  dc:contributor "string"^^xsd:string ;
+  dc:coverage "string"^^xsd:string ;
+  dc:creator "string"^^xsd:string ;
+  dc:description "Lorem ipsum"^^rdfs:Literal ;
+  dc:hasFormat "string"^^xsd:string ;
+  dc:hasPart "string"^^xsd:string ;
+  dc:hasVersion "string"^^xsd:string ;
+  dc:identifier "Lorem ipsum"^^rdfs:Literal ;
+  dc:isFormatOf "string"^^xsd:string ;
+  dc:isPartOf "string"^^xsd:string ;
+  dc:isReferencedBy "string"^^xsd:string ;
+  dc:issued "string"^^xsd:string ;
+  dc:language "string"^^xsd:string ;
+  dc:license "string"^^xsd:string ;
+  dc:modified "Lorem ipsum"^^rdfs:Literal ;
+  dc:publisher "string"^^xsd:string ;
+  dc:relation "string"^^xsd:string ;
+  dc:rights "string"^^xsd:string ;
+  dc:rightsHolder "string"^^xsd:string ;
+  dc:source "string"^^xsd:string ;
+  dc:title "Lorem ipsum"^^rdfs:Literal ;
+  dc:type "string"^^xsd:string ;
+  ns0:createdWith "string"^^xsd:string ;
+  ns0:curatedBy "string"^^xsd:string ;
+  void:classPartition <https://example.org/voidDataset/voidDatasetID> ;
+  void:exampleResource <https://example.org/Resource/ResourceID> ;
+  void:openSearchDescription <https://example.org/Document/DocumentID> ;
+  void:propertyPartition <https://example.org/voidDataset/voidDatasetID> ;
+  void:rootResource <https://example.org/Resource/ResourceID> ;
+  void:uriLookupEndpoint "https://example.org"^^xsd:anyURI ;
+  void:uriRegexPattern "string"^^xsd:string ;
+  doap:bug-database "string"^^xsd:string ;
+  doap:mailing-list "string"^^xsd:string ;
+  doap:repository <https://example.org/repository/repositoryID> ;
+  rdfs:comment "Lorem ipsum"^^rdfs:Literal ;
+  owl:backwardCompatibleWith <https://example.org/Ontology/OntologyID> ;
+  owl:deprecated <https://example.org/Resource/ResourceID> ;
+  owl:incompatibleWith <https://example.org/Ontology/OntologyID> ;
+  owl:priorVersion <https://example.org/Ontology/OntologyID> ;
+  owl:versionIRI <https://example.org/Ontology/OntologyID> ;
+  owl:versionInfo "Lorem ipsum"^^xsd:string ;
+  skos:hiddenLabel "Lorem ipsum"^^rdfs:Literal ;
+  dcat:contactPoint <https://example.org/vcardKind/vcardKindID> ;
+  dcat:keyword "string"^^xsd:string ;
+  dcat:landingPage <https://example.org/Document/DocumentID> ;
+  dcat:qualifiedRelation <https://example.org/Relationship/RelationshipID> ;
+  dcat:theme <https://example.org/Theme/ThemeID> ;
+  odrl:hasPolicy <https://example.org/Policy/PolicyID> ;
+  prov:qualifiedAttribution <https://example.org/Attribution/AttributionID> ;
+  prov:wasGeneratedBy <https://example.org/Activity/ActivityID> ;
+  prov:wasInvalidatedBy <https://example.org/Activity/ActivityID> ;
+  foaf:depiction <https://example.org/Image/ImageID> ;
+  foaf:fundedBy <https://example.org/Thing/ThingID> ;
+  foaf:homepage <https://example.org/Document/DocumentID> ;
+  foaf:logo <https://example.org/Thing/ThingID> ;
+  foaf:primaryTopic <https://example.org/Thing/ThingID> ;
+  ns1:associatedMedia "string"^^xsd:string ;
+  ns1:award "string"^^xsd:string ;
+  ns1:comment "string"^^xsd:string ;
+  ns1:funding "string"^^xsd:string ;
+  ns1:includedInDataCatalog "string"^^xsd:string ;
+  ns1:translationOfWork "string"^^xsd:string ;
+  ns1:translator "string"^^xsd:string ;
+  ns1:workTranslation "string"^^xsd:string ;
+  ns2:changes "string"^^xsd:string ;
+  ns2:example "string"^^xsd:string ;
+  ns2:preferredNamespacePrefix "string"^^xsd:string ;
+  ns2:preferredNamespaceUri "string"^^xsd:string ;
+  ns3:URI "https://example.org"^^xsd:anyURI ;
+  ns3:acronym "Lorem ipsum"^^xsd:string ;
+  ns3:analytics <https://example.org/Analytics/AnalyticsID> ;
+  ns3:comesFromTheSameDomain "string"^^xsd:string ;
+  ns3:competencyQuestion "Lorem ipsum"^^xsd:string ;
+  ns3:designedForTask <https://example.org/SemanticArtefactTask/SemanticArtefactTaskID> ;
+  ns3:endorsedBy "string"^^xsd:string ;
+  ns3:generalizes "string"^^xsd:string ;
+  ns3:group <https://example.org/Group/GroupID> ;
+  ns3:hasDisjunctionsWith "string"^^xsd:string ;
+  ns3:hasDisparateModelling "string"^^xsd:string ;
+  ns3:hasEquivalencesWith "string"^^xsd:string ;
+  ns3:hasEvaluation <https://example.org/Evaluation/EvaluationID> ;
+  ns3:knownUsage "Lorem ipsum"^^xsd:string ;
+  ns3:metrics "5436"^^xsd:nonNegativeInteger ;
+  ns3:numberOfAgents "5436"^^xsd:nonNegativeInteger ;
+  ns3:numberOfEndorsements "5436"^^xsd:nonNegativeInteger ;
+  ns3:numberOfEvaluations "5436"^^xsd:nonNegativeInteger ;
+  ns3:numberOfNotes "5436"^^xsd:nonNegativeInteger ;
+  ns3:numberOfUsers "5436"^^xsd:nonNegativeInteger ;
+  ns3:numberOfUsingProjects "5436"^^xsd:nonNegativeInteger ;
+  ns3:reliesOn "string"^^xsd:string ;
+  ns3:semanticArtefactRelation "string"^^xsd:string ;
+  ns3:similar "string"^^xsd:string ;
+  ns3:specializes "string"^^xsd:string ;
+  ns3:status "Lorem ipsum"^^xsd:string ;
+  ns3:toDoList <https://example.org/Vtodo/VtodoID> ;
+  ns3:usedBy "string"^^xsd:string ;
+  ns3:usedInProject <https://example.org/Project/ProjectID> .
+
+<https://example.org/Resource/ResourceID> a rdfs:Resource .
+<https://example.org/voidDataset/voidDatasetID> a void:dataset .
+<https://example.org/Document/DocumentID> a foaf:Document .
+<https://example.org/repository/repositoryID> a doap:repository .
+<https://example.org/Ontology/OntologyID> a owl:Ontology .
+<https://example.org/vcardKind/vcardKindID>
+  a vcard:Kind ;
+  vcard:fn "Corky Crystal"^^xsd:string ;
+  vcard:nickname "Corks"^^xsd:string .
+
+<https://example.org/Relationship/RelationshipID> a dcat:Relationship .
+<https://example.org/Theme/ThemeID> a rdfs:Resource .
+<https://example.org/Policy/PolicyID> a odrl:Policy .
+<https://example.org/Attribution/AttributionID> a prov:Attribution .
+<https://example.org/Activity/ActivityID> a prov:Activity .
+<https://example.org/Image/ImageID> a foaf:Image .
+<https://example.org/Thing/ThingID> a owl:Thing .
+<https://example.org/Analytics/AnalyticsID> a ns3:Analytics .
+<https://example.org/SemanticArtefactTask/SemanticArtefactTaskID> a ns3:SemanticArtefactTask .
+<https://example.org/Group/GroupID> a ns3:Group .
+<https://example.org/Evaluation/EvaluationID> a ns3:Evaluation .
+<https://example.org/Vtodo/VtodoID> a <http://www.w3.org/2002/12/cal/ical#Vtodo> .
+<https://example.org/Project/ProjectID> a foaf:Project .

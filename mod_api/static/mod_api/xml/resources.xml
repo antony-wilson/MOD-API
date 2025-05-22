@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:ns0="http://www.w3.org/ns/hydra/core#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+
+  <rdf:Description rdf:about="https://example.org/collection/collectionID">
+    <rdf:type rdf:resource="http://www.w3.org/ns/hydra/core#Collection"/>
+    <ns0:itemsPerPage rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">50</ns0:itemsPerPage>
+    <ns0:member>
+      <rdfs:Resource rdf:about="https://example.org/Resource/ResourceID">
+      </rdfs:Resource>
+    </ns0:member>
+
+    <ns0:totalItems rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">5436</ns0:totalItems>
+    <ns0:view>
+      <ns0:PartialCollectionView rdf:about="https://example.org/items?page=3">
+        <ns0:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://example.org/items?page=1</ns0:first>
+        <ns0:last rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://example.org/items?page=42</ns0:last>
+        <ns0:next rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://example.org/items?page=4</ns0:next>
+        <ns0:previous rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://example.org/items?page=2</ns0:previous>
+      </ns0:PartialCollectionView>
+    </ns0:view>
+
+  </rdf:Description>
+
+</rdf:RDF>

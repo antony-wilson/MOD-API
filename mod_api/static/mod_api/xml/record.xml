@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:dc="http://purl.org/dc/terms/"
+         xmlns:ns0="http://purl.org/pav/"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:foaf="http://xmlns.com/foaf/0.1/"
+         xmlns:dcat="http://www.w3.org/ns/dcat#">
+
+  <rdf:Description rdf:about="https://example.org/SemanticArtefactCatalogRecord/SemanticArtefactCatalogRecordID">
+    <rdf:type rdf:resource="https://w3id.org/mod#SemanticArtefactCatalogRecord"/>
+    <dc:conformsTo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string</dc:conformsTo>
+    <dc:created rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Lorem ipsum</dc:created>
+    <dc:dateSubmitted rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Lorem ipsum</dc:dateSubmitted>
+    <dc:description rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Lorem ipsum</dc:description>
+    <dc:issued rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Lorem ipsum</dc:issued>
+    <dc:modified rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Lorem ipsum</dc:modified>
+    <dc:title rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Lorem ipsum</dc:title>
+    <ns0:curatedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string</ns0:curatedBy>
+    <ns0:curatedOn>
+      <xsd:date>
+      </xsd:date>
+    </ns0:curatedOn>
+
+    <foaf:homepage>
+      <foaf:Document rdf:about="https://example.org/Document/DocumentID">
+      </foaf:Document>
+    </foaf:homepage>
+
+    <foaf:primaryTopic>
+      <dcat:Resource rdf:about="https://example.org/dcatResource/dcatResourceID">
+      </dcat:Resource>
+    </foaf:primaryTopic>
+
+  </rdf:Description>
+
+</rdf:RDF>

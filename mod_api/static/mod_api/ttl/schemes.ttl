@@ -1,0 +1,25 @@
+@prefix ns0: <http://www.w3.org/ns/hydra/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<https://example.org/collection/collectionID>
+  a <http://www.w3.org/ns/hydra/core#Collection> ;
+  ns0:itemsPerPage "50"^^xsd:nonNegativeInteger ;
+  ns0:member <https://example.org/skosScheme/skosSchemeID1>, <https://example.org/skosScheme/skosSchemeID2> ;
+  ns0:totalItems "5436"^^xsd:nonNegativeInteger ;
+  ns0:view <https://example.org/items?page=3> .
+
+<https://example.org/skosScheme/skosSchemeID1>
+  a skos:ConceptScheme ;
+  skos:prefLabel "cars scheme"^^xsd:string .
+
+<https://example.org/skosScheme/skosSchemeID2>
+  a skos:ConceptScheme ;
+  skos:prefLabel "cats scheme"^^xsd:string .
+
+<https://example.org/items?page=3>
+  a ns0:PartialCollectionView ;
+  ns0:first "https://example.org/items?page=1"^^xsd:string ;
+  ns0:last "https://example.org/items?page=42"^^xsd:string ;
+  ns0:next "https://example.org/items?page=4"^^xsd:string ;
+  ns0:previous "https://example.org/items?page=2"^^xsd:string .
