@@ -222,12 +222,19 @@ components:
         text/turtle:
           schema:
             type: string
+          examples:
+            semanticArtefact:
+              summary: Semantic Artefacts TTL
+              externalValue: "./ttl/artefacts.ttl"
         application/rdf+xml:
           schema:
-            type: array
             xml:
               name: rdf
               wrapped: true
+          examples:
+            semanticArtefact:
+              summary: Semantic Artefacts RDF/XML
+              externalValue: "./xml/artefacts.xml"
 
     catalog:
       description: "OK"
