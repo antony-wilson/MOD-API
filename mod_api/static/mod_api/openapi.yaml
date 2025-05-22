@@ -163,9 +163,20 @@ components:
         text/html:
           schema:
             $ref: "#/components/schemas/html"
+        text/plain:
+          schema:
+            type: string
+          examples:
+            semanticArtefact:
+              summary: Semantic Artefact plain text
+              externalValue: "./ttl/artefact.ttl"
         text/turtle:
           schema:
             type: string
+          examples:
+            semanticArtefact:
+              summary: Semantic Artefact TTL
+              externalValue: "./ttl/artefact.ttl"
         application/rdf+xml:
           schema:
             type: array
@@ -174,8 +185,8 @@ components:
               wrapped: true
           examples:
             semanticArtefact:
-              summary: Semantic Artefact
-              externalValue: "./xml/artefacts.xml"
+              summary: Semantic Artefact RDF/XML
+              externalValue: "./xml/artefact.xml"
 
 
     artefacts:
