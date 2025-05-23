@@ -1,4 +1,4 @@
-openapi: 3.1.1
+openapi: 3.1.0
 servers:
   - url: https://localhost
 
@@ -169,6 +169,8 @@ components:
         application/rdf+xml:
           schema:
             type: array
+            items:
+              type: string
             xml:
               name: rdf
               wrapped: true
@@ -212,7 +214,9 @@ components:
             type: string
         application/rdf+xml:
           schema:
-            type: string
+            type: array
+            items:
+              type: string
             xml:
               name: rdf
               wrapped: true
@@ -243,7 +247,9 @@ components:
             type: string
         application/rdf+xml:
           schema:
-            type: string
+            type: array
+            items:
+              type: string
             xml:
               name: rdf
               wrapped: true
@@ -288,6 +294,8 @@ components:
         application/rdf+xml:
           schema:
             type: array
+            items:
+              type: string
             xml:
               name: rdf
               wrapped: true
@@ -332,6 +340,8 @@ components:
         application/rdf+xml:
           schema:
             type: array
+            items:
+              type: string
             xml:
               name: rdf
               wrapped: true
@@ -376,6 +386,8 @@ components:
         application/rdf+xml:
           schema:
             type: array
+            items:
+              type: string
             xml:
               name: rdf
               wrapped: true
@@ -408,6 +420,8 @@ components:
         application/rdf+xml:
           schema:
             type: array
+            items:
+              type: string
             xml:
               name: rdf
               wrapped: true
@@ -440,6 +454,8 @@ components:
         application/rdf+xml:
           schema:
             type: array
+            items:
+              type: string
             xml:
               name: rdf
               wrapped: true
@@ -486,6 +502,8 @@ components:
         application/rdf+xml:
           schema:
             type: array
+            items:
+              type: string
             xml:
               name: rdf
               wrapped: true
@@ -530,6 +548,8 @@ components:
         application/rdf+xml:
           schema:
             type: array
+            items:
+              type: string
             xml:
               name: rdf
               wrapped: true
@@ -574,6 +594,8 @@ components:
         application/rdf+xml:
           schema:
             type: array
+            items:
+              type: string
             xml:
               name: rdf
               wrapped: true
@@ -606,6 +628,8 @@ components:
         application/rdf+xml:
           schema:
             type: array
+            items:
+              type: string
             xml:
               name: rdf
               wrapped: true
@@ -652,6 +676,8 @@ components:
         application/rdf+xml:
           schema:
             type: array
+            items:
+              type: string
             xml:
               name: rdf
               wrapped: true
@@ -680,6 +706,8 @@ components:
         application/rdf+xml:
           schema:
             type: array
+            items:
+              type: string
             xml:
               name: rdf
               wrapped: true
@@ -724,6 +752,8 @@ components:
         application/rdf+xml:
           schema:
             type: array
+            items:
+              type: string
             xml:
               name: rdf
               wrapped: true
@@ -768,6 +798,8 @@ components:
         application/rdf+xml:
           schema:
             type: array
+            items:
+              type: string
             xml:
               name: rdf
               wrapped: true
@@ -855,11 +887,11 @@ components:
         application/rdf+xml:
           schema:
             type: array
+            items:
+              example: In progress
             xml:
               name: rdf
               wrapped: true
-            items:
-              example: In progress
 
     searchResultContent:
       description: "OK"
@@ -934,11 +966,11 @@ components:
         application/rdf+xml:
           schema:
             type: array
+            items:
+              example: In progress
             xml:
               name: rdf
               wrapped: true
-            items:
-              example: In progress
 
     searchResultMetadata:
       description: "OK"
@@ -976,11 +1008,11 @@ components:
         application/rdf+xml:
           schema:
             type: array
+            items:
+              example: In progress
             xml:
               name: rdf
               wrapped: true
-            items:
-              example: In progress
 
     error_message:
       description: The provided parameters are incorrect.
@@ -3441,7 +3473,6 @@ components:
               title: endpoint URL
               description: The root location or primary endpoint of the service (a web-resolvable IRI).
             dcat:servesDataset:
-              tile: serves dataset
               description: A collection of data that this data service can distribute.
               type: array
               items:
@@ -3832,8 +3863,8 @@ components:
               title: bug database
               description: Bug tracker for a project.
             doap:mailing-list:
-              title: 
-              description: 
+              title: mailing list
+              description: 'DOAP: Mailing list home page or email address.'
             doap:repository:
               title: repository
               description: Source code repository.
@@ -4089,7 +4120,7 @@ components:
               description: A description of the subject resource.      
               $ref: "#/components/schemas/rdfsLiteral"
             schema:associatedMedia:
-              title:
+              title: associated media
               description: A media object that encodes this CreativeWork. This property is a synonym for encoding.      
             schema:award:
               title: award
@@ -4292,8 +4323,8 @@ components:
               title: bug database
               description: Bug tracker for a project.
             doap:mailing-list:
-              title: 
-              description: 
+              title: mailing list
+              description: 'DOAP: Mailing list home page or email address.'
             doap:repository:
               title: repository
               description: Source code repository.
@@ -4587,7 +4618,7 @@ components:
                 '@value':
                   example: Lorem ipsum
             schema:associatedMedia:
-              title:
+              title: associated media
               description: A media object that encodes this CreativeWork. This property is a synonym for encoding.      
             schema:award:
               title: award
