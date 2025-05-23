@@ -215,6 +215,7 @@ components:
             type: array
             xml:
               name: rdf
+              wrapped: true
           examples:
             semanticArtefacts:
               summary: Semantic Artefacts (RDF/XML)
@@ -232,7 +233,7 @@ components:
             allOf:
               - $ref: "#/components/schemas/modSemanticArtefactCatalog"
           examples:
-            record:
+            semanticArtefactCatalog:
               $ref: "#/components/examples/semanticArtefactCatalog"
         text/html:
           schema:
@@ -384,6 +385,38 @@ components:
               externalValue: "./xml/concepts.xml"
 
     distribution:
+      description: "OK"
+      content:
+        application/ld+json:
+          schema:
+            type: object
+            title: Semantic Artefact Distribution
+            properties:
+              '@context':
+                $ref: "#/components/schemas/Context"
+            allOf:
+              - $ref: "#/components/schemas/modSemanticArtefactDistribution"
+          examples:
+            semanticArtefactDistribution:
+              $ref: "#/components/examples/semanticArtefactDistribution"
+        text/html:
+          schema:
+            $ref: "#/components/schemas/html"
+        text/turtle:
+          schema:
+            type: string
+        application/rdf+xml:
+          schema:
+            type: array
+            xml:
+              name: rdf
+              wrapped: true
+          examples:
+            semanticArtefactDistribution:
+              summary: Semantic Artefact Distribution (RDF/XML)
+              externalValue: "./xml/distribution.xml"
+
+    distributionLatest:
       description: "OK"
       content:
         application/ld+json:
@@ -577,7 +610,7 @@ components:
               name: rdf
               wrapped: true
           examples:
-            semanticArtefactCatalogRecord:
+            record:
               summary: Semantic Artefact Catalog Record (RDF/XML)
               externalValue: "./xml/record.xml"
 
@@ -623,7 +656,7 @@ components:
               name: rdf
               wrapped: true
           examples:
-            semanticArtefactCatalogRecords:
+            records:
               summary: Semantic Artefact Catalog Records (RDF/XML)
               externalValue: "./xml/records.xml"
 
@@ -5422,7 +5455,7 @@ paths:
       operationId: getArtefactDistributionsLatest
       responses:
         "200":
-          $ref: "#/components/responses/distribution"
+          $ref: "#/components/responses/distributionLatest"
         "404":
           $ref: "#/components/responses/error_message"
 
