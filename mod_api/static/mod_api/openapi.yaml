@@ -1,11 +1,11 @@
-openapi: 3.1.0
+openapi: 3.1.1
 servers:
   - url: https://localhost
 
 info:
   description: This Application Programming Interface (API) has been developed to promote interoperability of Semantic Artefact Catalogues in the European Open Science Cloud (EOSC) ecosystem and beyond. 
   title: Metadata for Ontology Description and Publication Ontology Application Program Interface
-  version: 0.0.1
+  version: 1.0.0
 
 tags:
   - name: Artefact
@@ -163,20 +163,9 @@ components:
         text/html:
           schema:
             $ref: "#/components/schemas/html"
-        text/plain:
-          schema:
-            type: string
-          examples:
-            semanticArtefact:
-              summary: Semantic Artefact plain text
-              externalValue: "./ttl/artefact.ttl"
         text/turtle:
           schema:
             type: string
-          examples:
-            semanticArtefact:
-              summary: Semantic Artefact TTL
-              externalValue: "./ttl/artefact.ttl"
         application/rdf+xml:
           schema:
             type: array
@@ -185,9 +174,8 @@ components:
               wrapped: true
           examples:
             semanticArtefact:
-              summary: Semantic Artefact RDF/XML
+              summary: Semantic Artefact (RDF/XML)
               externalValue: "./xml/artefact.xml"
-
 
     artefacts:
       description: "OK"
@@ -222,20 +210,15 @@ components:
         text/turtle:
           schema:
             type: string
-          examples:
-            semanticArtefact:
-              summary: Semantic Artefacts TTL
-              externalValue: "./ttl/artefacts.ttl"
         application/rdf+xml:
           schema:
             type: array
             xml:
               name: rdf
           examples:
-            semanticArtefact:
-              summary: Semantic Artefacts RDF/XML
+            semanticArtefacts:
+              summary: Semantic Artefacts (RDF/XML)
               externalValue: "./xml/artefacts.xml"
-
     catalog:
       description: "OK"
       content:
@@ -263,6 +246,10 @@ components:
             xml:
               name: rdf
               wrapped: true
+          examples:
+            semanticArtefactCatalog:
+              summary: Semantic Artefact Catalog (RDF/XML)
+              externalValue: "./xml/catalog.xml"
 
     classes:
       description: "OK"
@@ -303,6 +290,10 @@ components:
             xml:
               name: rdf
               wrapped: true
+          examples:
+            owlClasses:
+              summary: Classes (RDF/XML)
+              externalValue: "./xml/classes.xml"
 
     collections:
       description: "OK"
@@ -343,6 +334,10 @@ components:
             xml:
               name: rdf
               wrapped: true
+          examples:
+            skosCollection:
+              summary: Collections (RDF/XML)
+              externalValue: "./xml/collections.xml"
 
     concepts:
       description: "OK"
@@ -383,6 +378,10 @@ components:
             xml:
               name: rdf
               wrapped: true
+          examples:
+            skosConcept:
+              summary: Skos Concepts (RDF/XML)
+              externalValue: "./xml/concepts.xml"
 
     distribution:
       description: "OK"
@@ -411,6 +410,10 @@ components:
             xml:
               name: rdf
               wrapped: true
+          examples:
+            semanticArtefactDistribution:
+              summary: Semantic Artefact Distribution (RDF/XML)
+              externalValue: "./xml/distribution.xml"
 
     distributions:
       description: "OK"
@@ -453,6 +456,10 @@ components:
             xml:
               name: rdf
               wrapped: true
+          examples:
+            semanticArtefactDistributions:
+              summary: Semantic Artefact Distributions (RDF/XML)
+              externalValue: "./xml/distributions.xml"
 
     individuals:
       description: "OK"
@@ -493,6 +500,10 @@ components:
             xml:
               name: rdf
               wrapped: true
+          examples:
+            owlNamedIndividual:
+              summary: Named Individuals (RDF/XML)
+              externalValue: "./xml/individuals.xml"
 
     properties:
       description: "OK"
@@ -533,6 +544,10 @@ components:
             xml:
               name: rdf
               wrapped: true
+          examples:
+            rdfsProperty:
+              summary: Properties (RDF/XML)
+              externalValue: "./xml/properties.xml"
 
     record:
       description: "OK"
@@ -561,6 +576,10 @@ components:
             xml:
               name: rdf
               wrapped: true
+          examples:
+            semanticArtefactCatalogRecord:
+              summary: Semantic Artefact Catalog Record (RDF/XML)
+              externalValue: "./xml/record.xml"
 
     records:
       description: "OK"
@@ -603,6 +622,10 @@ components:
             xml:
               name: rdf
               wrapped: true
+          examples:
+            semanticArtefactCatalogRecords:
+              summary: Semantic Artefact Catalog Records (RDF/XML)
+              externalValue: "./xml/records.xml"
 
     resource:
       description: "OK"
@@ -627,6 +650,10 @@ components:
             xml:
               name: rdf
               wrapped: true
+          examples:
+            rdfsResource:
+              summary: Resource (RDF/XML)
+              externalValue: "./xml/resource.xml"
 
     resources:
       description: "OK"
@@ -667,6 +694,10 @@ components:
             xml:
               name: rdf
               wrapped: true
+          examples:
+            rdfsResource:
+              summary: Resources (RDF/XML)
+              externalValue: "./xml/resources.xml"
 
     schemes:
       description: "OK"
@@ -707,6 +738,10 @@ components:
             xml:
               name: rdf
               wrapped: true
+          examples:
+            skosScheme:
+              summary: Concept Schemes (RDF/XML)
+              externalValue: "./xml/schemes.xml"
 
     searchResult:
       description: "OK"
@@ -923,7 +958,7 @@ components:
 
   examples:
     owlClasses:
-      summary: Classes
+      summary: Classes (JSON-LD)
       value:
         '@context':
           hydra: 'http://www.w3.org/ns/hydra/core#'
@@ -963,7 +998,7 @@ components:
           lastPage: 'https://example.org/items?page=42'
 
     owlNamedIndividuals:
-      summary: Named Individuals
+      summary: Named Individuals (JSON-LD)
       value:
         '@context':
           hydra: 'http://www.w3.org/ns/hydra/core#'
@@ -1004,7 +1039,7 @@ components:
 
 
     semanticArtefact:
-      summary: Semantic Artefact
+      summary: Semantic Artefact (JSON-LD)
       value:
         '@context':
           adms: 'http://www.w3.org/ns/adms#'
@@ -1382,7 +1417,7 @@ components:
         uriRegexPattern: string
 
     semanticArtefacts:
-      summary: Semantic Artefacts
+      summary: Semantic Artefacts (JSON-LD)
       value:
         '@context':
           adms: 'http://www.w3.org/ns/adms#'
@@ -1786,7 +1821,7 @@ components:
           lastPage: 'https://example.org/items?page=42'
 
     semanticArtefactCatalog:
-      summary: Semantic Artefact Catalog
+      summary: Semantic Artefact Catalog (JSON-LD)
       value:
         '@context':
           adms: 'http://www.w3.org/ns/adms#'
@@ -2170,7 +2205,7 @@ components:
         uriRegexPattern: string
 
     semanticArtefactCatalogRecord:
-      summary: Semantic Artefact Catalog Record
+      summary: Semantic Artefact Catalog Record (JSON-LD)
       value:
         '@context':
           dcat: 'http://www.w3.org/ns/dcat#'
@@ -2229,7 +2264,7 @@ components:
           '@type': date
 
     semanticArtefactCatalogRecords:
-      summary: Semantic Artefact Catalog Records
+      summary: Semantic Artefact Catalog Records (JSON-LD)
       value:
         '@context':
           dcat: 'http://www.w3.org/ns/dcat#'
@@ -2316,7 +2351,7 @@ components:
           lastPage: 'https://example.org/items?page=42'
 
     semanticArtefactDistribution:
-      summary: Semantic Artefact Distribution
+      summary: Semantic Artefact Distribution (JSON-LD)
       value:
         '@context':
           cc: 'http://creativecommons.org/ns#'
@@ -2587,7 +2622,7 @@ components:
         endpoint: string
 
     semanticArtefactDistributions:
-      summary: Semantic Artefact Distributions
+      summary: Semantic Artefact Distributions (JSON-LD)
       value:
         '@context':
           cc: 'http://creativecommons.org/ns#'
@@ -2885,7 +2920,7 @@ components:
           lastPage: 'https://example.org/items?page=42'
 
     skosCollections:
-      summary: Collections
+      summary: Collections (JSON-LD)
       value:
         '@context':
           hydra: 'http://www.w3.org/ns/hydra/core#'
@@ -2928,7 +2963,7 @@ components:
           lastPage: 'https://example.org/items?page=42'
 
     skosConcepts:
-      summary: Concepts
+      summary: Concepts (JSON-LD)
       value:
         '@context':
           hydra: 'http://www.w3.org/ns/hydra/core#'
@@ -2971,7 +3006,7 @@ components:
           lastPage: 'https://example.org/items?page=42'
 
     skosSchemes:
-      summary: Schemes
+      summary: Concept Schemes (JSON-LD)
       value:
         '@context':
           hydra: 'http://www.w3.org/ns/hydra/core#'
@@ -3014,7 +3049,7 @@ components:
           lastPage: 'https://example.org/items?page=42'
 
     rdfsProperties:
-      summary: Properties
+      summary: Properties (JSON-LD)
       value:
         '@context':
           hydra: 'http://www.w3.org/ns/hydra/core#'
@@ -3052,7 +3087,7 @@ components:
           lastPage: 'https://example.org/items?page=42'
 
     rdfsResource:
-      summary: Resource
+      summary: Resource (JSON-LD)
       value:
         '@context':
           rdfs: 'http://www.w3.org/2000/01/rdf-schema#'
@@ -3061,7 +3096,7 @@ components:
         '@type': Resource
 
     rdfsResources:
-      summary: Resources
+      summary: Resources (JSON-LD)
       value:
         '@context':
           hydra: 'http://www.w3.org/ns/hydra/core#'
