@@ -212,7 +212,7 @@ components:
             type: string
         application/rdf+xml:
           schema:
-            type: array
+            type: string
             xml:
               name: rdf
               wrapped: true
@@ -243,7 +243,7 @@ components:
             type: string
         application/rdf+xml:
           schema:
-            type: array
+            type: string
             xml:
               name: rdf
               wrapped: true
